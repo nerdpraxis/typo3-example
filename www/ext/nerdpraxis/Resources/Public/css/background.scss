@@ -1,0 +1,14 @@
+.background-primary{
+ background-color:$primary-color;
+}
+.background-secondary{
+ background-color:$grey-dark;
+}
+.background-terziary{
+ background-color:$terziary-color;
+}
+
+.horizontal-verlauf{
+ background: rgb(0,0,0);
+ background: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba($primary-color,1) .5%,rgba($primary-color,1) 99.5%, rgba(0,0,0,0) 100%);
+}

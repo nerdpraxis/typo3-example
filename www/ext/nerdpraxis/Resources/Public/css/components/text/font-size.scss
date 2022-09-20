@@ -1,0 +1,8 @@
+$font-sizes: (12:19, 14:18, 16:26, 18:24, 20:30, 22:28, 24:30, 30:31, 38:41, 42:52, 48:56, 60:70, 74:84);
+@each $size, $line-height in $font-sizes {
+  .font-size-#{$size} {
+    font-size: rem-calc($size);
+    line-height: rem-calc($line-height);
+  }
+}
+

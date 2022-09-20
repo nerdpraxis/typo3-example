@@ -1,0 +1,53 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers"
+			xmlns:t3b="http://typo3.org/ns/FelixNagel/T3extblog/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<div class="panel panel-space panel-default">
+	<f:if condition="{comments}">
+		<f:then>
+			<div class="table-fit">
+			<t3b:widget.paginate objects="{comments}" as="paginatedComments" configuration="{settings.backend.comments.paginate}">
+				<table border="0" cellpadding="0" cellspacing="0" class="typo3-dblist table table-striped table-hover">
+					<thead>
+						<tr class="t3-row-header">
+							<td>&nbsp;</td>
+							<td><f:translate key="module.comment.table.title" /></td>
+							<td><f:translate key="module.comment.table.date" /></td>
+							<td><f:translate key="module.comment.table.author" /></td>
+							<td><f:translate key="module.comment.table.email" /></td>
+							<td><f:translate key="module.comment.table.website" /></td>
+							<td><f:translate key="module.comment.table.approved" /></td>
+							<td><f:translate key="module.comment.table.spam" /></td>
+							<td style="width: 75px;">&nbsp;</td>
+						</tr>
+					</thead>
+
+					<f:groupedFor each="{paginatedComments}" as="paginatedCommentsByPost" groupBy="postId" groupKey="currentPostUid">
+						<tr class="c-headLine">
+							<td colspan="9" class="col-title">
+								<b><t3b:backend.recordTitle table="tx_t3blog_post" uid="{currentPostUid}" /></b>
+							</td>
+						</tr>
+						<f:for each="{paginatedCommentsByPost}" as="comment">
+							<f:render partial="Backend/Comment/Row" arguments="{comment: comment, dateTimeFormat: dateTimeFormat}" />
+						</f:for>
+					</f:groupedFor>
+					<tr>
+						<td colspan="9">
+							<f:translate
+								key="module.comment.table.count"
+								arguments="{0: '{paginatedComments -> f:count()}', 1: '{comments -> f:count()}'}" />
+						</td>
+					</tr>
+				</table>
+			</t3b:widget.paginate>
+			</div>
+		</f:then>
+		<f:else>
+			<div class="panel-body">
+				<em><f:translate key="module.comment.noRecords" /></em>
+			</div>
+		</f:else>
+	</f:if>
+</div>
+
+</html>

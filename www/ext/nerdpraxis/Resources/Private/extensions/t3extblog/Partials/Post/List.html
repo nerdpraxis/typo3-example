@@ -1,0 +1,50 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers"
+			xmlns:t3b="http://typo3.org/ns/FelixNagel/T3extblog/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<f:render partial="Post/Filter" arguments="{category: category, tag: tag, author: author}" />
+
+<t3b:widget.paginate objects="{posts}" as="paginatedPosts" configuration="{settings.blogsystem.posts.paginate}">
+	<f:for each="{paginatedPosts}" as="post">
+		<article class="well">
+			<h2>
+				<f:link.action controller="Post" action="show" arguments="{post.linkParameter}">
+					{post.title}
+				</f:link.action>
+			</h2>
+			<p class="top">
+				<f:cObject typoscriptObjectPath="lib.tx_t3extblog.date" data="{f:format.date(format:'U', date:'{post.publishDate}')}" />,
+				<f:if condition="{post.author.uid}">
+					<f:link.action controller="Post" action="author" arguments="{author: post.author}">
+						<span class="author">{post.author.name}</span>
+					</f:link.action> -
+				</f:if>
+				<f:render partial="Post/Categories" arguments="{post: post}" />
+			</p>
+
+			<f:if condition="{post.content}">
+				<div class="teaser clearfix">
+					<f:render partial="Post/Teaser" arguments="{post: post, settings: settings}" />
+				</div>
+			</f:if>
+
+			<br>
+
+			<div class="bottom row">
+				<div class="col-xs-4">
+					<f:link.action controller="Post" action="show" arguments="{post.linkParameter}" section="comment-list">
+						<span class="badge">
+							<span class="icon icon-comments glyphicon glyphicon-comment" aria-hidden="true"></span>
+							<f:count subject="{post.comments}" />
+							<f:translate key="post.comments" />
+						</span>
+					</f:link.action>
+				</div>
+				<div class="col-xs-8 text-right">
+					<f:render partial="Post/TagCloud" arguments="{post: post}" />
+				</div>
+			</div>
+		</article>
+	</f:for>
+</t3b:widget.paginate>
+
+</html>

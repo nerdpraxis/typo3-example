@@ -1,0 +1,114 @@
+# Load default processing options
+imports:
+  - { resource: "EXT:rte_ckeditor/Configuration/RTE/Processing.yaml" }
+  - { resource: "EXT:rte_ckeditor/Configuration/RTE/Editor/Base.yaml" }
+  - { resource: "EXT:rte_ckeditor/Configuration/RTE/Editor/Plugins.yaml" }
+
+# Add configuration for the editor
+# For complete documentation see http://docs.ckeditor.com/#!/api/CKEDITOR.config
+
+editor:
+
+  externalPlugins:
+    youtube: { resource: "EXT:nerdpraxis/Resources/Public/CKEditor/Plugins/youtube/" }
+
+  config:
+    youtube_width: '640'
+    youtube_responsive: true
+    youtube_related: false
+    youtube_privacy: true
+    youtube_autoplay: false
+    youtube_controls: true
+    allowedContent: true
+    removeFormatAttributes: ""
+    codeSnippet_theme: "monokai"
+    extraAllowedContent:
+      - '*(*)[data-*]; iframe'
+      - iframe
+      - span
+
+    removePlugins:
+      - image
+
+    removeButtons:
+      - Strike
+
+    # Allow s and u tag
+    processing:
+      allowTagsOutside:
+        - s
+        - u
+        - iframe
+        - div
+        - span
+        - pre
+        - code
+      allowTags:
+        - s
+        - u
+        - iframe
+        - div
+        - span
+        - pre
+        - code
+
+    # contentsCss: [ "EXT:nerdpraxis/Resources/Public/dist/style.css" ]
+    # can be "default", but a custom stylesSet can be defined here, which fits TYPO3 best
+    stylesSet:
+      - { name: "Btn - Schwarz + Weiss", element: "a", attributes: { 'class': 'black-white' } }
+      - { name: "Btn - Weiss + Schwarz", element: "a", attributes: { 'class': 'white-black' } }
+      - { name: "Btn - Weiss + Rot", element: "a", attributes: { 'class': 'white-red' } }
+      - { name: "Btn - Rot + Weiss", element: "a", attributes: { 'class': 'red-white' } }
+      - { name: "Btn - Schwarz + Gelb", element: "a", attributes: { 'class': 'black-yellow' } }
+      - { name: "Btn - Gelb + Schwarz", element: "a", attributes: { 'class': 'yellow-black' } }
+      - { name: "Btn - Blau + Orange", element: "a", attributes: { 'class': 'blue-orange' } }
+      - { name: "Btn - Orange + Blau", element: "a", attributes: { 'class': 'orange-blue' } }
+      - { name: "Text - Default", element: "p", attributes: { class: "buttonlink" } }
+      - { name: "Text - Default + Weiss", element: "p", attributes: { class: "font-color-white " } }
+      - { name: "Text - Arial", element: "p", attributes: { class: "font-arial font-arial-hover-bold" } }
+      - { name: "Text - Arial + Weiss", element: "p", attributes: { class: "font-arial font-color-white font-arial-hover-bold" } }
+      - { name: "Link Bold", element: "a", attributes: { 'class': 'font-arial-bold' } }
+      - { name: "Text - Arial Bold", element: "p", attributes: { 'class': 'font-arial-bold' } }
+      - { name: "Text - Rot + Fett + Arial", element: "span", attributes: { 'class': 'font-arial-bold  font-color-red' } }
+      - { name: "H2 - Last word Bold", element: "h2", attributes: { 'class': 'lastbold' } }
+      - { name: "H2 - Arial Bold", element: "h2", attributes: { 'class': 'font-arial-bold' } }
+      - { name: "H3 - Arial Bold", element: "h3", attributes: { 'class': 'font-arial-bold' } }
+      - { name: "H4 - Arial Bold", element: "h4", attributes: { 'class': 'font-arial-bold' } }
+      - { name: "H4 - Arial + Schwarz", element: "h4", attributes: { 'class': 'font-arial-normal font-color-black' } }
+      - { name: "H4 - Kadwa + Bold + Schwarz", element: "h4", attributes: { 'class': 'font-kadwa-bold-black' } }
+
+
+    format_tags: "p;h1;h2;h3;h4;h5;pre;p"
+    enterMode: 2
+    shiftEnterMode: 2
+
+    toolbarGroups:
+      - { name: 'styles', groups: [ 'styles' ] },
+      - { name: 'clipboard', groups: [ 'clipboard', 'undo' ] },
+      - { name: 'editing', groups: [ 'find', 'selection', 'spellchecker', 'editing' ] },
+      - { name: 'links', groups: [ 'links' ] },
+      - { name: 'insert', groups: [ 'insert' ] },
+      - { name: 'forms', groups: [ 'forms' ] },
+      - { name: 'tools', groups: [ 'tools' ] },
+      - { name: 'document', groups: [ 'mode', 'document', 'doctools' ] },
+      - { name: 'others', groups: [ 'others' ] },
+      - { name: 'basicstyles', groups: [ 'basicstyles', 'cleanup' ] },
+      - { name: 'paragraph', groups: [ 'list', 'indent', 'blocks', 'align', 'bidi', 'paragraph' ] },
+      - { name: 'colors', groups: [ 'colors' ] },
+      - { name: 'about', groups: [ 'about' ] }
+
+
+    justifyClasses:
+      - text-left
+      - text-center
+      - text-right
+      - text-justify
+
+    extraPlugins:
+      - justify
+      - find
+      - bidi
+      - selectall
+      - autolink
+      - codesnippet
+      - youtube

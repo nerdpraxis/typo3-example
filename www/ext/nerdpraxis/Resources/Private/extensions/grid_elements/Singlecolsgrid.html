@@ -1,0 +1,39 @@
+{namespace v=FluidTYPO3\Vhs\ViewHelpers}
+
+<f:comment>
+    ACHTUNG! Die Leerzeichen sind absichtlich so gesetzt um den ausgegebenen Code sauberer zu halten
+</f:comment>
+
+<section class="singlecolsgrid <f:if condition='{data.space_after_class}'>frame-space-after-{data.space_after_class}</f:if> <f:if condition='{data.space_before_class}'>frame-space-before-{data.space_before_class}</f:if> default-container container {v:format.replace(substring: ',', content: '{data.flexform_cssklassenliste}', replacement: ' ')} {data.flexform_cssklassen} {v:format.replace(substring: ',', content: '{data.flexform_cssklassenliste}', replacement: ' ')} layout-{data.layout} <f:if condition="{data.flexform_animation}!=disabled">{data.flexform_animation} start wow </f:if><f:if condition="{data.flexform_animationspeed}!=default">{data.flexform_animationspeed} </f:if><f:if condition="{data.flexform_animationdelay}!=none">{data.flexform_animationdelay} </f:if>" id="c{data.uid}" style="<f:if condition="{data.flexform_inlineCSS}">{data.flexform_inlineCSS}</f:if><f:if condition="{data.flexform_verlaufsfarbe_start}">background: linear-gradient({data.flexform_verlaufsfarbe_winkel}deg, {data.flexform_verlaufsfarbe_ende} 0%, {data.flexform_verlaufsfarbe_start} 100%);</f:if>color:{data.flexform_verlaufsfarbe_schriftfarbe};">
+    <div class="row">
+        <f:if condition="{children}">
+            <f:for each="{children.1}" as="column" key="columnNumber">
+                <f:if condition="{columnNumber} == 4">
+                    <article id="c{data.uid}-{columnNumber}" class="{v:format.replace(substring: ',', content: '{data.flexform_cssklassenlisteright}', replacement: ' ')} twocols_grid_right grid-column-{columnNumber} custom-col-right offset-{data.pi_flexform.data.col.lDEF.colleftoffset.vDEF} col-{data.pi_flexform.data.col.lDEF.colleft.vDEF} offset-sm-{data.pi_flexform.data.colsm.lDEF.colsmleftoffset.vDEF} col-sm-{data.pi_flexform.data.colsm.lDEF.colsmleft.vDEF} offset-md-{data.pi_flexform.data.colmd.lDEF.colmdleftoffset.vDEF} col-md-{data.pi_flexform.data.colmd.lDEF.colmdleft.vDEF} offset-lg-{data.pi_flexform.data.collg.lDEF.collgleftoffset.vDEF} col-lg-{data.pi_flexform.data.collg.lDEF.collgleft.vDEF} offset-xl-{data.pi_flexform.data.colxl.lDEF.colxlleftoffset.vDEF} col-xl-{data.pi_flexform.data.colxl.lDEF.colxlleft.vDEF} {data.flexform_cssklassen_right}">
+                        <f:for each="{column}" as="child">
+                            <f:render partial="Child" arguments="{data: child.data, children: child.children, options: options, settings: settings}"/>
+                        </f:for>
+                    </article>
+                </f:if>
+            </f:for>
+        </f:if>
+    </div>
+</section>
+<f:if condition="{data.flexform_verlaufsfarbe_schriftfarbe}">
+<style>
+    #c{data.uid}{
+    color:<f:comment></f:comment>{data.flexform_verlaufsfarbe_schriftfarbe}
+    }
+    #c{data.uid} p{
+    color:<f:comment></f:comment>{data.flexform_verlaufsfarbe_schriftfarbe}
+    }
+    #c{data.uid} h1,
+    #c{data.uid} h2,
+    #c{data.uid} h3,
+    #c{data.uid} h4,
+    #c{data.uid} h5 {
+    color:<f:comment></f:comment>{data.flexform_verlaufsfarbe_schriftfarbe}
+    }
+</style>
+</f:if>
+

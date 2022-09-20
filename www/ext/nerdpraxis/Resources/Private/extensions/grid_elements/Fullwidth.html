@@ -1,0 +1,37 @@
+{namespace v=FluidTYPO3\Vhs\ViewHelpers}
+
+
+<main id="c{data.uid}" class='fullwidth <f:if condition="{data.space_after_class}">frame-space-after-{data.space_after_class}</f:if> <f:if condition="{data.space_before_class}">frame-space-before-{data.space_before_class}</f:if> grid_fullwidth container-fluid {v:format.replace(substring: ",", content: "{data.flexform_cssklassenliste}", replacement: " ")}  <f:if condition="{data.flexform_negativeheight}">negativeheight</f:if>' style=" <f:if condition='{data.flexform_inlineCSS_left}'>{data.flexform_inlineCSS_left}</f:if> <f:if condition='{data.flexform_verlaufsfarbe_start}'>background: linear-gradient({data.flexform_verlaufsfarbe_winkel}deg, {data.flexform_verlaufsfarbe_ende} 0%, {data.flexform_verlaufsfarbe_start} 100%);color:{data.flexform_verlaufsfarbe_schriftfarbe};</f:if>">
+    <f:if condition="{children}">
+        <f:then>
+            <a id="c{data.uid}"></a>
+            <f:if condition="{data._LOCALIZED_UID}">
+                <a id="c{data._LOCALIZED_UID}"></a>
+            </f:if>
+            <f:render partial="Container" arguments="{_all}" optional="true"/>
+        </f:then>
+        <f:else>
+            <f:if condition="{data.CType}">
+                <f:cObject typoscriptObjectPath="tt_content.{data.CType}" data="{data}" table="tt_content" />
+            </f:if>
+        </f:else>
+    </f:if>
+</main>
+<f:if condition="{data.flexform_verlaufsfarbe_schriftfarbe}">
+<style>
+    #c{data.uid}{
+    color:<f:comment></f:comment>{data.flexform_verlaufsfarbe_schriftfarbe};
+    overflow:auto;
+    }
+    #c{data.uid} p{
+    color:<f:comment></f:comment>{data.flexform_verlaufsfarbe_schriftfarbe}
+    }
+    #c{data.uid} h1,
+    #c{data.uid} h2,
+    #c{data.uid} h3,
+    #c{data.uid} h4,
+    #c{data.uid} h5 {
+    color:<f:comment></f:comment>{data.flexform_verlaufsfarbe_schriftfarbe}
+    }
+</style>
+</f:if>

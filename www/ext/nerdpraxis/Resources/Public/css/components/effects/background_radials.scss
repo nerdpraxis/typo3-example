@@ -1,0 +1,72 @@
+.left-effects {
+ position: fixed;
+ bottom: 650px;
+ left: 0;
+ width: 500px;
+ height: 500px;
+ border-radius: 50%;
+ background: rgba($terziary-color, 0.4);
+ -webkit-filter: blur(100px);
+ filter: blur(100px);
+ opacity: 0.4;
+ pointer-events: none;
+ z-index: -1;
+ animation-name: bg_radial_leftanimation;
+ animation-duration: 27s;
+ animation-iteration-count: infinite;
+}
+
+@keyframes bg_radial_leftanimation {
+ 0% {
+	background: rgba($secondary-color, 0.4);
+	bottom: 650px;
+	left: 0;
+ }
+ 50% {
+	background: rgba($primary-color, 0.3);
+	bottom: 50px;
+	left: 200px;
+ }
+ 100% {
+	background: rgba($secondary-color, 0.4);
+	bottom: 650px;
+	left: 0;
+ }
+}
+
+.right-effects {
+ position: fixed;
+ top: 50px;
+ right: 0;
+ bottom: unset;
+ width: 500px;
+ height: 500px;
+ border-radius: 50%;
+ background: rgba($secondary-color, 0.8);
+ -webkit-filter: blur(100px);
+ filter: blur(100px);
+ opacity: 0.33;
+ pointer-events: none;
+ z-index: -1;
+ animation-name: bg_radial_rightanimation;
+ animation-duration: 22s;
+ animation-iteration-count: infinite;
+}
+
+@keyframes bg_radial_rightanimation {
+ 0% {
+	background: rgba($secondary-color, 0.8);
+	top: 50px;
+	right: 0;
+ }
+ 33% {
+	background: rgba($terziary-color, 0.8);
+	top: 370px;
+	right: 300px;
+ }
+ 100% {
+	background: rgba($secondary-color, 0.8);
+	top: 50px;
+	right: 0;
+ }
+}

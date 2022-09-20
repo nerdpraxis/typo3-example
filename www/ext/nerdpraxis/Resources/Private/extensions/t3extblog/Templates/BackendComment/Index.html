@@ -1,0 +1,18 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers"
+			xmlns:t3b="http://typo3.org/ns/FelixNagel/T3extblog/ViewHelpers/Backend" data-namespace-typo3-fluid="true">
+
+<f:layout name="Backend" />
+
+<f:section name="headline">
+	<f:translate key="module.comment.title.all" />
+</f:section>
+
+<f:section name="main">
+	<f:render partial="Backend/PendingComments" arguments="{pendingComments: pendingComments, addLink: 1}" />
+
+	<f:render
+		partial="Backend/Comment/Table"
+		arguments="{comments: comments,	dateTimeFormat: dateTimeFormat}" />
+</f:section>
+
+</html>

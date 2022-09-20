@@ -1,0 +1,24 @@
+{
+	"name": "live",
+	"version": "1.0.0",
+	"description": "practise npm",
+	"main": "app",
+	"type": "module",
+	"scripts": {
+		"minifyJS": "uglifyjs JavaScript/app.js --compress --output dist/app.min.js",
+		"css": "node-sass css/style.scss -o dist",
+		"css:watch": "npm run css && node-sass css/style.scss -wo dist",
+		"build": "node-sass -r --output-style compressed css/style.scss -o dist",
+		"watch": "npm run css && npm run minifyJS"
+	},
+	"author": "Sascha Wildenhain",
+	"license": "GPL-2.0-only",
+	"dependencies": {
+		"@popperjs/core": "^2.11.5",
+		"bootstrap": "^5.1.3",
+		"node-minify": "^2.0.3",
+		"node-sass": "^7.0.1",
+		"npm-watch": "^0.11.0",
+		"uniq": "^1.0.1"
+	}
+}

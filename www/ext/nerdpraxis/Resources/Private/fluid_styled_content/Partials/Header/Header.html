@@ -1,0 +1,162 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:if condition="{header}">
+    <f:switch expression="{layout}">
+<f:comment> H1 </f:comment>
+        <f:case value="0">
+            <h1 class="{positionClass} font-color-white font-size-42">
+                <f:link.typolink parameter="{link}">{header}</f:link.typolink>
+            </h1>
+        </f:case>
+        <f:case value="1">
+            <h1 class="{positionClass} font-color-white font-size-42">
+                <f:link.typolink parameter="{link}">{header}</f:link.typolink>
+            </h1>
+        </f:case>
+        <f:case value="2">
+	        <div class="link-wrapper">
+	            <h1 class="{positionClass}   font-primary font-size-42 fw-bolderlink hover ">
+	                <f:link.typolink parameter="{link}">{header}</f:link.typolink>
+	            </h1>
+	        </div>
+        </f:case>
+        <f:case value="3">
+	            <h1 class="{positionClass} case3 ">
+	                <f:link.typolink parameter="{link}">{header}</f:link.typolink>
+	            </h1>
+        </f:case>
+
+<f:comment> H2 </f:comment>
+
+        <f:case value="4">
+            <h2 class="{positionClass} case4 ">
+                <f:link.typolink parameter="{link}">{header}</f:link.typolink>
+            </h2>
+        </f:case>
+        <f:case value="5">
+            <h2 class="{positionClass} case5 font-color-white ">
+                <f:link.typolink parameter="{link}">{header}</f:link.typolink>
+            </h2>
+        </f:case>
+        <f:case value="6">
+            <h2 class="{positionClass} case6 font-arial">
+                <f:link.typolink parameter="{link}">{header}</f:link.typolink>
+            </h2>
+        </f:case>
+        <f:case value="7">
+            <h2 class="{positionClass} case7 font-arial font-color-white ">
+                <f:link.typolink parameter="{link}">{header}</f:link.typolink>
+            </h2>
+        </f:case>
+
+<f:comment> H3 </f:comment>
+        <f:case value="8">
+            <h3 class="{positionClass} case8">
+                <f:link.typolink parameter="{link}">{header}</f:link.typolink>
+            </h3>
+        </f:case>
+        <f:case value="9">
+            <h3 class="{positionClass} case9 font-color-white ">
+                <f:link.typolink parameter="{link}">{header}</f:link.typolink>
+            </h3>
+        </f:case>
+
+<f:comment> H4 </f:comment>
+        <f:case value="10">
+            <h4 class="{positionClass} case10 ">
+                <f:link.typolink parameter="{link}">{header}</f:link.typolink>
+            </h4>
+        </f:case>
+        <f:case value="11">
+            <h4 class="{positionClass} font-color-black">
+                <f:link.typolink parameter="{link}">{header}</f:link.typolink>
+            </h4>
+        </f:case>
+        <f:case value="12">
+            <h4 class="{positionClass} font-color-white">
+                <f:link.typolink parameter="{link}">{header}</f:link.typolink>
+            </h4>
+        </f:case>
+        <f:case value="13">
+            <h4 class="{positionClass} font-color-black font-arial-bold">
+                <f:link.typolink parameter="{link}">{header}</f:link.typolink>
+            </h4>
+        </f:case>
+        <f:case value="14">
+            <h4 class="{positionClass} font-color-black font-arial">
+                <f:link.typolink parameter="{link}">{header}</f:link.typolink>
+            </h4>
+        </f:case>
+        <f:case value="15">
+            <h4 class="{positionClass} font-color-white font-arial-bold">
+                <f:link.typolink parameter="{link}">{header}</f:link.typolink>
+            </h4>
+        </f:case>
+        <f:case value="16">
+            <h4 class="{positionClass} font-color-white font-arial">
+                <f:link.typolink parameter="{link}">{header}</f:link.typolink>
+            </h4>
+        </f:case>
+        <f:case value="17">
+            <h4 class="{positionClass} font-color-blue font-arial-bold">
+                <f:link.typolink parameter="{link}">{header}</f:link.typolink>
+            </h4>
+        </f:case>
+
+
+<f:comment> H5 </f:comment>
+        <f:case value="18">
+            <h5 class="{positionClass} font-color-black">
+                <f:link.typolink parameter="{link}">{header}</f:link.typolink>
+            </h5>
+        </f:case>
+        <f:case value="19">
+            <h5 class="{positionClass} font-color-white">
+                <f:link.typolink parameter="{link}">{header}</f:link.typolink>
+            </h5>
+        </f:case>
+        <f:case value="20">
+            <h5 class="{positionClass} font-color-black font-arial font-arial-hover-bold">
+                <f:link.typolink parameter="{link}">{header}</f:link.typolink>
+            </h5>
+        </f:case>
+        <f:case value="21">
+            <h5 class="{positionClass} font-color-white font-arial  font-arial-hover-bold">
+                <f:link.typolink parameter="{link}">{header}</f:link.typolink>
+            </h5>
+        </f:case>
+        <f:case value="22">
+            <h5 class="{positionClass} font-color-black font-arial">
+                <f:link.typolink parameter="{link}">{header}</f:link.typolink>
+            </h5>
+        </f:case>
+        <f:case value="23">
+            <h5 class="{positionClass} font-color-white font-arial">
+                <f:link.typolink parameter="{link}">{header}</f:link.typolink>
+            </h5>
+        </f:case>
+
+        <f:case value="24">
+            <h2 class="lastbold {positionClass}"><f:link.typolink parameter="{link}">{header}</f:link.typolink></h2>
+        </f:case>
+        <f:case value="25">
+            <h2 class="firsttwo {positionClass}"><f:link.typolink parameter="{link}">{header}</f:link.typolink></h2>
+        </f:case>
+        <f:case value="26">
+            <h2 class="firstone {positionClass}"><f:link.typolink parameter="{link}">{header}</f:link.typolink></h2>
+        </f:case>
+
+        <f:case value="99">
+            <f:comment> -- do not show header -- </f:comment>
+        </f:case>
+        <f:defaultCase>
+            <f:if condition="{default}">
+                <f:render partial="Header/Header" arguments="{
+                    header: header,
+                    layout: default,
+                    positionClass: positionClass,
+                    link: link}" />
+            </f:if>
+        </f:defaultCase>
+    </f:switch>
+</f:if>
+</html>

@@ -1,0 +1,46 @@
+<!--====== CARD PART START ======-->
+
+	<div class="dce col-lg-12 col-md-12 col-sm-12 feature-box px-0 pt-0  mb-8"  data-elementtype="dce-card">
+		<div class="text-lg-start font-white text-start px-0 pt-0 h-100">
+			<div class="card-img-top">
+				<figure class="figure preview d-block w-100 ratio ratio-16x9 cursor-pointer">
+					<span class="ratio ratio-16x9 d-block w-100">
+
+						<f:for each="{field.image}" as="file" iteration="iter">
+							<figure class="figure preview d-block w-100 ratio ratio-16x9 cursor-pointer">
+								<span class="ratio ratio-16x9 d-block w-100">
+									<div class="c-glitch w-100 d-block ratio ratio-16x9 bg-norepeat" style="background-image: url({f:uri.image(image: field.image.0, height:'250c', width: '420', crop: '0,0')});">
+										<div class="c-glitch__img w-100 d-block bg-norepeat" style="background-image: url({f:uri.image(image: field.image.0, height:'250c', width: '420', crop: '0,0')});"></div>
+										<div class="c-glitch__img w-100 d-block bg-norepeat" style="background-image: url({f:uri.image(image: field.image.0, height:'250c', width: '420', crop: '0,0')});"></div>
+										<div class="c-glitch__img w-100 d-block bg-norepeat" style="background-image: url({f:uri.image(image: field.image.0, height:'250c', width: '420', crop: '0,0')});"></div>
+										<div class="c-glitch__img w-100 d-block bg-norepeat" style="background-image: url({f:uri.image(image: field.image.0, height:'250c', width: '420', crop: '0,0')});"></div>
+										<div class="c-glitch__img w-100 d-block bg-norepeat" style="background-image: url({f:uri.image(image: field.image.0, height:'250c', width: '420', crop: '0,0')});"></div>
+									</div>
+								</span>
+							</figure>
+						</f:for>
+
+						<figcaption class="figure-caption mb-4">
+							<p class="small muted"><f:for each="{field.image}" as="file" iteration="iter">{file.description}</f:for></p>
+						</figcaption>
+					</span>
+				</figure>
+			</div>
+			<div class="card-body text-start px-6">
+				<h4 class="card-title mb-5 ">
+					<div class="link-wrapper">
+						<span class="font-primary font-size-42 fw-bolderlink hover" >
+							{field.headline}
+						</span>
+					</div>
+				</h4>
+				<h6 class="card-subtitle mb-3 font-secondary font-size-16"> {field.tags} </h6>
+				<div class="card-text mb-8">
+					<p><f:format.html><f:format.crop maxCharacters="120" respectWordBoundaries="true" respectHtml="true">{field.textfeld} </f:format.crop> </f:format.html></p>
+					<br>
+					<f:link.typolink parameter="{field.more}">mehr</f:link.typolink>
+				</div>
+			</div>
+		</div>
+	</div>
+

@@ -1,0 +1,63 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers"
+			xmlns:t3b="http://typo3.org/ns/FelixNagel/T3extblog/ViewHelpers/Frontend" data-namespace-typo3-fluid="true">
+
+<f:comment>
+	Make sure to always add flashMessagesClearCache BEFORE flashMessages VH
+	Not needed before TYPO3 CMS 7.3
+</f:comment>
+<t3b:flashMessagesClearCache />
+<f:render partial="FlashMessages" arguments="{_all}" />
+
+<t3b:commentAllowed post="{post}">
+	<f:then>
+		<f:render section="commentForm" arguments="{_all}" />
+	</f:then>
+	<f:else>
+		<p class="alert alert-info"><f:translate key="comment.disabled" /></p>
+	</f:else>
+</t3b:commentAllowed>
+
+
+<f:section name="commentForm">
+	<f:form
+		controller="Comment"
+		action="create"
+		section="comment-section"
+		name="newComment"
+		object="{newComment}"
+		arguments="{post.linkParameter}">
+
+		<f:render partial="FormErrors" arguments="{object: Comment, anchorLink: '{f:uri.action(action: \'create\', controller: \'Comment\', arguments: post.linkParameter)}'}" />
+
+		<fieldset>
+			<legend><f:translate key="comment.new" /></legend>
+
+			<f:render partial="Comment/FormFields" />
+		</fieldset>
+
+		<fieldset class="row">
+			<div class="col-md-3">
+				<div class="form-group">
+					<button class="btn btn-primary btn-block">
+						{f:translate(key: 'comment.submit')}
+					</button>
+				</div>
+			</div>
+			<div class="col-md-9">
+				<div class="form-group">
+					<f:render partial="IsHuman" arguments="{spamSettings: settings.blogsystem.comments.spamCheck}" />
+					<f:render partial="SpamCheck" arguments="{spamSettings: settings.blogsystem.comments.spamCheck}" />
+				</div>
+				<div class="form-group {t3b:formError(for: 'newComment.privacyPolicyAccepted')}">
+					<f:render partial="PrivacyPolicy" arguments="{
+						privacyPolicySettings: settings.blogsystem.comments.privacyPolicy,
+						id: 'newComment.privacyPolicyAccepted',
+						localizationKey: 'comment.privacyPolicyAccepted'
+					}" />
+				</div>
+			</div>
+		</fieldset>
+	</f:form>
+</f:section>
+
+</html>

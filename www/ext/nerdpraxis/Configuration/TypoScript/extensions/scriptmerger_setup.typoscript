@@ -1,0 +1,51 @@
+plugin.tx_scriptmerger {
+  css {
+    enable = 1
+    addContentInDocument = 0
+    doNotRemoveInDoc = 0
+    minify {
+      enable = 1
+      ignore =
+    }
+
+    compress {
+      enable = 0
+      ignore = \.gz\.
+    }
+
+    merge {
+      enable = 1
+      ignore =
+    }
+
+    uniqueCharset {
+      enable = 1
+      value = @charset "UTF-8";
+    }
+  }
+
+  javascript {
+    enable = 0
+    parseBody = 1
+    mergedHeadFilePosition = </head>
+    mergedBodyFilePosition = </body>
+    minify {
+      enable = 1
+      useJSMinPlus = 1
+      useJShrink = 0
+      ignore = \?,uc.js
+    }
+
+    compress {
+      enable = 0
+      ignore = \?,\.gz\.,uc.js
+    }
+
+    merge {
+      enable = 1
+      ignore = uc.js
+    }
+  }
+
+  externalFileCacheLifetime = 3600
+}

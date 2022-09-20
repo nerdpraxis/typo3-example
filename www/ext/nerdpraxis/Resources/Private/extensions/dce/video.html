@@ -1,0 +1,224 @@
+<div class="videoelement dce " id="uid-{contentObject.uid}">
+  <div class="artplayer-app{contentObject.uid}" style="width:100%;height:160px;max-height:100%;"></div>
+</div>
+
+<script type="text/javascript">
+  $( document ).ready(function() {
+	  console.log('%c Success: SW0001 ', 'background: #9BC31C; color: #FFF', 'Video wird ausgegeben');
+
+	  function videocontainersize(){
+		  <f:comment></f:comment><f:if condition="{field.seitenverhaeltnis} == 'sechsenzuneun'">
+	 		var player<f:comment></f:comment>{contentObject.uid} = $(".artplayer-app<f:comment></f:comment>{contentObject.uid}");
+			$(player<f:comment></f:comment>{contentObject.uid}).css("height",$(".artplayer-app<f:comment></f:comment>{contentObject.uid}").width() * 0.5625);
+			</f:if>
+		  <f:comment></f:comment><f:if condition="{field.seitenverhaeltnis} == 'vierzudrei'">
+	 		var player<f:comment></f:comment>{contentObject.uid} = $(".artplayer-app<f:comment></f:comment>{contentObject.uid}");
+			$(player<f:comment></f:comment>{contentObject.uid}).css("height",$(".artplayer-app<f:comment></f:comment>{contentObject.uid}").width() * 0.75);
+			</f:if>
+		  <f:comment></f:comment><f:if condition="{field.seitenverhaeltnis} == 'neunzusechsen'">
+	 		var player<f:comment></f:comment>{contentObject.uid} = $(".artplayer-app<f:comment></f:comment>{contentObject.uid}");
+			$(player<f:comment></f:comment>{contentObject.uid}).css("height",$(".artplayer-app<f:comment></f:comment>{contentObject.uid}").parent().parent().width() * 1.777777777777778);
+		  </f:if>
+		  <f:comment></f:comment><f:if condition="{field.seitenverhaeltnis} == 'einszueins'">
+	 		var player<f:comment></f:comment>{contentObject.uid} = $(".artplayer-app<f:comment></f:comment>{contentObject.uid}");
+			$(player<f:comment></f:comment>{contentObject.uid}).css("height",$(".artplayer-app<f:comment></f:comment>{contentObject.uid}").width() * 1);
+			</f:if>
+	  }
+
+	  videocontainersize();
+
+
+	var art<f:comment></f:comment>{contentObject.uid} = new Artplayer({
+	    container: '.artplayer-app<f:comment></f:comment>{contentObject.uid}',
+	    url: '<f:comment></f:comment>{f:uri.typolink(parameter:field.localpath, absolute: 1)}',
+	    title: '<f:comment></f:comment>{field.title}',
+	    poster: '<f:comment></f:comment><f:if condition="{field.thumbnail.0}"><f:uri.image image="{field.thumbnail.0}" width="450" absolute="1" /></f:if>',
+	    volume: <f:comment></f:comment>{field.volume},
+	    isLive: <f:comment></f:comment>{field.isLive},
+	    muted: <f:comment></f:comment>{field.muted},
+	    autoplay: <f:comment></f:comment>{field.autoplay},
+	    pip: <f:comment></f:comment>{field.pip},
+	    autoSize: <f:comment></f:comment>{field.autoSize},
+	    autoMini: <f:comment></f:comment>{field.autoMini},
+	    screenshot: <f:comment></f:comment>{field.screenshot},
+	    setting: <f:comment></f:comment>{field.setting},
+	    loop: <f:comment></f:comment>{field.loop},
+	    flip: <f:comment></f:comment>{field.flip},
+	    playbackRate: <f:comment></f:comment>{field.playbackRate},
+	    aspectRatio: <f:comment></f:comment>{field.aspectRatio},
+	    fullscreen: <f:comment></f:comment>{field.fullscreen},
+	    fullscreenWeb: <f:comment></f:comment>{field.fullscreenWeb},
+	    subtitleOffset: <f:comment></f:comment>{field.subtitleOffset},
+	    miniProgressBar: <f:comment></f:comment>{field.miniProgressBar},
+	    localVideo: <f:comment></f:comment>{field.localVideo},
+	    localSubtitle: <f:comment></f:comment>{field.localSubtitle},
+	    networkMonitor: <f:comment></f:comment>{field.networkMonitor},
+	    mutex: <f:comment></f:comment>{field.mutex},
+	    light: <f:comment></f:comment>{field.light}<f:comment></f:comment>,
+        theme: <f:comment></f:comment>'<f:comment></f:comment>{field.themecolor}'<f:comment></f:comment>,
+	    backdrop: <f:comment></f:comment>{field.backdrop}<f:comment></f:comment>,
+	    lang: navigator.language.toLowerCase(),
+	    moreVideoAttr: {
+	        crossOrigin: 'anonymous',
+	    },
+/*	Code Direkt aus dem GitHub beispiel - fuer den Fall der Fälle hier gelassen
+		contextmenu: [
+
+	        {
+	            html: 'Custom menu',
+	            click: function (contextmenu) {
+	                console.info('You clicked on the custom menu');
+	                contextmenu.show = false;
+	            },
+	        },
+	    ],*/
+	    layers: [
+	        {
+	            html: `<f:comment></f:comment><f:format.raw>{field.htmloverlay}</f:format.raw><img style="width: 100px" src='<f:comment></f:comment><f:if condition="{field.poster}"><f:uri.image image="{field.poster.0}" width="250" absolute="1" /></f:if>'>`,
+	            click: function () {
+	              <f:comment></f:comment><f:format.raw>{field.jsoverlay}</f:format.raw>
+	            },
+	            style: {
+	                <f:comment></f:comment><f:format.raw>{field.overlayCss}</f:format.raw>
+	            },
+	        },
+	    ],
+	    quality: [
+	        {
+	            default: true,
+	            name: 'SD 480P',
+	            url: '<f:comment></f:comment>{f:uri.typolink(parameter:field.localpath, absolute: 1)}',
+	        },
+		<f:comment></f:comment><f:if condition="{field.localpathhd} != 0}">
+	        {
+	            name: 'HD 720P',
+	            url: '<f:comment></f:comment>{f:uri.typolink(parameter:field.localpathhd, absolute: 1)}',
+	        },
+		  <f:comment></f:comment></f:if>
+		<f:comment></f:comment><f:if condition="{field.localpathfhd}}">
+	        {
+	            name: 'Full-HD 1080P',
+	            url: '<f:comment></f:comment>{f:uri.typolink(parameter:field.localpathfhd, absolute: 1)}',
+	        },
+		  <f:comment></f:comment></f:if>
+		<f:comment></f:comment><f:if condition="{field.localpath4k} != 0}">
+	        {
+	            name: '4K',
+	            url: '<f:comment></f:comment>{f:uri.typolink(parameter:field.localpath4k, absolute: 1)}',
+	        },
+		  <f:comment></f:comment></f:if>
+
+	    ],
+/*	Code Direkt aus dem GitHub beispiel - fuer den Fall der Fälle hier gelassen
+	thumbnails: {
+	        url: '/assets/sample/thumbnails.png',
+	        number: 100,
+	        width: 160,
+	        height: 90,
+	        column: 10,
+	    }, */
+	    highlight: [
+		<f:comment></f:comment><f:for each="{field.hightlight}" as="hightlight">
+		  {
+            time: <f:comment></f:comment>{hightlight.timestamp},
+            text: '<f:comment></f:comment>{hightlight.highlighttext}',
+		  },
+		</f:for>
+	    ],
+/*  Code Direkt aus dem GitHub beispiel - fuer den Fall der Fälle hier gelassen
+
+		controls: [
+	        {
+	            position: 'right',
+	            html: 'Control',
+	            click: function () {
+	                console.info('You clicked on the custom control');
+	            },
+	        },
+	    ],*/
+	    icons: {
+	        loading: '<img src="/Assets/Resources/Public/images/ploading.gif">',
+	        state: '<img src="/typo3conf/ext/nerdpraxis/Resources/Public/images/logo-web-landscape-white_nowebdesign.svg">',
+	    },
+/*		thumbnails: {
+			url: '<f:comment></f:comment><f:uri.image image="{field.thumbnail.0}" width="250" absolute="1" />',
+			number: 1,
+			width: 160,
+			height: 90,
+			column: 1,
+		},*/
+/*  Code Direkt aus dem GitHub beispiel - fuer den Fall der Fälle hier gelassen
+	icons: {
+			loading: '',
+			state: '',
+			play: '',
+			pause: '',
+			volume: '',
+			volumeClose: '',
+			subtitle: '',
+			screenshot: '',
+			setting: '',
+			fullscreen: '',
+			fullscreenWeb: '',
+			pip: '',
+		},*/
+
+	  plugins: [
+	          artplayerPluginDanmuku({
+	              danmuku: [
+	                 /* Code Direkt aus dem GitHub beispiel - fuer den Fall der Fälle hier gelassen
+
+	                 {
+	                      text: '666', // Danmu text
+	                      time: 5, // Video time
+	                      color: '#fff', // Danmu color
+	                      border: false, // Danmu border
+	                      mode: 0, // Danmu mode: 0-scroll or 1-static
+	                  },*/
+	              ], // Can be an array or return the promised function or danmuku xml url
+	              speed: <f:comment></f:comment>{field.speed}, // Animation time
+	              opacity: <f:comment></f:comment>{field.opacity}, // Opacity
+	              color: '<f:comment></f:comment>{field.color}', // Font color
+	              size: 25, // Font size
+	              maxlength: <f:comment></f:comment>{field.maxlength}, // The maximum number of words in the danmu
+	              margin: [<f:comment></f:comment>{field.margintop}, <f:comment></f:comment>{field.marginbottom}], // Margin top and margin bottom
+	              synchronousPlayback: false, // Synchronous playback speed
+	          }),
+	      ],
+
+	});
+
+  $(window).on("resize", function () {
+		  videocontainersize();
+	  });
+
+	  <f:comment></f:comment><f:for each="{field.danmuku}" as="danmuku">
+		art<f:comment></f:comment>{contentObject.uid}.plugins.artplayerPluginDanmuku.emit({
+		    text: '<f:comment></f:comment>{danmuku.text}',
+		    time: <f:comment></f:comment>{danmuku.time},
+		    color: '<f:comment></f:comment>{danmuku.color}',
+		    size: <f:comment></f:comment>{danmuku.size},
+		    border: false,
+		    mode: <f:comment></f:comment>{danmuku.mode},
+		});
+	  </f:for>
+
+
+  });
+</script>
+
+<f:if condition="{field.controls} == true">
+	<style>
+		#uid-<f:comment></f:comment>{contentObject.uid} .art-bottom{
+		  display:none;
+		  }
+	</style>
+</f:if>
+
+<f:if condition="{field.poster}"><f:then></f:then>
+	<f:else>
+		<style>
+		    #uid-<f:comment></f:comment>{contentObject.uid} .art-layers  .art-layer-layer2 img{display:none;}
+		</style>
+	</f:else>
+</f:if>

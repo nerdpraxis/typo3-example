@@ -1,0 +1,295 @@
+TCEFORM.tt_content.CType {
+ removeItems = bullets, table,  login,  script, splash, div, menus, abstract, splash,
+}
+#TCEFORM.tt_content.image_zoom.disabled = 0
+###Ausblenden von unnötigen Feldern im Bildmodul - TYP
+TCEFORM.tt_content.sys_language_uid.disabled = 1
+#TCEFORM.tt_content.colPos.disabled = 1
+#TCEFORM.tt_content.spaceBefore.disabled = 1
+#TCEFORM.tt_content.spaceAfter.disabled = 1
+#TCEFORM.tt_content.section_frame.disabled = 1
+#TCEFORM.tt_content.sectionIndex.disabled = 1
+TCEFORM.tt_content.linkToTop.disabled = 1
+#TCEFORM.tt_content.image_effects.disabled = 1
+#TCEFORM.tt_content.image_noRows.disabled=1
+#TCEFORM.tt_content.imagecaption.disabled = 1
+#TCEFORM.tt_content.imagecaption_position.disabled = 1
+#TCEFORM.tt_content.header.disabled = 1
+TCEFORM.tt_content.header_position.disabled = 0
+#TCEFORM.tt_content.header_layout.disabled = 1
+#TCEFORM.tt_content.header_link.disabled = 1
+#TCEFORM.tt_content.date.disabled = 1
+
+###bei Bildern alles außer "links neben Text (Nr. 26)" ausblenden
+TCEFORM.tt_content.imageorient.removeItems = 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,28,29,30,31,32
+### Set the default image orientation (Nr. 26)
+mod.wizards.newContentElement.wizardItems.common.elements.textpic.tt_content_defValues.imageorient = 26
+### Disable image orientation completly but have Nr. 26 override this setting (to use it as default)
+#TCEFORM.tt_content.imageorient.override = 26
+#TCEFORM.tt_content.imageorient.disabled = 1
+
+### Bildrahmen standardmässig deaktiviert
+#TCEFORM.tt_content.imageborder.disabled = 1
+
+### Nur eine einzige Bildspalte zur Auswahl (entferne alle Standard-Spalten ausser 1)
+     #TCEFORM.tt_content.imagecols.removeItems = 2,3,4,5,6,7,8
+     #TCEFORM.tt_content.imagecols.addItems = 9,10,11,12,13,14,15,16
+### Setze 1 als Standard-Spaltenanzahl
+     #TCAdefaults.tt_content.imagecols = 0
+### Entferne die Bildspaltenanzahl ganz und verwende nur 1 Spalte:
+    #TCEFORM.tt_content.imagecols.disabled = 1
+    #TCEFORM.tt_content.imagecols = 0
+
+RTE.default.preset = zcustom1
+RTE.config.tt_content.bodytext.preset = zcustom1
+
+TCEFORM{
+  tt_content {
+    imagecols {
+      addItems {
+        9 = 9
+        10 = 10
+        11 = 11
+        12 = 12
+        13 = 13
+        14 = 14
+        15 = 15
+        16 = 16
+      }
+    }
+  }
+
+  addItems {
+    12 = Placeholder
+  }
+}
+TCEFORM.pages.layout {
+	addItems {
+	}
+	altLabels {
+		0 = Default
+		1 = Kein weisses Dreieck oben
+		2 = Versatz nach oben
+		3 = Video Header
+	}
+}
+#TCEFORM.tt_content.layout.removeItems = 1,2,3
+#TCEFORM.tt_content.layout.addItems.20 =  Slider
+
+
+
+###Kopierte Elemente nicht verstecken und Titel unveraendert lassen###
+TCEMAIN.table.tt_content {
+  disablePrependAtCopy = 1
+  disableHideAtCopy = 1
+}
+
+TCEFORM.sys_file_reference.crop.config.cropVariants {
+    default {
+        title = Desktop
+        selectedRatio = NaN
+        allowedAspectRatios {
+            NaN {
+                title = Free
+                value = 0.0
+            }
+            21:9 {
+                title = 21:9
+                value = 2.3333333
+            }
+            16:9 {
+                title = 16:9
+                value = 1.7777777
+            }
+            4:3 {
+                title = 4:3
+                value = 1.3333333
+            }
+            3:2 {
+                title = 3:2
+                value = 1.5
+            }
+            1:1 {
+                title = 1:1
+                value = 1
+            }
+        }
+    }
+    tablet {
+        title = Tablet
+        selectedRatio = NaN
+        allowedAspectRatios {
+            NaN {
+                title = Free
+                value = 0.0
+            }
+            21:9 {
+                title = 21:9
+                value = 2.3333333
+            }
+            16:9 {
+                title = 16:9
+                value = 1.7777777
+            }
+            4:3 {
+                title = 4:3
+                value = 1.3333333
+            }
+            3:2 {
+                title = 3:2
+                value = 1.5
+            }
+            1:1 {
+                title = 1:1
+                value = 1
+            }
+        }
+    }
+    mobile {
+        title = Mobile
+        selectedRatio = NaN
+        allowedAspectRatios {
+            NaN {
+                title = Free
+                value = 0.0
+            }
+            21:9 {
+                title = 21:9
+                value = 2.3333333
+            }
+            16:9 {
+                title = 16:9
+                value = 1.7777777
+            }
+            4:3 {
+                title = 4:3
+                value = 1.3333333
+            }
+            3:2 {
+                title = 3:2
+                value = 1.5
+            }
+            1:1 {
+                title = 1:1
+                value = 1
+            }
+        }
+    }
+}
+
+TCEFORM {
+	pages {
+		layout {
+			# Rename the default options for the layout field in table pages
+			altLabels.0 = Seitenlayout - Default
+		}
+		layout.removeItems = 4
+		# There is no need for the Alias field in page properties when we use RealURL
+		alias.disabled = 1
+	}
+	tt_content {
+		layout.addItems {
+			/*
+      4 = Layout 4
+			5 = Layout 5
+			6 = Layout 6
+			7 = Layout 7
+      */
+		}
+		layout {
+			altLabels.0 = Element - Layout 1
+			altLabels.1 = Element - Placeholder
+		}
+
+    #header_layout.removeItems =  4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,100
+		header_layout.addItems {
+			0 = Layout 0
+			1 = Layout 1
+			2 = Layout 2
+			3 = Layout 3
+			4 = Layout 4
+			5 = Layout 5
+			6 = Layout 6
+			7 = Layout 7
+			99 = Layout 99
+		}
+		header_layout{
+			altLabels.0 = H1 - Weiss +  BIG
+			altLabels.1 = H1 - Weiss + middle
+			altLabels.2 = H1 - Blau + BIG
+			altLabels.3 = H1 - Blau + middle
+
+			altLabels.4 = H2 - Weiss + BIG
+			altLabels.5 = H2 - Weiss + middle
+			altLabels.6 = H2 - Blau + BIG
+			altLabels.7 = H2 - Blau + middle
+
+
+      altLabels.99 = Hidden
+		}
+
+		# Remove the 'border' option from selectbox 'column' in content records
+		#colPos.keepItems = 1,0,2
+	}
+}
+
+##frames
+TCEFORM.tt_content.frame_class{
+ addItems {
+  29 = -------------------
+  30 = hide-on-desktop
+  31 = hide-on-mobile
+ }
+}
+
+
+TCEFORM.tx_powermail_domain_model_field{
+    css {
+        addItems{
+          layout4 = 66% Breite
+        }
+        altLabels {
+                layout1 = 50% Breite
+                layout2 = 33% Breite
+                layout3 = 25% Breite
+                layout4 = 66% Breite
+        }
+    }
+}
+
+
+TCEFORM.tt_content {
+    space_before_class{
+      altLabels.extra-small = Abstand_davor_extra-small
+      altLabels.small = Abstand_davor_small
+      altLabels.medium = Abstand_davor_medium
+      altLabels.large = Abstand_davor_large
+      altLabels.extra-large = Abstand_davor_sehr_groß
+    }
+    space_after_class {
+      altLabels.extra-small = Abstand_danach_extra-small
+      altLabels.small = Abstand_danach_small
+      altLabels.medium = Abstand_danach_medium
+      altLabels.large = Abstand_danach_large
+      altLabels.extra-large = Abstand_danach_sehr_groß
+    }
+}
+
+# RTE SETUP
+RTE.default.preset = zcustom1
+RTE.config.tt_content.bodytext.preset = zcustom1
+RTE {
+    default {
+        preset = zcustom1
+    }
+}
+RTE.default.proc.blockElementList = PRE,UL,OL,H1,H2,H3,H4,H5,H6,ADDRESS,DL,DD,HEADER,SECTION,FOOTER,NAV,ARTICLE,ASIDE,IFRAME
+
+RTE.default.proc.allowTags:=addToList(iframe)
+RTE.default.proc.allowTagsOutside:=addToList(iframe)
+RTE.default.proc.entryHTMLparser_db.allowTags<RTE.default.proc.allowTags
+
+styles.content.imgtext.linkWrap {
+   lightboxEnabled = 1
+   width = 800
+}

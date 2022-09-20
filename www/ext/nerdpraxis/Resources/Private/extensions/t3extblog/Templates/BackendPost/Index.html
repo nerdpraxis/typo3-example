@@ -1,0 +1,85 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers"
+			xmlns:t3b="http://typo3.org/ns/FelixNagel/T3extblog/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<f:layout name="Backend" />
+
+<f:section name="headline">
+	<f:translate key="module.post.title" />
+</f:section>
+
+<f:section name="main">
+	<div class="panel panel-space panel-default">
+		<f:if condition="{posts}">
+			<f:then>
+				<div class="table-fit">
+				<t3b:widget.paginate objects="{posts}" as="paginatedPosts" configuration="{settings.backend.posts.paginate}">
+					<table border="0" cellpadding="0" cellspacing="0" class="typo3-dblist table table-striped table-hover">
+						<thead>
+							<tr class="t3-row-header">
+								<td>&nbsp;</td>
+								<td><f:translate key="module.post.table.title" /></td>
+								<td><f:translate key="module.post.table.date" /></td>
+								<td><f:translate key="module.post.table.author" /></td>
+								<td><f:translate key="module.post.table.comments" /></td>
+								<td style="width: 75px;">&nbsp;</td>
+								<f:if condition="{settings.subscriptionManager.blog.subscriber.enableNotifications}">
+									<td style="width: 25px;">&nbsp;</td>
+								</f:if>
+							</tr>
+						</thead>
+
+						<f:for each="{paginatedPosts}" as="post">
+							<tr class="db_list_normal">
+								<td class="col-icon">
+									<a href="#" class="t3js-contextmenutrigger" data-uid="{post.uid}" data-table="tx_t3blog_post" title="{post.uid}">
+										<t3b:backend.spriteIconForRecord table="tx_t3blog_post" object="{post}" />
+									</a>
+								</td>
+								<f:render partial="Backend/Post/RowContent" arguments="{post: post, dateTimeFormat: dateTimeFormat}" />
+								<f:if condition="{settings.subscriptionManager.blog.subscriber.enableNotifications}">
+									<td>
+										<f:if condition="{post.mailSendingAllowed}">
+											<f:link.action
+												title="{f:translate(key: 'module.post.sendBlogSubscriptionEmails')}"
+												action="sendPostNotifications" arguments="{post: post}"
+												onclick="return confirm(\"{f:translate(key: 'general.confirm')}\");">
+												<t3b:backend.spriteManagerIcon iconName="extensions-t3extblog-subscriber" />
+											</f:link.action>
+										</f:if>
+									</td>
+								</f:if>
+							</tr>
+							<t3b:backend.localization translations="localizedRecords" table="tx_t3blog_post" object="{post}">
+								<f:for each="{localizedRecords}" as="localizedPost">
+									<tr class="db_list_normal localized">
+										<td class="col-icon">
+											<f:format.raw>{localizedPost.editIcon}</f:format.raw>
+										</td>
+										<f:render partial="Backend/Post/RowContent" arguments="{post: '{t3b:backend.getPost(uid: localizedPost.uid, respectEnableFields: 0)}', dateTimeFormat: dateTimeFormat}" />
+										<td></td>
+									</tr>
+								</f:for>
+							</t3b:backend.localization>
+						</f:for>
+
+						<tr>
+							<td colspan="{f:if(condition: '{settings.subscriptionManager.blog.subscriber.enableNotifications}', then: 7, else: 6)}">
+								<f:translate
+									key="module.post.table.count"
+									arguments="{0: '{paginatedPosts -> f:count()}', 1: '{posts -> f:count()}'}" />
+							</td>
+						</tr>
+					</table>
+				</t3b:widget.paginate>
+				</div>
+			</f:then>
+			<f:else>
+				<div class="panel-body">
+					<em><f:translate key="module.post.noRecords" /></em>
+				</div>
+			</f:else>
+		</f:if>
+	</div>
+</f:section>
+
+</html>

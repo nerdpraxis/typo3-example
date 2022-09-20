@@ -1,0 +1,20 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers" xmlns:t3b="http://typo3.org/ns/FelixNagel/T3extblog/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<f:layout name="Default"/>
+
+<f:section name="main">
+	<f:if condition="{posts}">
+		<t3b:widget.paginate objects="{posts}" as="paginatedPosts" configuration="{settings.latestPosts.paginate}">
+			<div class="container mb-10 px-4">
+				<div class="row gx-10 gy-5 minusmargin">
+					<f:for each="{paginatedPosts}" as="post">
+						<f:render partial="Post/Latest" arguments="{post: post, settings: settings}"/>
+					</f:for>
+				</div>
+			</div>
+		</t3b:widget.paginate>
+	</f:if>
+
+</f:section>
+
+</html>

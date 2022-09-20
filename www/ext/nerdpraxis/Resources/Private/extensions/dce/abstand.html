@@ -1,0 +1,42 @@
+
+{namespace v=FluidTYPO3\Vhs\ViewHelpers}
+
+<v:asset.style name="{contentObject.uid}" content=".abstandselement#c{contentObject.uid},.ae-none{
+	height: {field.margintopxl};
+    width: 100%;
+}
+<f:if condition='{field.margintopxl}!='>
+@media only screen and (min-width: 1490px){
+	.abstandselement#c{contentObject.uid},.ae-xl{
+		height: {field.margintopxl} !important;
+	}
+}</f:if>
+<f:if condition='{field.marginlg}!='>
+@media only screen and (min-width: 1200px) and (max-width: 1490px){
+	.abstandselement#c{contentObject.uid},.ae-lg{
+		height: {field.marginlg} !important;
+	}
+}</f:if>
+<f:if condition='{field.marginmd}!='>
+@media only screen and (min-width: 576px) and (max-width: 1200px){
+	.abstandselement#c{contentObject.uid},.ae-md{
+		height: {field.marginmd} !important;
+	}
+}</f:if>
+<f:if condition='{field.marginsm}!='>
+@media only screen and (min-width: 461px) and (max-width: 576px){
+	.abstandselement#c{contentObject.uid},.ae-sm{
+		height: {field.marginsm} !important;
+	}
+}</f:if>
+<f:if condition='{field.marginxs}!='>
+@media only screen and (max-width: 461px){
+	.abstandselement#c{contentObject.uid},.ae-xs{
+		height: {field.marginxs} !important;
+	}
+}</f:if>" overwrite="1" group="flex{contentObject.uid}" standalone="1" rewrite="1" fluid="0" namedChunks="0"></v:asset.style>
+<div class="container">
+	<div class="row">
+		<div id="c{contentObject.uid}" class="abstandselement"></div>
+	</div>
+</div>

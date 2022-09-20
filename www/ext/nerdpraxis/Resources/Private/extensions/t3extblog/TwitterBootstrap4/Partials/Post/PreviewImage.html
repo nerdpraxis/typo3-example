@@ -1,0 +1,20 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<f:if condition="{post.previewImage}">
+	<figure class="figure preview d-block w-100 ratio ratio-16x9 cursor-pointer">
+		<f:link.action class="ratio ratio-16x9 d-block w-100" pluginName="Blogsystem" controller="Post" action="show" pageUid="{settings.blogsystem.pid}" arguments="{post.linkParameter}">
+			<div class="c-glitch w-100 d-block ratio ratio-16x9 bg-norepeat" style="background-image: url({f:uri.image(image: post.previewImage, maxWidth: 600, cropVariant: 'default')});">
+				<div class="c-glitch__img w-100 d-block bg-norepeat" style="background-image: url({f:uri.image(image: post.previewImage, maxWidth: 600, cropVariant: 'default')});"></div>
+				<div class="c-glitch__img w-100 d-block bg-norepeat" style="background-image: url({f:uri.image(image: post.previewImage, maxWidth: 600, cropVariant: 'default')});"></div>
+				<div class="c-glitch__img w-100 d-block bg-norepeat" style="background-image: url({f:uri.image(image: post.previewImage, maxWidth: 600, cropVariant: 'default')});"></div>
+				<div class="c-glitch__img w-100 d-block bg-norepeat" style="background-image: url({f:uri.image(image: post.previewImage, maxWidth: 600, cropVariant: 'default')});"></div>
+				<div class="c-glitch__img w-100 d-block bg-norepeat" style="background-image: url({f:uri.image(image: post.previewImage, maxWidth: 600, cropVariant: 'default')});"></div>
+			</div>
+		<figcaption class="figure-caption mb-4">
+			<f:render partial="Post/ImageCaption" arguments="{image: post.previewImage, settings: settings}"/>
+		</figcaption>
+		</f:link.action>
+	</figure>
+</f:if>
+
+</html>

@@ -1,0 +1,49 @@
+$img-small-size: 120px;
+$img-big-size: 180px;
+$img-padding: 15px;
+$img-rahmen: 5px;
+
+/* animation */
+div.hover-zoom-gallery figure, div.hover-zoom-gallery figure img {
+	-webkit-transition: all 0.1s ease-in-out;
+  	-moz-transition: all 0.1s ease-in-out;
+  	-o-transition: all 0.1s ease-in-out;
+  	transition: all 0.1s ease-in-out;
+}
+
+div.hover-zoom-gallery figure{
+	position: relative;
+	float: left;
+	width: $img-small-size;
+	height: $img-small-size;
+	margin: $img-padding;
+	padding: $img-padding;
+	z-index: 0;
+}
+
+/* Make sure z-index is higher on hover */
+/* Ensure that hover image overlapped the others */
+div.hover-zoom-gallery figure:hover {
+	z-index: 5;
+}
+
+/* Image is position nicely under li */
+div.hover-zoom-gallery figure img {
+	position: absolute;
+	left: 0;
+	top: 0;
+	border: 1px solid #dddddd;
+	padding: $img-rahmen;
+	width: $img-small-size;
+	height: $img-small-size;
+	background: #f0f0f0;
+}
+
+div.hover-zoom-gallery figure img:hover {
+	width: $img-big-size;
+	height: $img-big-size;
+	margin-top: -$img-small-size;
+	margin-left: -$img-small-size;
+	top: 65%;
+	left: 65%;
+}

@@ -1,0 +1,65 @@
+{namespace v=FluidTYPO3\Vhs\ViewHelpers}
+
+<f:comment>
+	ACHTUNG! Die Leerzeichen sind absichtlich so gesetzt um den ausgegebenen Code sauberer zu halten
+</f:comment>
+<section class="threecolsgrid <f:if condition='{data.space_after_class}'>frame-space-after-{data.space_after_class}</f:if> <f:if condition='{data.space_before_class}'>frame-space-before-{data.space_before_class}</f:if> container {v:format.replace(substring: ',', content: '{data.flexform_cssklassenliste}', replacement: ' ')}  <f:if condition="{data.flexform_animation}!=disabled">{data.flexform_animation} start wow animated </f:if><f:if condition="{data.flexform_animationspeed}!=default">{data.flexform_animationspeed} </f:if><f:if condition="{data.flexform_animationdelay}!=none">{data.flexform_animationdelay} </f:if>" id="c{data.uid}" style="<f:if condition="{data.flexform_gutter}==false">margin:0 auto;</f:if> <f:if condition="{data.flexform_inlineCSS}">{data.flexform_inlineCSS}</f:if>">
+    <div class="row">
+               <f:if condition="{children}">
+                   <f:for each="{children.1}" as="column" key="columnNumber">
+
+                       <f:if condition="{columnNumber} == 4">
+                           <article id="c{data.uid}-{columnNumber}"  class="{v:format.replace(substring: ',', content: '{data.flexform_cssklassenlisteleft}', replacement: ' ')} twocols_grid_left grid-column-{columnNumber} custom-col-left offset-{data.flexform_colleftoffset} col-{data.flexform_colleft} offset-sm-{data.flexform_colsmleftoffset} col-sm-{data.flexform_colsmleft} offset-md-{data.flexform_colmdleftoffset} col-md-{data.flexform_colmdleft} offset-lg-{data.flexform_collgleftoffset} col-lg-{data.flexform_collgleft} offset-xl-{data.flexform_colxlleftoffset} col-xl-{data.flexform_colxlleft} {data.flexform_cssklassen_left}" style=" <f:if condition="{data.flexform_verlaufsfarbe_start_left}">background: linear-gradient({data.flexform_verlaufsfarbe_winkel_left}deg, {data.flexform_verlaufsfarbe_ende_left} 0%, {data.flexform_verlaufsfarbe_start_left} 100%);color:{data.flexform_verlaufsfarbe_schriftfarbe_left};</f:if>">
+
+                                    <f:for each="{column}" as="child">
+                                       <f:render partial="Child"
+                                           arguments="{data: child.data, children: child.children, options: options, settings: settings}" />
+                                   </f:for>
+
+                           </article>
+                       </f:if>
+
+                       <f:if condition="{columnNumber} == 6">
+                           <article id="c{data.uid}-{columnNumber}"  class="{v:format.replace(substring: ',', content: '{data.flexform_cssklassenlistecenter}', replacement: ' ')} twocols_grid_center grid-column-{columnNumber} custom-col-center offset-{data.flexform_colcenteroffset} col-{data.flexform_colcenter} offset-sm-{data.flexform_colsmcenteroffset} col-sm-{data.flexform_colsmcenter} offset-md-{data.flexform_colmdcenteroffset} col-md-{data.flexform_colmdcenter} offset-lg-{data.flexform_collgcenteroffset} col-lg-{data.flexform_collgcenter} offset-xl-{data.flexform_colxlcenteroffset} col-xl-{data.flexform_colxlcenter} {data.flexform_cssklassen_center}" style=" <f:if condition="{data.flexform_verlaufsfarbe_start_center}">background: linear-gradient({data.flexform_verlaufsfarbe_winkel_center}deg, {data.flexform_verlaufsfarbe_ende_center} 0%, {data.flexform_verlaufsfarbe_start_center} 100%);color:{data.flexform_verlaufsfarbe_schriftfarbe_center};</f:if>">
+
+                                    <f:for each="{column}" as="child">
+                                       <f:render partial="Child"
+                                           arguments="{data: child.data, children: child.children, options: options, settings: settings}" />
+                                   </f:for>
+
+                           </article>
+                       </f:if>
+
+                       <f:if condition="{columnNumber} == 5">
+                           <article id="c{data.uid}-{columnNumber}"  class="{v:format.replace(substring: ',', content: '{data.flexform_cssklassenlisteright}', replacement: ' ')} twocols_grid_right grid-column-{columnNumber} custom-col-right offset-{data.flexform_colrightoffset} col-{data.flexform_colright} offset-sm-{data.flexform_colsmrightoffset} col-sm-{data.flexform_colsmright} offset-md-{data.flexform_colmdrightoffset} col-md-{data.flexform_colmdright} offset-lg-{data.flexform_collgrightoffset} col-lg-{data.flexform_collgright} offset-xl-{data.flexform_colxlrightoffset} col-xl-{data.flexform_colxlright} {data.flexform_cssklassen_right}"   style=" <f:if condition="{data.flexform_verlaufsfarbe_start_right}">background: linear-gradient({data.flexform_verlaufsfarbe_winkel_right}deg, {data.flexform_verlaufsfarbe_ende_right} 0%, {data.flexform_verlaufsfarbe_start_right} 100%);color:{data.flexform_verlaufsfarbe_schriftfarbe_right};</f:if>">
+
+                                    <f:for each="{column}" as="child">
+                                       <f:render partial="Child"
+                                           arguments="{data: child.data, children: child.children, options: options, settings: settings}" />
+                                   </f:for>
+
+                           </article>
+                       </f:if>
+
+
+                   </f:for>
+               </f:if>
+   	</div>
+</section>
+<f:if condition="{data.flexform_verlaufsfarbe_schriftfarbe}">
+<style>
+    #c{data.uid}{
+    color:<f:comment></f:comment>{data.flexform_verlaufsfarbe_schriftfarbe}
+    }
+    #c{data.uid} p{
+    color:<f:comment></f:comment>{data.flexform_verlaufsfarbe_schriftfarbe}
+    }
+    #c{data.uid} h1,
+    #c{data.uid} h2,
+    #c{data.uid} h3,
+    #c{data.uid} h4,
+    #c{data.uid} h5 {
+    color:<f:comment></f:comment>{data.flexform_verlaufsfarbe_schriftfarbe}
+    }
+</style>
+</f:if>

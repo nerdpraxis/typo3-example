@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <defs>
+    <style>.cls-1{fill:#29abe2;}.cls-2{fill:#ff3232;}.cls-3,.cls-5{fill:none;}.cls-3,.cls-4,.cls-5{stroke:#fff;stroke-miterlimit:10;}.cls-3,.cls-4{stroke-linecap:square;}.cls-4,.cls-6{fill:#fff;}</style>
+  </defs>
+  <g id="Ebene_2" data-name="Ebene 2">
+    <rect class="cls-1" x="0.5" y="0.5" width="31" height="31"></rect>
+    <path d="M31,1V31H1V1H31m1-1H0V32H32V0Z"></path>
+  </g>
+  <g id="Ebene_1" data-name="Ebene 1">
+    <rect class="cls-2" x="2.5" y="7.5" width="27" height="17"></rect>
+    <path d="M29,8V24H3V8H29m1-1H2V25H30V7Z"></path>
+    <line class="cls-3" x1="4.5" y1="9.5" x2="12.5" y2="9.5"></line>
+    <line class="cls-3" x1="4.5" y1="14.5" x2="19.5" y2="14.5"></line>
+    <line class="cls-3" x1="4.5" y1="16.5" x2="7.5" y2="16.5"></line>
+    <line class="cls-3" x1="4.5" y1="18.5" x2="20.5" y2="18.5"></line>
+    <line class="cls-3" x1="4.5" y1="20.5" x2="11.5" y2="20.5"></line>
+    <line class="cls-3" x1="4.5" y1="22.5" x2="10.5" y2="22.5"></line>
+    <line class="cls-3" x1="9.5" y1="16.5" x2="13.5" y2="16.5"></line>
+    <rect class="cls-4" x="25.5" y="9.5" width="2" height="2"></rect>
+    <line class="cls-5" x1="22.5" y1="22.5" x2="27.06" y2="22.5"></line>
+    <polygon class="cls-6" points="26.77 23.5 28.5 22.5 26.77 21.5 26.77 23.5"></polygon>
+  </g>
+</svg>

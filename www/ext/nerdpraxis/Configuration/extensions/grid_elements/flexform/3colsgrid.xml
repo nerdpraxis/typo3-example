@@ -1,0 +1,3132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<T3DataStructure>
+	<meta>
+		<langDisable>1</langDisable>
+	</meta>
+	<sheets>
+		<allgemein>
+			<ROOT type="array">
+				<TCEforms>
+					<sheetTitle>Allgemein</sheetTitle>
+				</TCEforms>
+				<type>array</type>
+				<el type="array">
+					<hinweis type="array">
+						<TCEforms type="array">
+							<label>Hinweis</label>
+							<config>
+								<type>text</type>
+								<rows>2</rows>
+								<cols>45</cols>
+								<eval>trim</eval>
+								<readOnly>true</readOnly>
+								<default>Die Cols müssen immer 12, oder ein vielfaches von 12 zusammen ergeben !</default>
+							</config>
+						</TCEforms>
+					</hinweis>
+
+					<cssklassenliste type="array">
+							<TCEforms type="array">
+								<label>CSS Klassen Liste</label>
+									<config>
+										<type>selectSingle</type>
+										<items type="array">
+											<numIndex index="0" type="array">
+												<numIndex index="0">Grau</numIndex>
+												<numIndex index="1">grey</numIndex>
+											</numIndex>
+										</items>
+										<size>4</size>
+										<minitems>0</minitems>
+										<maxitems>999</maxitems>
+										<multiple>1</multiple>
+										<enableMultiSelectFilterTextfield>1</enableMultiSelectFilterTextfield>
+									</config>
+							</TCEforms>
+					</cssklassenliste>
+
+					<cssklassen type="array">
+						<TCEforms type="array">
+							<label>Zusätzliche CSS Klassen (optional)</label>
+							<config>
+								<type>input</type>
+								<size>30</size>
+								<eval>trim</eval>
+							</config>
+						</TCEforms>
+					</cssklassen>
+
+					<inlineCSS type="array">
+						<TCEforms type="array">
+							<label>inlineCSS (optional)</label>
+							<config>
+								<type>input</type>
+								<size>120</size>
+								<eval>trim</eval>
+							</config>
+						</TCEforms>
+					</inlineCSS>
+
+					<animation type="array">
+						<TCEforms type="array">
+							<label>AnimateCSS Animation (optional)</label>
+							<config>
+								<type>selectSingle</type>
+								<items type="array">
+									<numIndex index="1" type="array">
+										<numIndex index="0">disabled</numIndex>
+										<numIndex index="1">disabled</numIndex>
+									</numIndex>
+									<numIndex index="2" type="array">
+										<numIndex index="0">flash</numIndex>
+										<numIndex index="1">flash</numIndex>
+									</numIndex>
+									<numIndex index="3" type="array">
+										<numIndex index="0">pulse</numIndex>
+										<numIndex index="1">pulse</numIndex>
+									</numIndex>
+									<numIndex index="4" type="array">
+										<numIndex index="0">rubberBand</numIndex>
+										<numIndex index="1">rubberBand</numIndex>
+									</numIndex>
+									<numIndex index="5" type="array">
+										<numIndex index="0">shake</numIndex>
+										<numIndex index="1">shake</numIndex>
+									</numIndex>
+									<numIndex index="6" type="array">
+										<numIndex index="0">headShake</numIndex>
+										<numIndex index="1">headShake</numIndex>
+									</numIndex>
+									<numIndex index="7" type="array">
+										<numIndex index="0">swing</numIndex>
+										<numIndex index="1">swing</numIndex>
+									</numIndex>
+									<numIndex index="8" type="array">
+										<numIndex index="0">tada</numIndex>
+										<numIndex index="1">tada</numIndex>
+									</numIndex>
+									<numIndex index="9" type="array">
+										<numIndex index="0">wobble</numIndex>
+										<numIndex index="1">wobble</numIndex>
+									</numIndex>
+									<numIndex index="10" type="array">
+										<numIndex index="0">jello</numIndex>
+										<numIndex index="1">jello</numIndex>
+									</numIndex>
+									<numIndex index="11" type="array">
+										<numIndex index="0">bounceIn</numIndex>
+										<numIndex index="1">bounceIn</numIndex>
+									</numIndex>
+									<numIndex index="12" type="array">
+										<numIndex index="0">bounceInDown</numIndex>
+										<numIndex index="1">bounceInDown</numIndex>
+									</numIndex>
+									<numIndex index="13" type="array">
+										<numIndex index="0">bounceInLeft</numIndex>
+										<numIndex index="1">bounceInLeft</numIndex>
+									</numIndex>
+									<numIndex index="14" type="array">
+										<numIndex index="0">bounceInRight</numIndex>
+										<numIndex index="1">bounceInRight</numIndex>
+									</numIndex>
+									<numIndex index="15" type="array">
+										<numIndex index="0">bounceInUp</numIndex>
+										<numIndex index="1">bounceInUp</numIndex>
+									</numIndex>
+									<numIndex index="16" type="array">
+										<numIndex index="0">bounceOut</numIndex>
+										<numIndex index="1">bounceOut</numIndex>
+									</numIndex>
+									<numIndex index="17" type="array">
+										<numIndex index="0">bounceOutDown</numIndex>
+										<numIndex index="1">bounceOutDown</numIndex>
+									</numIndex>
+									<numIndex index="18" type="array">
+										<numIndex index="0">bounceOutLeft</numIndex>
+										<numIndex index="1">bounceOutLeft</numIndex>
+									</numIndex>
+									<numIndex index="19" type="array">
+										<numIndex index="0">bounceOutRight</numIndex>
+										<numIndex index="1">bounceOutRight</numIndex>
+									</numIndex>
+									<numIndex index="20" type="array">
+										<numIndex index="0">bounceOutUp</numIndex>
+										<numIndex index="1">bounceOutUp</numIndex>
+									</numIndex>
+									<numIndex index="21" type="array">
+										<numIndex index="0">fadeIn</numIndex>
+										<numIndex index="1">fadeIn</numIndex>
+									</numIndex>
+									<numIndex index="22" type="array">
+										<numIndex index="0">fadeInDown</numIndex>
+										<numIndex index="1">fadeInDown</numIndex>
+									</numIndex>
+									<numIndex index="23" type="array">
+										<numIndex index="0">fadeInDownBig</numIndex>
+										<numIndex index="1">fadeInDownBig</numIndex>
+									</numIndex>
+									<numIndex index="24" type="array">
+										<numIndex index="0">fadeInLeft</numIndex>
+										<numIndex index="1">fadeInLeft</numIndex>
+									</numIndex>
+									<numIndex index="25" type="array">
+										<numIndex index="0">fadeInLeftBig</numIndex>
+										<numIndex index="1">fadeInLeftBig</numIndex>
+									</numIndex>
+									<numIndex index="26" type="array">
+										<numIndex index="0">fadeInRight</numIndex>
+										<numIndex index="1">fadeInRight</numIndex>
+									</numIndex>
+									<numIndex index="27" type="array">
+										<numIndex index="0">fadeInRightBig</numIndex>
+										<numIndex index="1">fadeInRightBig</numIndex>
+									</numIndex>
+									<numIndex index="28" type="array">
+										<numIndex index="0">fadeInUp</numIndex>
+										<numIndex index="1">fadeInUp</numIndex>
+									</numIndex>
+									<numIndex index="29" type="array">
+										<numIndex index="0">fadeInUpBig</numIndex>
+										<numIndex index="1">fadeInUpBig</numIndex>
+									</numIndex>
+									<numIndex index="30" type="array">
+										<numIndex index="0">fadeOut</numIndex>
+										<numIndex index="1">fadeOut</numIndex>
+									</numIndex>
+									<numIndex index="31" type="array">
+										<numIndex index="0">fadeOutDown</numIndex>
+										<numIndex index="1">fadeOutDown</numIndex>
+									</numIndex>
+									<numIndex index="32" type="array">
+										<numIndex index="0">fadeOutDownBig</numIndex>
+										<numIndex index="1">fadeOutDownBig</numIndex>
+									</numIndex>
+									<numIndex index="33" type="array">
+										<numIndex index="0">fadeOutLeft</numIndex>
+										<numIndex index="1">fadeOutLeft</numIndex>
+									</numIndex>
+									<numIndex index="34" type="array">
+										<numIndex index="0">fadeOutLeftBig</numIndex>
+										<numIndex index="1">fadeOutLeftBig</numIndex>
+									</numIndex>
+									<numIndex index="35" type="array">
+										<numIndex index="0">fadeOutRight</numIndex>
+										<numIndex index="1">fadeOutRight</numIndex>
+									</numIndex>
+									<numIndex index="36" type="array">
+										<numIndex index="0">fadeOutRightBig</numIndex>
+										<numIndex index="1">fadeOutRightBig</numIndex>
+									</numIndex>
+									<numIndex index="37" type="array">
+										<numIndex index="0">fadeOutUp</numIndex>
+										<numIndex index="1">fadeOutUp</numIndex>
+									</numIndex>
+									<numIndex index="38" type="array">
+										<numIndex index="0">fadeOutUpBig</numIndex>
+										<numIndex index="1">fadeOutUpBig</numIndex>
+									</numIndex>
+									<numIndex index="39" type="array">
+										<numIndex index="0">flipInX</numIndex>
+										<numIndex index="1">flipInX</numIndex>
+									</numIndex>
+									<numIndex index="40" type="array">
+										<numIndex index="0">flipInY</numIndex>
+										<numIndex index="1">flipInY</numIndex>
+									</numIndex>
+									<numIndex index="41" type="array">
+										<numIndex index="0">flipOutX</numIndex>
+										<numIndex index="1">flipOutX</numIndex>
+									</numIndex>
+									<numIndex index="42" type="array">
+										<numIndex index="0">flipOutY</numIndex>
+										<numIndex index="1">flipOutY</numIndex>
+									</numIndex>
+									<numIndex index="43" type="array">
+										<numIndex index="0">lightSpeedIn</numIndex>
+										<numIndex index="1">lightSpeedIn</numIndex>
+									</numIndex>
+									<numIndex index="44" type="array">
+										<numIndex index="0">lightSpeedOut</numIndex>
+										<numIndex index="1">lightSpeedOut</numIndex>
+									</numIndex>
+									<numIndex index="45" type="array">
+										<numIndex index="0">rotateIn</numIndex>
+										<numIndex index="1">rotateIn</numIndex>
+									</numIndex>
+									<numIndex index="46" type="array">
+										<numIndex index="0">rotateInDownLeft</numIndex>
+										<numIndex index="1">rotateInDownLeft</numIndex>
+									</numIndex>
+									<numIndex index="47" type="array">
+										<numIndex index="0">rotateInDownRight</numIndex>
+										<numIndex index="1">rotateInDownRight</numIndex>
+									</numIndex>
+									<numIndex index="48" type="array">
+										<numIndex index="0">rotateInUpLeft</numIndex>
+										<numIndex index="1">rotateInUpLeft</numIndex>
+									</numIndex>
+									<numIndex index="49" type="array">
+										<numIndex index="0">rotateInUpRight</numIndex>
+										<numIndex index="1">rotateInUpRight</numIndex>
+									</numIndex>
+									<numIndex index="50" type="array">
+										<numIndex index="0">rotateOut</numIndex>
+										<numIndex index="1">rotateOut</numIndex>
+									</numIndex>
+									<numIndex index="51" type="array">
+										<numIndex index="0">rotateOutDownLeft</numIndex>
+										<numIndex index="1">rotateOutDownLeft</numIndex>
+									</numIndex>
+									<numIndex index="52" type="array">
+										<numIndex index="0">rotateOutDownRight</numIndex>
+										<numIndex index="1">rotateOutDownRight</numIndex>
+									</numIndex>
+									<numIndex index="53" type="array">
+										<numIndex index="0">rotateOutUpLeft</numIndex>
+										<numIndex index="1">rotateOutUpLeft</numIndex>
+									</numIndex>
+									<numIndex index="54" type="array">
+										<numIndex index="0">rotateOutUpRight</numIndex>
+										<numIndex index="1">rotateOutUpRight</numIndex>
+									</numIndex>
+									<numIndex index="55" type="array">
+										<numIndex index="0">hinge</numIndex>
+										<numIndex index="1">hinge</numIndex>
+									</numIndex>
+									<numIndex index="56" type="array">
+										<numIndex index="0">jackInTheBox</numIndex>
+										<numIndex index="1">jackInTheBox</numIndex>
+									</numIndex>
+									<numIndex index="57" type="array">
+										<numIndex index="0">rollIn</numIndex>
+										<numIndex index="1">rollIn</numIndex>
+									</numIndex>
+									<numIndex index="58" type="array">
+										<numIndex index="0">rollOut</numIndex>
+										<numIndex index="1">rollOut</numIndex>
+									</numIndex>
+									<numIndex index="59" type="array">
+										<numIndex index="0">zoomIn</numIndex>
+										<numIndex index="1">zoomIn</numIndex>
+									</numIndex>
+									<numIndex index="60" type="array">
+										<numIndex index="0">zoomInDown</numIndex>
+										<numIndex index="1">zoomInDown</numIndex>
+									</numIndex>
+									<numIndex index="61" type="array">
+										<numIndex index="0">zoomInLeft</numIndex>
+										<numIndex index="1">zoomInLeft</numIndex>
+									</numIndex>
+									<numIndex index="62" type="array">
+										<numIndex index="0">zoomInRight</numIndex>
+										<numIndex index="1">zoomInRight</numIndex>
+									</numIndex>
+									<numIndex index="63" type="array">
+										<numIndex index="0">zoomInUp</numIndex>
+										<numIndex index="1">zoomInUp</numIndex>
+									</numIndex>
+									<numIndex index="64" type="array">
+										<numIndex index="0">zoomOut</numIndex>
+										<numIndex index="1">zoomOut</numIndex>
+									</numIndex>
+									<numIndex index="65" type="array">
+										<numIndex index="0">zoomOutDown</numIndex>
+										<numIndex index="1">zoomOutDown</numIndex>
+									</numIndex>
+									<numIndex index="66" type="array">
+										<numIndex index="0">zoomOutLeft</numIndex>
+										<numIndex index="1">zoomOutLeft</numIndex>
+									</numIndex>
+									<numIndex index="67" type="array">
+										<numIndex index="0">zoomOutRight</numIndex>
+										<numIndex index="1">zoomOutRight</numIndex>
+									</numIndex>
+									<numIndex index="68" type="array">
+										<numIndex index="0">zoomOutUp</numIndex>
+										<numIndex index="1">zoomOutUp</numIndex>
+									</numIndex>
+									<numIndex index="69" type="array">
+										<numIndex index="0">slideInDown</numIndex>
+										<numIndex index="1">slideInDown</numIndex>
+									</numIndex>
+									<numIndex index="70" type="array">
+										<numIndex index="0">slideInLeft</numIndex>
+										<numIndex index="1">slideInLeft</numIndex>
+									</numIndex>
+									<numIndex index="71" type="array">
+										<numIndex index="0">slideInRight</numIndex>
+										<numIndex index="1">slideInRight</numIndex>
+									</numIndex>
+									<numIndex index="72" type="array">
+										<numIndex index="0">slideInUp</numIndex>
+										<numIndex index="1">slideInUp</numIndex>
+									</numIndex>
+									<numIndex index="73" type="array">
+										<numIndex index="0">slideOutDown</numIndex>
+										<numIndex index="1">slideOutDown</numIndex>
+									</numIndex>
+									<numIndex index="74" type="array">
+										<numIndex index="0">slideOutLeft</numIndex>
+										<numIndex index="1">slideOutLeft</numIndex>
+									</numIndex>
+									<numIndex index="75" type="array">
+										<numIndex index="0">slideOutRight</numIndex>
+										<numIndex index="1">slideOutRight</numIndex>
+									</numIndex>
+									<numIndex index="76" type="array">
+										<numIndex index="0">slideOutUp</numIndex>
+										<numIndex index="1">slideOutUp</numIndex>
+									</numIndex>
+									<numIndex index="77" type="array">
+										<numIndex index="0">heartBeat</numIndex>
+										<numIndex index="1">heartBeat</numIndex>
+									</numIndex>
+									<numIndex index="78" type="array">
+										<numIndex index="0">bounce</numIndex>
+										<numIndex index="1">bounce</numIndex>
+									</numIndex>
+								</items>
+								<size>1</size>
+								<minitems>1</minitems>
+								<maxitems>1</maxitems>
+							</config>
+							<!-- <onChange>reload</onChange> -->
+
+						</TCEforms>
+					</animation>
+
+					<animationspeed type="array">
+						<TCEforms type="array">
+							<label>Animations-Geschwindigkeit (optional)</label>
+							<config>
+								<type>selectSingle</type>
+								<items type="array">
+									<numIndex index="1" type="array">
+										<numIndex index="0">default - 1s</numIndex>
+										<numIndex index="1">default</numIndex>
+									</numIndex>
+									<numIndex index="2" type="array">
+										<numIndex index="0">slow - 2s</numIndex>
+										<numIndex index="1">slow</numIndex>
+									</numIndex>
+									<numIndex index="3" type="array">
+										<numIndex index="0">slower - 3s</numIndex>
+										<numIndex index="1">slower</numIndex>
+									</numIndex>
+									<numIndex index="4" type="array">
+										<numIndex index="0">fast - 800ms</numIndex>
+										<numIndex index="1">fast</numIndex>
+									</numIndex>
+									<numIndex index="5" type="array">
+										<numIndex index="0">faster - 500ms</numIndex>
+										<numIndex index="1">faster</numIndex>
+									</numIndex>
+								</items>
+								<size>1</size>
+								<minitems>1</minitems>
+								<maxitems>1</maxitems>
+							</config>
+						</TCEforms>
+					</animationspeed>
+
+					<animationdelay type="array">
+						<TCEforms type="array">
+							<label>Animations-Verzögerung (optional)</label>
+							<config>
+								<type>selectSingle</type>
+								<items type="array">
+									<numIndex index="1" type="array">
+										<numIndex index="0">none</numIndex>
+										<numIndex index="1">none</numIndex>
+									</numIndex>
+									<numIndex index="2" type="array">
+										<numIndex index="0">delay-2s</numIndex>
+										<numIndex index="1">delay-2s</numIndex>
+									</numIndex>
+									<numIndex index="3" type="array">
+										<numIndex index="0">delay-3s</numIndex>
+										<numIndex index="1">delay-3s</numIndex>
+									</numIndex>
+									<numIndex index="4" type="array">
+										<numIndex index="0">delay-4s</numIndex>
+										<numIndex index="1">delay-4s</numIndex>
+									</numIndex>
+									<numIndex index="5" type="array">
+										<numIndex index="0">delay-5s</numIndex>
+										<numIndex index="1">delay-5s</numIndex>
+									</numIndex>
+								</items>
+								<size>1</size>
+								<minitems>1</minitems>
+								<maxitems>1</maxitems>
+							</config>
+						</TCEforms>
+					</animationdelay>
+
+                    <verlaufsfarbe_start type="array">
+                        <TCEforms type="array">
+                            <label>Start - Verlaufsfarbe</label>
+                            <config>
+                            	<type>input</type>
+                            	<renderType>colorpicker</renderType>
+                            	<size>10</size>
+                            </config>
+                        </TCEforms>
+                    </verlaufsfarbe_start>
+
+                    <verlaufsfarbe_ende type="array">
+                        <TCEforms type="array">
+                            <label>Ende - Verlaufsfarbe</label>
+                            <config>
+                            	<type>input</type>
+                            	<renderType>colorpicker</renderType>
+                            	<size>10</size>
+                            </config>
+                        </TCEforms>
+                    </verlaufsfarbe_ende>
+
+                    <verlaufsfarbe_winkel type="array">
+                        <TCEforms type="array">
+                            <label>Verlauf - Winkel°</label>
+                            <config>
+                                <type>input</type>
+                                <size>5</size>
+                                <eval>trim</eval>
+                            </config>
+                        </TCEforms>
+                    </verlaufsfarbe_winkel>
+
+                    <verlaufsfarbe_schriftfarbe type="array">
+                        <TCEforms type="array">
+                            <label>Verlauf - Schriftfarbe</label>
+                            <config>
+                            	<type>input</type>
+                            	<renderType>colorpicker</renderType>
+                            	<size>10</size>
+                            </config>
+                        </TCEforms>
+                    </verlaufsfarbe_schriftfarbe>
+
+				</el>
+			</ROOT>
+		</allgemein>
+
+		<colxl>
+			<ROOT type="array">
+				<TCEforms>
+					<sheetTitle>Extra large / Desktop</sheetTitle>
+				</TCEforms>
+				<type>array</type>
+				<el type="array">
+
+					<colxlleft type="array">
+						<TCEforms type="array">
+							<label>col-xl left</label>
+							<config>
+								<type>input</type>
+								<size>30</size>
+								<eval>trim,required</eval>
+								<default>4</default>
+							</config>
+						</TCEforms>
+					</colxlleft>
+
+					<colxlcenter type="array">
+						<TCEforms type="array">
+							<label>col-xl center</label>
+							<config>
+								<type>input</type>
+								<size>30</size>
+								<eval>trim,required</eval>
+								<default>4</default>
+							</config>
+						</TCEforms>
+					</colxlcenter>
+
+					<colxlright type="array">
+						<TCEforms type="array">
+							<label>col-xl right</label>
+							<config>
+								<type>input</type>
+								<size>30</size>
+								<eval>trim,required</eval>
+								<default>4</default>
+							</config>
+						</TCEforms>
+					</colxlright>
+
+					<colxlleftoffset type="array">
+						<TCEforms type="array">
+							<label>col-xl left offset</label>
+							<config>
+								<type>selectSingle</type>
+								<items type="array">
+									<numIndex index="0" type="array">
+										<numIndex index="0">No Offset</numIndex>
+										<numIndex index="1">0</numIndex>
+									</numIndex>
+									<numIndex index="1" type="array">
+										<numIndex index="0">1 Offset</numIndex>
+										<numIndex index="1">1</numIndex>
+									</numIndex>
+									<numIndex index="2" type="array">
+										<numIndex index="0">2 Offset</numIndex>
+										<numIndex index="1">2</numIndex>
+									</numIndex>
+									<numIndex index="3" type="array">
+										<numIndex index="0">3 Offset</numIndex>
+										<numIndex index="1">3</numIndex>
+									</numIndex>
+									<numIndex index="3" type="array">
+										<numIndex index="0">3 Offset</numIndex>
+										<numIndex index="1">3</numIndex>
+									</numIndex>
+									<numIndex index="4" type="array">
+										<numIndex index="0">4 Offset</numIndex>
+										<numIndex index="1">4</numIndex>
+									</numIndex>
+									<numIndex index="5" type="array">
+										<numIndex index="0">5 Offset</numIndex>
+										<numIndex index="1">5</numIndex>
+									</numIndex>
+									<numIndex index="6" type="array">
+										<numIndex index="0">6 Offset</numIndex>
+										<numIndex index="1">6</numIndex>
+									</numIndex>
+									<numIndex index="7" type="array">
+										<numIndex index="0">7 Offset</numIndex>
+										<numIndex index="1">7</numIndex>
+									</numIndex>
+									<numIndex index="8" type="array">
+										<numIndex index="0">8 Offset</numIndex>
+										<numIndex index="1">8</numIndex>
+									</numIndex>
+									<numIndex index="9" type="array">
+										<numIndex index="0">9 Offset</numIndex>
+										<numIndex index="1">9</numIndex>
+									</numIndex>
+									<numIndex index="10" type="array">
+										<numIndex index="0">10 Offset</numIndex>
+										<numIndex index="1">10</numIndex>
+									</numIndex>
+								</items>
+								<size>1</size>
+								<minitems>1</minitems>
+								<maxitems>1</maxitems>
+							</config>
+							<!-- <onChange>reload</onChange> -->
+
+						</TCEforms>
+					</colxlleftoffset>
+
+					<colxlcenteroffset type="array">
+						<TCEforms type="array">
+							<label>col-xl center offset</label>
+							<config>
+								<type>selectSingle</type>
+								<items type="array">
+									<numIndex index="0" type="array">
+										<numIndex index="0">No Offset</numIndex>
+										<numIndex index="1">0</numIndex>
+									</numIndex>
+									<numIndex index="1" type="array">
+										<numIndex index="0">1 Offset</numIndex>
+										<numIndex index="1">1</numIndex>
+									</numIndex>
+									<numIndex index="2" type="array">
+										<numIndex index="0">2 Offset</numIndex>
+										<numIndex index="1">2</numIndex>
+									</numIndex>
+									<numIndex index="3" type="array">
+										<numIndex index="0">3 Offset</numIndex>
+										<numIndex index="1">3</numIndex>
+									</numIndex>
+									<numIndex index="3" type="array">
+										<numIndex index="0">3 Offset</numIndex>
+										<numIndex index="1">3</numIndex>
+									</numIndex>
+									<numIndex index="4" type="array">
+										<numIndex index="0">4 Offset</numIndex>
+										<numIndex index="1">4</numIndex>
+									</numIndex>
+									<numIndex index="5" type="array">
+										<numIndex index="0">5 Offset</numIndex>
+										<numIndex index="1">5</numIndex>
+									</numIndex>
+									<numIndex index="6" type="array">
+										<numIndex index="0">6 Offset</numIndex>
+										<numIndex index="1">6</numIndex>
+									</numIndex>
+									<numIndex index="7" type="array">
+										<numIndex index="0">7 Offset</numIndex>
+										<numIndex index="1">7</numIndex>
+									</numIndex>
+									<numIndex index="8" type="array">
+										<numIndex index="0">8 Offset</numIndex>
+										<numIndex index="1">8</numIndex>
+									</numIndex>
+									<numIndex index="9" type="array">
+										<numIndex index="0">9 Offset</numIndex>
+										<numIndex index="1">9</numIndex>
+									</numIndex>
+									<numIndex index="10" type="array">
+										<numIndex index="0">10 Offset</numIndex>
+										<numIndex index="1">10</numIndex>
+									</numIndex>
+								</items>
+								<size>1</size>
+								<minitems>1</minitems>
+								<maxitems>1</maxitems>
+							</config>
+							<!-- <onChange>reload</onChange> -->
+
+						</TCEforms>
+					</colxlcenteroffset>
+
+					<colxlrightoffset type="array">
+						<TCEforms type="array">
+							<label>col-xl right offset</label>
+							<config>
+								<type>selectSingle</type>
+								<items type="array">
+									<numIndex index="0" type="array">
+										<numIndex index="0">No Offset</numIndex>
+										<numIndex index="1">0</numIndex>
+									</numIndex>
+									<numIndex index="1" type="array">
+										<numIndex index="0">1 Offset</numIndex>
+										<numIndex index="1">1</numIndex>
+									</numIndex>
+									<numIndex index="2" type="array">
+										<numIndex index="0">2 Offset</numIndex>
+										<numIndex index="1">2</numIndex>
+									</numIndex>
+									<numIndex index="3" type="array">
+										<numIndex index="0">3 Offset</numIndex>
+										<numIndex index="1">3</numIndex>
+									</numIndex>
+									<numIndex index="3" type="array">
+										<numIndex index="0">3 Offset</numIndex>
+										<numIndex index="1">3</numIndex>
+									</numIndex>
+									<numIndex index="4" type="array">
+										<numIndex index="0">4 Offset</numIndex>
+										<numIndex index="1">4</numIndex>
+									</numIndex>
+									<numIndex index="5" type="array">
+										<numIndex index="0">5 Offset</numIndex>
+										<numIndex index="1">5</numIndex>
+									</numIndex>
+									<numIndex index="6" type="array">
+										<numIndex index="0">6 Offset</numIndex>
+										<numIndex index="1">6</numIndex>
+									</numIndex>
+									<numIndex index="7" type="array">
+										<numIndex index="0">7 Offset</numIndex>
+										<numIndex index="1">7</numIndex>
+									</numIndex>
+									<numIndex index="8" type="array">
+										<numIndex index="0">8 Offset</numIndex>
+										<numIndex index="1">8</numIndex>
+									</numIndex>
+									<numIndex index="9" type="array">
+										<numIndex index="0">9 Offset</numIndex>
+										<numIndex index="1">9</numIndex>
+									</numIndex>
+									<numIndex index="10" type="array">
+										<numIndex index="0">10 Offset</numIndex>
+										<numIndex index="1">10</numIndex>
+									</numIndex>
+								</items>
+								<size>1</size>
+								<minitems>1</minitems>
+								<maxitems>1</maxitems>
+							</config>
+							<!-- <onChange>reload</onChange> -->
+
+						</TCEforms>
+					</colxlrightoffset>
+
+				</el>
+			</ROOT>
+		</colxl>
+
+		<collg>
+			<ROOT type="array">
+				<TCEforms>
+					<sheetTitle>Large / Laptop</sheetTitle>
+				</TCEforms>
+				<type>array</type>
+				<el type="array">
+
+					<collgleft type="array">
+						<TCEforms type="array">
+							<label>col-lg left</label>
+							<config>
+								<type>input</type>
+								<size>30</size>
+								<eval>trim,required</eval>
+								<default>12</default>
+							</config>
+						</TCEforms>
+					</collgleft>
+
+					<collgcenter type="array">
+						<TCEforms type="array">
+							<label>col-lg center</label>
+							<config>
+								<type>input</type>
+								<size>30</size>
+								<eval>trim,required</eval>
+								<default>12</default>
+							</config>
+						</TCEforms>
+					</collgcenter>
+
+					<collgright type="array">
+						<TCEforms type="array">
+							<label>col-lg right</label>
+							<config>
+								<type>input</type>
+								<size>30</size>
+								<eval>trim,required</eval>
+								<default>12</default>
+							</config>
+						</TCEforms>
+					</collgright>
+
+					<collgleftoffset type="array">
+						<TCEforms type="array">
+							<label>col-lg left offset</label>
+							<config>
+								<type>selectSingle</type>
+								<items type="array">
+									<numIndex index="0" type="array">
+										<numIndex index="0">No Offset</numIndex>
+										<numIndex index="1">0</numIndex>
+									</numIndex>
+									<numIndex index="1" type="array">
+										<numIndex index="0">1 Offset</numIndex>
+										<numIndex index="1">1</numIndex>
+									</numIndex>
+									<numIndex index="2" type="array">
+										<numIndex index="0">2 Offset</numIndex>
+										<numIndex index="1">2</numIndex>
+									</numIndex>
+									<numIndex index="3" type="array">
+										<numIndex index="0">3 Offset</numIndex>
+										<numIndex index="1">3</numIndex>
+									</numIndex>
+									<numIndex index="3" type="array">
+										<numIndex index="0">3 Offset</numIndex>
+										<numIndex index="1">3</numIndex>
+									</numIndex>
+									<numIndex index="4" type="array">
+										<numIndex index="0">4 Offset</numIndex>
+										<numIndex index="1">4</numIndex>
+									</numIndex>
+									<numIndex index="5" type="array">
+										<numIndex index="0">5 Offset</numIndex>
+										<numIndex index="1">5</numIndex>
+									</numIndex>
+									<numIndex index="6" type="array">
+										<numIndex index="0">6 Offset</numIndex>
+										<numIndex index="1">6</numIndex>
+									</numIndex>
+									<numIndex index="7" type="array">
+										<numIndex index="0">7 Offset</numIndex>
+										<numIndex index="1">7</numIndex>
+									</numIndex>
+									<numIndex index="8" type="array">
+										<numIndex index="0">8 Offset</numIndex>
+										<numIndex index="1">8</numIndex>
+									</numIndex>
+									<numIndex index="9" type="array">
+										<numIndex index="0">9 Offset</numIndex>
+										<numIndex index="1">9</numIndex>
+									</numIndex>
+									<numIndex index="10" type="array">
+										<numIndex index="0">10 Offset</numIndex>
+										<numIndex index="1">10</numIndex>
+									</numIndex>
+								</items>
+								<size>1</size>
+								<minitems>1</minitems>
+								<maxitems>1</maxitems>
+							</config>
+							<!-- <onChange>reload</onChange> -->
+
+						</TCEforms>
+					</collgleftoffset>
+
+					<collgcenteroffset type="array">
+						<TCEforms type="array">
+							<label>col-lg center offset</label>
+							<config>
+								<type>selectSingle</type>
+								<items type="array">
+									<numIndex index="0" type="array">
+										<numIndex index="0">No Offset</numIndex>
+										<numIndex index="1">0</numIndex>
+									</numIndex>
+									<numIndex index="1" type="array">
+										<numIndex index="0">1 Offset</numIndex>
+										<numIndex index="1">1</numIndex>
+									</numIndex>
+									<numIndex index="2" type="array">
+										<numIndex index="0">2 Offset</numIndex>
+										<numIndex index="1">2</numIndex>
+									</numIndex>
+									<numIndex index="3" type="array">
+										<numIndex index="0">3 Offset</numIndex>
+										<numIndex index="1">3</numIndex>
+									</numIndex>
+									<numIndex index="3" type="array">
+										<numIndex index="0">3 Offset</numIndex>
+										<numIndex index="1">3</numIndex>
+									</numIndex>
+									<numIndex index="4" type="array">
+										<numIndex index="0">4 Offset</numIndex>
+										<numIndex index="1">4</numIndex>
+									</numIndex>
+									<numIndex index="5" type="array">
+										<numIndex index="0">5 Offset</numIndex>
+										<numIndex index="1">5</numIndex>
+									</numIndex>
+									<numIndex index="6" type="array">
+										<numIndex index="0">6 Offset</numIndex>
+										<numIndex index="1">6</numIndex>
+									</numIndex>
+									<numIndex index="7" type="array">
+										<numIndex index="0">7 Offset</numIndex>
+										<numIndex index="1">7</numIndex>
+									</numIndex>
+									<numIndex index="8" type="array">
+										<numIndex index="0">8 Offset</numIndex>
+										<numIndex index="1">8</numIndex>
+									</numIndex>
+									<numIndex index="9" type="array">
+										<numIndex index="0">9 Offset</numIndex>
+										<numIndex index="1">9</numIndex>
+									</numIndex>
+									<numIndex index="10" type="array">
+										<numIndex index="0">10 Offset</numIndex>
+										<numIndex index="1">10</numIndex>
+									</numIndex>
+								</items>
+								<size>1</size>
+								<minitems>1</minitems>
+								<maxitems>1</maxitems>
+							</config>
+							<!-- <onChange>reload</onChange> -->
+
+						</TCEforms>
+					</collgcenteroffset>
+
+					<collgrightoffset type="array">
+						<TCEforms type="array">
+							<label>col-lg right offset</label>
+							<config>
+								<type>selectSingle</type>
+								<items type="array">
+									<numIndex index="0" type="array">
+										<numIndex index="0">No Offset</numIndex>
+										<numIndex index="1">0</numIndex>
+									</numIndex>
+									<numIndex index="1" type="array">
+										<numIndex index="0">1 Offset</numIndex>
+										<numIndex index="1">1</numIndex>
+									</numIndex>
+									<numIndex index="2" type="array">
+										<numIndex index="0">2 Offset</numIndex>
+										<numIndex index="1">2</numIndex>
+									</numIndex>
+									<numIndex index="3" type="array">
+										<numIndex index="0">3 Offset</numIndex>
+										<numIndex index="1">3</numIndex>
+									</numIndex>
+									<numIndex index="3" type="array">
+										<numIndex index="0">3 Offset</numIndex>
+										<numIndex index="1">3</numIndex>
+									</numIndex>
+									<numIndex index="4" type="array">
+										<numIndex index="0">4 Offset</numIndex>
+										<numIndex index="1">4</numIndex>
+									</numIndex>
+									<numIndex index="5" type="array">
+										<numIndex index="0">5 Offset</numIndex>
+										<numIndex index="1">5</numIndex>
+									</numIndex>
+									<numIndex index="6" type="array">
+										<numIndex index="0">6 Offset</numIndex>
+										<numIndex index="1">6</numIndex>
+									</numIndex>
+									<numIndex index="7" type="array">
+										<numIndex index="0">7 Offset</numIndex>
+										<numIndex index="1">7</numIndex>
+									</numIndex>
+									<numIndex index="8" type="array">
+										<numIndex index="0">8 Offset</numIndex>
+										<numIndex index="1">8</numIndex>
+									</numIndex>
+									<numIndex index="9" type="array">
+										<numIndex index="0">9 Offset</numIndex>
+										<numIndex index="1">9</numIndex>
+									</numIndex>
+									<numIndex index="10" type="array">
+										<numIndex index="0">10 Offset</numIndex>
+										<numIndex index="1">10</numIndex>
+									</numIndex>
+								</items>
+								<size>1</size>
+								<minitems>1</minitems>
+								<maxitems>1</maxitems>
+							</config>
+							<!-- <onChange>reload</onChange> -->
+
+						</TCEforms>
+					</collgrightoffset>
+
+				</el>
+			</ROOT>
+		</collg>
+
+		<colmd>
+			<ROOT type="array">
+				<TCEforms>
+					<sheetTitle>Medium / Tablet</sheetTitle>
+				</TCEforms>
+				<type>array</type>
+				<el type="array">
+
+					<colmdleft type="array">
+						<TCEforms type="array">
+							<label>col-md left</label>
+							<config>
+								<type>input</type>
+								<size>30</size>
+								<eval>trim,required</eval>
+								<default>12</default>
+							</config>
+						</TCEforms>
+					</colmdleft>
+
+					<colmdcenter type="array">
+						<TCEforms type="array">
+							<label>col-md center</label>
+							<config>
+								<type>input</type>
+								<size>30</size>
+								<eval>trim,required</eval>
+								<default>12</default>
+							</config>
+						</TCEforms>
+					</colmdcenter>
+
+					<colmdright type="array">
+						<TCEforms type="array">
+							<label>col-md right</label>
+							<config>
+								<type>input</type>
+								<size>30</size>
+								<eval>trim,required</eval>
+								<default>12</default>
+							</config>
+						</TCEforms>
+					</colmdright>
+
+					<colmdleftoffset type="array">
+						<TCEforms type="array">
+							<label>col-md left offset</label>
+							<config>
+								<type>selectSingle</type>
+								<items type="array">
+									<numIndex index="0" type="array">
+										<numIndex index="0">No Offset</numIndex>
+										<numIndex index="1">0</numIndex>
+									</numIndex>
+									<numIndex index="1" type="array">
+										<numIndex index="0">1 Offset</numIndex>
+										<numIndex index="1">1</numIndex>
+									</numIndex>
+									<numIndex index="2" type="array">
+										<numIndex index="0">2 Offset</numIndex>
+										<numIndex index="1">2</numIndex>
+									</numIndex>
+									<numIndex index="3" type="array">
+										<numIndex index="0">3 Offset</numIndex>
+										<numIndex index="1">3</numIndex>
+									</numIndex>
+									<numIndex index="3" type="array">
+										<numIndex index="0">3 Offset</numIndex>
+										<numIndex index="1">3</numIndex>
+									</numIndex>
+									<numIndex index="4" type="array">
+										<numIndex index="0">4 Offset</numIndex>
+										<numIndex index="1">4</numIndex>
+									</numIndex>
+									<numIndex index="5" type="array">
+										<numIndex index="0">5 Offset</numIndex>
+										<numIndex index="1">5</numIndex>
+									</numIndex>
+									<numIndex index="6" type="array">
+										<numIndex index="0">6 Offset</numIndex>
+										<numIndex index="1">6</numIndex>
+									</numIndex>
+									<numIndex index="7" type="array">
+										<numIndex index="0">7 Offset</numIndex>
+										<numIndex index="1">7</numIndex>
+									</numIndex>
+									<numIndex index="8" type="array">
+										<numIndex index="0">8 Offset</numIndex>
+										<numIndex index="1">8</numIndex>
+									</numIndex>
+									<numIndex index="9" type="array">
+										<numIndex index="0">9 Offset</numIndex>
+										<numIndex index="1">9</numIndex>
+									</numIndex>
+									<numIndex index="10" type="array">
+										<numIndex index="0">10 Offset</numIndex>
+										<numIndex index="1">10</numIndex>
+									</numIndex>
+								</items>
+								<size>1</size>
+								<minitems>1</minitems>
+								<maxitems>1</maxitems>
+							</config>
+							<!-- <onChange>reload</onChange> -->
+
+						</TCEforms>
+					</colmdleftoffset>
+
+					<colmdcenteroffset type="array">
+						<TCEforms type="array">
+							<label>col-md center offset</label>
+							<config>
+								<type>selectSingle</type>
+								<items type="array">
+									<numIndex index="0" type="array">
+										<numIndex index="0">No Offset</numIndex>
+										<numIndex index="1">0</numIndex>
+									</numIndex>
+									<numIndex index="1" type="array">
+										<numIndex index="0">1 Offset</numIndex>
+										<numIndex index="1">1</numIndex>
+									</numIndex>
+									<numIndex index="2" type="array">
+										<numIndex index="0">2 Offset</numIndex>
+										<numIndex index="1">2</numIndex>
+									</numIndex>
+									<numIndex index="3" type="array">
+										<numIndex index="0">3 Offset</numIndex>
+										<numIndex index="1">3</numIndex>
+									</numIndex>
+									<numIndex index="3" type="array">
+										<numIndex index="0">3 Offset</numIndex>
+										<numIndex index="1">3</numIndex>
+									</numIndex>
+									<numIndex index="4" type="array">
+										<numIndex index="0">4 Offset</numIndex>
+										<numIndex index="1">4</numIndex>
+									</numIndex>
+									<numIndex index="5" type="array">
+										<numIndex index="0">5 Offset</numIndex>
+										<numIndex index="1">5</numIndex>
+									</numIndex>
+									<numIndex index="6" type="array">
+										<numIndex index="0">6 Offset</numIndex>
+										<numIndex index="1">6</numIndex>
+									</numIndex>
+									<numIndex index="7" type="array">
+										<numIndex index="0">7 Offset</numIndex>
+										<numIndex index="1">7</numIndex>
+									</numIndex>
+									<numIndex index="8" type="array">
+										<numIndex index="0">8 Offset</numIndex>
+										<numIndex index="1">8</numIndex>
+									</numIndex>
+									<numIndex index="9" type="array">
+										<numIndex index="0">9 Offset</numIndex>
+										<numIndex index="1">9</numIndex>
+									</numIndex>
+									<numIndex index="10" type="array">
+										<numIndex index="0">10 Offset</numIndex>
+										<numIndex index="1">10</numIndex>
+									</numIndex>
+								</items>
+								<size>1</size>
+								<minitems>1</minitems>
+								<maxitems>1</maxitems>
+							</config>
+							<!-- <onChange>reload</onChange> -->
+
+						</TCEforms>
+					</colmdcenteroffset>
+
+					<colmdrightoffset type="array">
+						<TCEforms type="array">
+							<label>col-md right offset</label>
+							<config>
+								<type>selectSingle</type>
+								<items type="array">
+									<numIndex index="0" type="array">
+										<numIndex index="0">No Offset</numIndex>
+										<numIndex index="1">0</numIndex>
+									</numIndex>
+									<numIndex index="1" type="array">
+										<numIndex index="0">1 Offset</numIndex>
+										<numIndex index="1">1</numIndex>
+									</numIndex>
+									<numIndex index="2" type="array">
+										<numIndex index="0">2 Offset</numIndex>
+										<numIndex index="1">2</numIndex>
+									</numIndex>
+									<numIndex index="3" type="array">
+										<numIndex index="0">3 Offset</numIndex>
+										<numIndex index="1">3</numIndex>
+									</numIndex>
+									<numIndex index="3" type="array">
+										<numIndex index="0">3 Offset</numIndex>
+										<numIndex index="1">3</numIndex>
+									</numIndex>
+									<numIndex index="4" type="array">
+										<numIndex index="0">4 Offset</numIndex>
+										<numIndex index="1">4</numIndex>
+									</numIndex>
+									<numIndex index="5" type="array">
+										<numIndex index="0">5 Offset</numIndex>
+										<numIndex index="1">5</numIndex>
+									</numIndex>
+									<numIndex index="6" type="array">
+										<numIndex index="0">6 Offset</numIndex>
+										<numIndex index="1">6</numIndex>
+									</numIndex>
+									<numIndex index="7" type="array">
+										<numIndex index="0">7 Offset</numIndex>
+										<numIndex index="1">7</numIndex>
+									</numIndex>
+									<numIndex index="8" type="array">
+										<numIndex index="0">8 Offset</numIndex>
+										<numIndex index="1">8</numIndex>
+									</numIndex>
+									<numIndex index="9" type="array">
+										<numIndex index="0">9 Offset</numIndex>
+										<numIndex index="1">9</numIndex>
+									</numIndex>
+									<numIndex index="10" type="array">
+										<numIndex index="0">10 Offset</numIndex>
+										<numIndex index="1">10</numIndex>
+									</numIndex>
+								</items>
+								<size>1</size>
+								<minitems>1</minitems>
+								<maxitems>1</maxitems>
+							</config>
+							<!-- <onChange>reload</onChange> -->
+
+						</TCEforms>
+					</colmdrightoffset>
+
+				</el>
+			</ROOT>
+		</colmd>
+
+		<colsm>
+			<ROOT type="array">
+				<TCEforms>
+					<sheetTitle>Small / Phone Landscape</sheetTitle>
+				</TCEforms>
+				<type>array</type>
+				<el type="array">
+
+					<colsmleft type="array">
+						<TCEforms type="array">
+							<label>col-sm left</label>
+							<config>
+								<type>input</type>
+								<size>30</size>
+								<eval>trim,required</eval>
+								<default>12</default>
+							</config>
+						</TCEforms>
+					</colsmleft>
+
+					<colsmcenter type="array">
+						<TCEforms type="array">
+							<label>col-sm center</label>
+							<config>
+								<type>input</type>
+								<size>30</size>
+								<eval>trim,required</eval>
+								<default>12</default>
+							</config>
+						</TCEforms>
+					</colsmcenter>
+
+					<colsmright type="array">
+						<TCEforms type="array">
+							<label>col-sm right</label>
+							<config>
+								<type>input</type>
+								<size>30</size>
+								<eval>trim,required</eval>
+								<default>12</default>
+							</config>
+						</TCEforms>
+					</colsmright>
+
+					<colsmleftoffset type="array">
+						<TCEforms type="array">
+							<label>col-sm left offset</label>
+							<config>
+								<type>selectSingle</type>
+								<items type="array">
+									<numIndex index="0" type="array">
+										<numIndex index="0">No Offset</numIndex>
+										<numIndex index="1">0</numIndex>
+									</numIndex>
+									<numIndex index="1" type="array">
+										<numIndex index="0">1 Offset</numIndex>
+										<numIndex index="1">1</numIndex>
+									</numIndex>
+									<numIndex index="2" type="array">
+										<numIndex index="0">2 Offset</numIndex>
+										<numIndex index="1">2</numIndex>
+									</numIndex>
+									<numIndex index="3" type="array">
+										<numIndex index="0">3 Offset</numIndex>
+										<numIndex index="1">3</numIndex>
+									</numIndex>
+									<numIndex index="3" type="array">
+										<numIndex index="0">3 Offset</numIndex>
+										<numIndex index="1">3</numIndex>
+									</numIndex>
+									<numIndex index="4" type="array">
+										<numIndex index="0">4 Offset</numIndex>
+										<numIndex index="1">4</numIndex>
+									</numIndex>
+									<numIndex index="5" type="array">
+										<numIndex index="0">5 Offset</numIndex>
+										<numIndex index="1">5</numIndex>
+									</numIndex>
+									<numIndex index="6" type="array">
+										<numIndex index="0">6 Offset</numIndex>
+										<numIndex index="1">6</numIndex>
+									</numIndex>
+									<numIndex index="7" type="array">
+										<numIndex index="0">7 Offset</numIndex>
+										<numIndex index="1">7</numIndex>
+									</numIndex>
+									<numIndex index="8" type="array">
+										<numIndex index="0">8 Offset</numIndex>
+										<numIndex index="1">8</numIndex>
+									</numIndex>
+									<numIndex index="9" type="array">
+										<numIndex index="0">9 Offset</numIndex>
+										<numIndex index="1">9</numIndex>
+									</numIndex>
+									<numIndex index="10" type="array">
+										<numIndex index="0">10 Offset</numIndex>
+										<numIndex index="1">10</numIndex>
+									</numIndex>
+								</items>
+								<size>1</size>
+								<minitems>1</minitems>
+								<maxitems>1</maxitems>
+							</config>
+							<!-- <onChange>reload</onChange> -->
+
+						</TCEforms>
+					</colsmleftoffset>
+
+					<colsmcenteroffset type="array">
+						<TCEforms type="array">
+							<label>col-sm center offset</label>
+							<config>
+								<type>selectSingle</type>
+								<items type="array">
+									<numIndex index="0" type="array">
+										<numIndex index="0">No Offset</numIndex>
+										<numIndex index="1">0</numIndex>
+									</numIndex>
+									<numIndex index="1" type="array">
+										<numIndex index="0">1 Offset</numIndex>
+										<numIndex index="1">1</numIndex>
+									</numIndex>
+									<numIndex index="2" type="array">
+										<numIndex index="0">2 Offset</numIndex>
+										<numIndex index="1">2</numIndex>
+									</numIndex>
+									<numIndex index="3" type="array">
+										<numIndex index="0">3 Offset</numIndex>
+										<numIndex index="1">3</numIndex>
+									</numIndex>
+									<numIndex index="3" type="array">
+										<numIndex index="0">3 Offset</numIndex>
+										<numIndex index="1">3</numIndex>
+									</numIndex>
+									<numIndex index="4" type="array">
+										<numIndex index="0">4 Offset</numIndex>
+										<numIndex index="1">4</numIndex>
+									</numIndex>
+									<numIndex index="5" type="array">
+										<numIndex index="0">5 Offset</numIndex>
+										<numIndex index="1">5</numIndex>
+									</numIndex>
+									<numIndex index="6" type="array">
+										<numIndex index="0">6 Offset</numIndex>
+										<numIndex index="1">6</numIndex>
+									</numIndex>
+									<numIndex index="7" type="array">
+										<numIndex index="0">7 Offset</numIndex>
+										<numIndex index="1">7</numIndex>
+									</numIndex>
+									<numIndex index="8" type="array">
+										<numIndex index="0">8 Offset</numIndex>
+										<numIndex index="1">8</numIndex>
+									</numIndex>
+									<numIndex index="9" type="array">
+										<numIndex index="0">9 Offset</numIndex>
+										<numIndex index="1">9</numIndex>
+									</numIndex>
+									<numIndex index="10" type="array">
+										<numIndex index="0">10 Offset</numIndex>
+										<numIndex index="1">10</numIndex>
+									</numIndex>
+								</items>
+								<size>1</size>
+								<minitems>1</minitems>
+								<maxitems>1</maxitems>
+							</config>
+							<!-- <onChange>reload</onChange> -->
+
+						</TCEforms>
+					</colsmcenteroffset>
+
+					<colsmrightoffset type="array">
+						<TCEforms type="array">
+							<label>col-sm right offset</label>
+							<config>
+								<type>selectSingle</type>
+								<items type="array">
+									<numIndex index="0" type="array">
+										<numIndex index="0">No Offset</numIndex>
+										<numIndex index="1">0</numIndex>
+									</numIndex>
+									<numIndex index="1" type="array">
+										<numIndex index="0">1 Offset</numIndex>
+										<numIndex index="1">1</numIndex>
+									</numIndex>
+									<numIndex index="2" type="array">
+										<numIndex index="0">2 Offset</numIndex>
+										<numIndex index="1">2</numIndex>
+									</numIndex>
+									<numIndex index="3" type="array">
+										<numIndex index="0">3 Offset</numIndex>
+										<numIndex index="1">3</numIndex>
+									</numIndex>
+									<numIndex index="3" type="array">
+										<numIndex index="0">3 Offset</numIndex>
+										<numIndex index="1">3</numIndex>
+									</numIndex>
+									<numIndex index="4" type="array">
+										<numIndex index="0">4 Offset</numIndex>
+										<numIndex index="1">4</numIndex>
+									</numIndex>
+									<numIndex index="5" type="array">
+										<numIndex index="0">5 Offset</numIndex>
+										<numIndex index="1">5</numIndex>
+									</numIndex>
+									<numIndex index="6" type="array">
+										<numIndex index="0">6 Offset</numIndex>
+										<numIndex index="1">6</numIndex>
+									</numIndex>
+									<numIndex index="7" type="array">
+										<numIndex index="0">7 Offset</numIndex>
+										<numIndex index="1">7</numIndex>
+									</numIndex>
+									<numIndex index="8" type="array">
+										<numIndex index="0">8 Offset</numIndex>
+										<numIndex index="1">8</numIndex>
+									</numIndex>
+									<numIndex index="9" type="array">
+										<numIndex index="0">9 Offset</numIndex>
+										<numIndex index="1">9</numIndex>
+									</numIndex>
+									<numIndex index="10" type="array">
+										<numIndex index="0">10 Offset</numIndex>
+										<numIndex index="1">10</numIndex>
+									</numIndex>
+								</items>
+								<size>1</size>
+								<minitems>1</minitems>
+								<maxitems>1</maxitems>
+							</config>
+							<!-- <onChange>reload</onChange> -->
+
+						</TCEforms>
+					</colsmrightoffset>
+
+				</el>
+			</ROOT>
+		</colsm>
+
+		<col>
+			<ROOT type="array">
+				<TCEforms>
+					<sheetTitle>Extra small / Phone Portrait
+					</sheetTitle>
+				</TCEforms>
+				<type>array</type>
+				<el type="array">
+
+					<colleft type="array">
+						<TCEforms type="array">
+							<label>col-left</label>
+							<config>
+								<type>input</type>
+								<size>30</size>
+								<eval>trim,required</eval>
+								<default>12</default>
+							</config>
+						</TCEforms>
+					</colleft>
+
+					<colcenter type="array">
+						<TCEforms type="array">
+							<label>col-center</label>
+							<config>
+								<type>input</type>
+								<size>30</size>
+								<eval>trim,required</eval>
+								<default>12</default>
+							</config>
+						</TCEforms>
+					</colcenter>
+
+					<colright type="array">
+						<TCEforms type="array">
+							<label>col-right</label>
+							<config>
+								<type>input</type>
+								<size>30</size>
+								<eval>trim,required</eval>
+								<default>12</default>
+							</config>
+						</TCEforms>
+					</colright>
+
+					<colleftoffset type="array">
+						<TCEforms type="array">
+							<label>col left offset</label>
+							<config>
+								<type>selectSingle</type>
+								<items type="array">
+									<numIndex index="0" type="array">
+										<numIndex index="0">No Offset</numIndex>
+										<numIndex index="1">0</numIndex>
+									</numIndex>
+									<numIndex index="1" type="array">
+										<numIndex index="0">1 Offset</numIndex>
+										<numIndex index="1">1</numIndex>
+									</numIndex>
+									<numIndex index="2" type="array">
+										<numIndex index="0">2 Offset</numIndex>
+										<numIndex index="1">2</numIndex>
+									</numIndex>
+									<numIndex index="3" type="array">
+										<numIndex index="0">3 Offset</numIndex>
+										<numIndex index="1">3</numIndex>
+									</numIndex>
+									<numIndex index="3" type="array">
+										<numIndex index="0">3 Offset</numIndex>
+										<numIndex index="1">3</numIndex>
+									</numIndex>
+									<numIndex index="4" type="array">
+										<numIndex index="0">4 Offset</numIndex>
+										<numIndex index="1">4</numIndex>
+									</numIndex>
+									<numIndex index="5" type="array">
+										<numIndex index="0">5 Offset</numIndex>
+										<numIndex index="1">5</numIndex>
+									</numIndex>
+									<numIndex index="6" type="array">
+										<numIndex index="0">6 Offset</numIndex>
+										<numIndex index="1">6</numIndex>
+									</numIndex>
+									<numIndex index="7" type="array">
+										<numIndex index="0">7 Offset</numIndex>
+										<numIndex index="1">7</numIndex>
+									</numIndex>
+									<numIndex index="8" type="array">
+										<numIndex index="0">8 Offset</numIndex>
+										<numIndex index="1">8</numIndex>
+									</numIndex>
+									<numIndex index="9" type="array">
+										<numIndex index="0">9 Offset</numIndex>
+										<numIndex index="1">9</numIndex>
+									</numIndex>
+									<numIndex index="10" type="array">
+										<numIndex index="0">10 Offset</numIndex>
+										<numIndex index="1">10</numIndex>
+									</numIndex>
+								</items>
+								<size>1</size>
+								<minitems>1</minitems>
+								<maxitems>1</maxitems>
+							</config>
+							<!-- <onChange>reload</onChange> -->
+
+						</TCEforms>
+					</colleftoffset>
+
+					<colcenteroffset type="array">
+						<TCEforms type="array">
+							<label>col center offset</label>
+							<config>
+								<type>selectSingle</type>
+								<items type="array">
+									<numIndex index="0" type="array">
+										<numIndex index="0">No Offset</numIndex>
+										<numIndex index="1">0</numIndex>
+									</numIndex>
+									<numIndex index="1" type="array">
+										<numIndex index="0">1 Offset</numIndex>
+										<numIndex index="1">1</numIndex>
+									</numIndex>
+									<numIndex index="2" type="array">
+										<numIndex index="0">2 Offset</numIndex>
+										<numIndex index="1">2</numIndex>
+									</numIndex>
+									<numIndex index="3" type="array">
+										<numIndex index="0">3 Offset</numIndex>
+										<numIndex index="1">3</numIndex>
+									</numIndex>
+									<numIndex index="3" type="array">
+										<numIndex index="0">3 Offset</numIndex>
+										<numIndex index="1">3</numIndex>
+									</numIndex>
+									<numIndex index="4" type="array">
+										<numIndex index="0">4 Offset</numIndex>
+										<numIndex index="1">4</numIndex>
+									</numIndex>
+									<numIndex index="5" type="array">
+										<numIndex index="0">5 Offset</numIndex>
+										<numIndex index="1">5</numIndex>
+									</numIndex>
+									<numIndex index="6" type="array">
+										<numIndex index="0">6 Offset</numIndex>
+										<numIndex index="1">6</numIndex>
+									</numIndex>
+									<numIndex index="7" type="array">
+										<numIndex index="0">7 Offset</numIndex>
+										<numIndex index="1">7</numIndex>
+									</numIndex>
+									<numIndex index="8" type="array">
+										<numIndex index="0">8 Offset</numIndex>
+										<numIndex index="1">8</numIndex>
+									</numIndex>
+									<numIndex index="9" type="array">
+										<numIndex index="0">9 Offset</numIndex>
+										<numIndex index="1">9</numIndex>
+									</numIndex>
+									<numIndex index="10" type="array">
+										<numIndex index="0">10 Offset</numIndex>
+										<numIndex index="1">10</numIndex>
+									</numIndex>
+								</items>
+								<size>1</size>
+								<minitems>1</minitems>
+								<maxitems>1</maxitems>
+							</config>
+							<!-- <onChange>reload</onChange> -->
+
+						</TCEforms>
+					</colcenteroffset>
+
+					<colrightoffset type="array">
+						<TCEforms type="array">
+							<label>col right offset</label>
+							<config>
+								<type>selectSingle</type>
+								<items type="array">
+									<numIndex index="0" type="array">
+										<numIndex index="0">No Offset</numIndex>
+										<numIndex index="1">0</numIndex>
+									</numIndex>
+									<numIndex index="1" type="array">
+										<numIndex index="0">1 Offset</numIndex>
+										<numIndex index="1">1</numIndex>
+									</numIndex>
+									<numIndex index="2" type="array">
+										<numIndex index="0">2 Offset</numIndex>
+										<numIndex index="1">2</numIndex>
+									</numIndex>
+									<numIndex index="3" type="array">
+										<numIndex index="0">3 Offset</numIndex>
+										<numIndex index="1">3</numIndex>
+									</numIndex>
+									<numIndex index="3" type="array">
+										<numIndex index="0">3 Offset</numIndex>
+										<numIndex index="1">3</numIndex>
+									</numIndex>
+									<numIndex index="4" type="array">
+										<numIndex index="0">4 Offset</numIndex>
+										<numIndex index="1">4</numIndex>
+									</numIndex>
+									<numIndex index="5" type="array">
+										<numIndex index="0">5 Offset</numIndex>
+										<numIndex index="1">5</numIndex>
+									</numIndex>
+									<numIndex index="6" type="array">
+										<numIndex index="0">6 Offset</numIndex>
+										<numIndex index="1">6</numIndex>
+									</numIndex>
+									<numIndex index="7" type="array">
+										<numIndex index="0">7 Offset</numIndex>
+										<numIndex index="1">7</numIndex>
+									</numIndex>
+									<numIndex index="8" type="array">
+										<numIndex index="0">8 Offset</numIndex>
+										<numIndex index="1">8</numIndex>
+									</numIndex>
+									<numIndex index="9" type="array">
+										<numIndex index="0">9 Offset</numIndex>
+										<numIndex index="1">9</numIndex>
+									</numIndex>
+									<numIndex index="10" type="array">
+										<numIndex index="0">10 Offset</numIndex>
+										<numIndex index="1">10</numIndex>
+									</numIndex>
+								</items>
+								<size>1</size>
+								<minitems>1</minitems>
+								<maxitems>1</maxitems>
+							</config>
+							<!-- <onChange>reload</onChange> -->
+
+						</TCEforms>
+					</colrightoffset>
+
+				</el>
+			</ROOT>
+		</col>
+		<left>
+			<ROOT>
+				<TCEforms>
+					<sheetTitle>Linke Col</sheetTitle>
+				</TCEforms>
+				<type>array</type>
+				<el>
+					<cssklassen_left type="array">
+						<TCEforms type="array">
+							<label>Zusätzliche CSS Klassen (optional)</label>
+							<config>
+								<type>input</type>
+								<size>30</size>
+								<eval>trim</eval>
+							</config>
+						</TCEforms>
+					</cssklassen_left>
+
+					<inlineCSS_left type="array">
+						<TCEforms type="array">
+							<label>inlineCSS (optional)</label>
+							<config>
+								<type>input</type>
+								<size>120</size>
+								<eval>trim</eval>
+							</config>
+						</TCEforms>
+					</inlineCSS_left>
+
+					<animation_left type="array">
+						<TCEforms type="array">
+							<label>AnimateCSS Animation (optional)</label>
+							<config>
+								<type>selectSingle</type>
+								<items type="array">
+									<numIndex index="1" type="array">
+										<numIndex index="0">disabled</numIndex>
+										<numIndex index="1">disabled</numIndex>
+									</numIndex>
+									<numIndex index="2" type="array">
+										<numIndex index="0">flash</numIndex>
+										<numIndex index="1">flash</numIndex>
+									</numIndex>
+									<numIndex index="3" type="array">
+										<numIndex index="0">pulse</numIndex>
+										<numIndex index="1">pulse</numIndex>
+									</numIndex>
+									<numIndex index="4" type="array">
+										<numIndex index="0">rubberBand</numIndex>
+										<numIndex index="1">rubberBand</numIndex>
+									</numIndex>
+									<numIndex index="5" type="array">
+										<numIndex index="0">shake</numIndex>
+										<numIndex index="1">shake</numIndex>
+									</numIndex>
+									<numIndex index="6" type="array">
+										<numIndex index="0">headShake</numIndex>
+										<numIndex index="1">headShake</numIndex>
+									</numIndex>
+									<numIndex index="7" type="array">
+										<numIndex index="0">swing</numIndex>
+										<numIndex index="1">swing</numIndex>
+									</numIndex>
+									<numIndex index="8" type="array">
+										<numIndex index="0">tada</numIndex>
+										<numIndex index="1">tada</numIndex>
+									</numIndex>
+									<numIndex index="9" type="array">
+										<numIndex index="0">wobble</numIndex>
+										<numIndex index="1">wobble</numIndex>
+									</numIndex>
+									<numIndex index="10" type="array">
+										<numIndex index="0">jello</numIndex>
+										<numIndex index="1">jello</numIndex>
+									</numIndex>
+									<numIndex index="11" type="array">
+										<numIndex index="0">bounceIn</numIndex>
+										<numIndex index="1">bounceIn</numIndex>
+									</numIndex>
+									<numIndex index="12" type="array">
+										<numIndex index="0">bounceInDown</numIndex>
+										<numIndex index="1">bounceInDown</numIndex>
+									</numIndex>
+									<numIndex index="13" type="array">
+										<numIndex index="0">bounceInLeft</numIndex>
+										<numIndex index="1">bounceInLeft</numIndex>
+									</numIndex>
+									<numIndex index="14" type="array">
+										<numIndex index="0">bounceInRight</numIndex>
+										<numIndex index="1">bounceInRight</numIndex>
+									</numIndex>
+									<numIndex index="15" type="array">
+										<numIndex index="0">bounceInUp</numIndex>
+										<numIndex index="1">bounceInUp</numIndex>
+									</numIndex>
+									<numIndex index="16" type="array">
+										<numIndex index="0">bounceOut</numIndex>
+										<numIndex index="1">bounceOut</numIndex>
+									</numIndex>
+									<numIndex index="17" type="array">
+										<numIndex index="0">bounceOutDown</numIndex>
+										<numIndex index="1">bounceOutDown</numIndex>
+									</numIndex>
+									<numIndex index="18" type="array">
+										<numIndex index="0">bounceOutLeft</numIndex>
+										<numIndex index="1">bounceOutLeft</numIndex>
+									</numIndex>
+									<numIndex index="19" type="array">
+										<numIndex index="0">bounceOutRight</numIndex>
+										<numIndex index="1">bounceOutRight</numIndex>
+									</numIndex>
+									<numIndex index="20" type="array">
+										<numIndex index="0">bounceOutUp</numIndex>
+										<numIndex index="1">bounceOutUp</numIndex>
+									</numIndex>
+									<numIndex index="21" type="array">
+										<numIndex index="0">fadeIn</numIndex>
+										<numIndex index="1">fadeIn</numIndex>
+									</numIndex>
+									<numIndex index="22" type="array">
+										<numIndex index="0">fadeInDown</numIndex>
+										<numIndex index="1">fadeInDown</numIndex>
+									</numIndex>
+									<numIndex index="23" type="array">
+										<numIndex index="0">fadeInDownBig</numIndex>
+										<numIndex index="1">fadeInDownBig</numIndex>
+									</numIndex>
+									<numIndex index="24" type="array">
+										<numIndex index="0">fadeInLeft</numIndex>
+										<numIndex index="1">fadeInLeft</numIndex>
+									</numIndex>
+									<numIndex index="25" type="array">
+										<numIndex index="0">fadeInLeftBig</numIndex>
+										<numIndex index="1">fadeInLeftBig</numIndex>
+									</numIndex>
+									<numIndex index="26" type="array">
+										<numIndex index="0">fadeInRight</numIndex>
+										<numIndex index="1">fadeInRight</numIndex>
+									</numIndex>
+									<numIndex index="27" type="array">
+										<numIndex index="0">fadeInRightBig</numIndex>
+										<numIndex index="1">fadeInRightBig</numIndex>
+									</numIndex>
+									<numIndex index="28" type="array">
+										<numIndex index="0">fadeInUp</numIndex>
+										<numIndex index="1">fadeInUp</numIndex>
+									</numIndex>
+									<numIndex index="29" type="array">
+										<numIndex index="0">fadeInUpBig</numIndex>
+										<numIndex index="1">fadeInUpBig</numIndex>
+									</numIndex>
+									<numIndex index="30" type="array">
+										<numIndex index="0">fadeOut</numIndex>
+										<numIndex index="1">fadeOut</numIndex>
+									</numIndex>
+									<numIndex index="31" type="array">
+										<numIndex index="0">fadeOutDown</numIndex>
+										<numIndex index="1">fadeOutDown</numIndex>
+									</numIndex>
+									<numIndex index="32" type="array">
+										<numIndex index="0">fadeOutDownBig</numIndex>
+										<numIndex index="1">fadeOutDownBig</numIndex>
+									</numIndex>
+									<numIndex index="33" type="array">
+										<numIndex index="0">fadeOutLeft</numIndex>
+										<numIndex index="1">fadeOutLeft</numIndex>
+									</numIndex>
+									<numIndex index="34" type="array">
+										<numIndex index="0">fadeOutLeftBig</numIndex>
+										<numIndex index="1">fadeOutLeftBig</numIndex>
+									</numIndex>
+									<numIndex index="35" type="array">
+										<numIndex index="0">fadeOutRight</numIndex>
+										<numIndex index="1">fadeOutRight</numIndex>
+									</numIndex>
+									<numIndex index="36" type="array">
+										<numIndex index="0">fadeOutRightBig</numIndex>
+										<numIndex index="1">fadeOutRightBig</numIndex>
+									</numIndex>
+									<numIndex index="37" type="array">
+										<numIndex index="0">fadeOutUp</numIndex>
+										<numIndex index="1">fadeOutUp</numIndex>
+									</numIndex>
+									<numIndex index="38" type="array">
+										<numIndex index="0">fadeOutUpBig</numIndex>
+										<numIndex index="1">fadeOutUpBig</numIndex>
+									</numIndex>
+									<numIndex index="39" type="array">
+										<numIndex index="0">flipInX</numIndex>
+										<numIndex index="1">flipInX</numIndex>
+									</numIndex>
+									<numIndex index="40" type="array">
+										<numIndex index="0">flipInY</numIndex>
+										<numIndex index="1">flipInY</numIndex>
+									</numIndex>
+									<numIndex index="41" type="array">
+										<numIndex index="0">flipOutX</numIndex>
+										<numIndex index="1">flipOutX</numIndex>
+									</numIndex>
+									<numIndex index="42" type="array">
+										<numIndex index="0">flipOutY</numIndex>
+										<numIndex index="1">flipOutY</numIndex>
+									</numIndex>
+									<numIndex index="43" type="array">
+										<numIndex index="0">lightSpeedIn</numIndex>
+										<numIndex index="1">lightSpeedIn</numIndex>
+									</numIndex>
+									<numIndex index="44" type="array">
+										<numIndex index="0">lightSpeedOut</numIndex>
+										<numIndex index="1">lightSpeedOut</numIndex>
+									</numIndex>
+									<numIndex index="45" type="array">
+										<numIndex index="0">rotateIn</numIndex>
+										<numIndex index="1">rotateIn</numIndex>
+									</numIndex>
+									<numIndex index="46" type="array">
+										<numIndex index="0">rotateInDownLeft</numIndex>
+										<numIndex index="1">rotateInDownLeft</numIndex>
+									</numIndex>
+									<numIndex index="47" type="array">
+										<numIndex index="0">rotateInDownRight</numIndex>
+										<numIndex index="1">rotateInDownRight</numIndex>
+									</numIndex>
+									<numIndex index="48" type="array">
+										<numIndex index="0">rotateInUpLeft</numIndex>
+										<numIndex index="1">rotateInUpLeft</numIndex>
+									</numIndex>
+									<numIndex index="49" type="array">
+										<numIndex index="0">rotateInUpRight</numIndex>
+										<numIndex index="1">rotateInUpRight</numIndex>
+									</numIndex>
+									<numIndex index="50" type="array">
+										<numIndex index="0">rotateOut</numIndex>
+										<numIndex index="1">rotateOut</numIndex>
+									</numIndex>
+									<numIndex index="51" type="array">
+										<numIndex index="0">rotateOutDownLeft</numIndex>
+										<numIndex index="1">rotateOutDownLeft</numIndex>
+									</numIndex>
+									<numIndex index="52" type="array">
+										<numIndex index="0">rotateOutDownRight</numIndex>
+										<numIndex index="1">rotateOutDownRight</numIndex>
+									</numIndex>
+									<numIndex index="53" type="array">
+										<numIndex index="0">rotateOutUpLeft</numIndex>
+										<numIndex index="1">rotateOutUpLeft</numIndex>
+									</numIndex>
+									<numIndex index="54" type="array">
+										<numIndex index="0">rotateOutUpRight</numIndex>
+										<numIndex index="1">rotateOutUpRight</numIndex>
+									</numIndex>
+									<numIndex index="55" type="array">
+										<numIndex index="0">hinge</numIndex>
+										<numIndex index="1">hinge</numIndex>
+									</numIndex>
+									<numIndex index="56" type="array">
+										<numIndex index="0">jackInTheBox</numIndex>
+										<numIndex index="1">jackInTheBox</numIndex>
+									</numIndex>
+									<numIndex index="57" type="array">
+										<numIndex index="0">rollIn</numIndex>
+										<numIndex index="1">rollIn</numIndex>
+									</numIndex>
+									<numIndex index="58" type="array">
+										<numIndex index="0">rollOut</numIndex>
+										<numIndex index="1">rollOut</numIndex>
+									</numIndex>
+									<numIndex index="59" type="array">
+										<numIndex index="0">zoomIn</numIndex>
+										<numIndex index="1">zoomIn</numIndex>
+									</numIndex>
+									<numIndex index="60" type="array">
+										<numIndex index="0">zoomInDown</numIndex>
+										<numIndex index="1">zoomInDown</numIndex>
+									</numIndex>
+									<numIndex index="61" type="array">
+										<numIndex index="0">zoomInLeft</numIndex>
+										<numIndex index="1">zoomInLeft</numIndex>
+									</numIndex>
+									<numIndex index="62" type="array">
+										<numIndex index="0">zoomInRight</numIndex>
+										<numIndex index="1">zoomInRight</numIndex>
+									</numIndex>
+									<numIndex index="63" type="array">
+										<numIndex index="0">zoomInUp</numIndex>
+										<numIndex index="1">zoomInUp</numIndex>
+									</numIndex>
+									<numIndex index="64" type="array">
+										<numIndex index="0">zoomOut</numIndex>
+										<numIndex index="1">zoomOut</numIndex>
+									</numIndex>
+									<numIndex index="65" type="array">
+										<numIndex index="0">zoomOutDown</numIndex>
+										<numIndex index="1">zoomOutDown</numIndex>
+									</numIndex>
+									<numIndex index="66" type="array">
+										<numIndex index="0">zoomOutLeft</numIndex>
+										<numIndex index="1">zoomOutLeft</numIndex>
+									</numIndex>
+									<numIndex index="67" type="array">
+										<numIndex index="0">zoomOutRight</numIndex>
+										<numIndex index="1">zoomOutRight</numIndex>
+									</numIndex>
+									<numIndex index="68" type="array">
+										<numIndex index="0">zoomOutUp</numIndex>
+										<numIndex index="1">zoomOutUp</numIndex>
+									</numIndex>
+									<numIndex index="69" type="array">
+										<numIndex index="0">slideInDown</numIndex>
+										<numIndex index="1">slideInDown</numIndex>
+									</numIndex>
+									<numIndex index="70" type="array">
+										<numIndex index="0">slideInLeft</numIndex>
+										<numIndex index="1">slideInLeft</numIndex>
+									</numIndex>
+									<numIndex index="71" type="array">
+										<numIndex index="0">slideInRight</numIndex>
+										<numIndex index="1">slideInRight</numIndex>
+									</numIndex>
+									<numIndex index="72" type="array">
+										<numIndex index="0">slideInUp</numIndex>
+										<numIndex index="1">slideInUp</numIndex>
+									</numIndex>
+									<numIndex index="73" type="array">
+										<numIndex index="0">slideOutDown</numIndex>
+										<numIndex index="1">slideOutDown</numIndex>
+									</numIndex>
+									<numIndex index="74" type="array">
+										<numIndex index="0">slideOutLeft</numIndex>
+										<numIndex index="1">slideOutLeft</numIndex>
+									</numIndex>
+									<numIndex index="75" type="array">
+										<numIndex index="0">slideOutRight</numIndex>
+										<numIndex index="1">slideOutRight</numIndex>
+									</numIndex>
+									<numIndex index="76" type="array">
+										<numIndex index="0">slideOutUp</numIndex>
+										<numIndex index="1">slideOutUp</numIndex>
+									</numIndex>
+									<numIndex index="77" type="array">
+										<numIndex index="0">heartBeat</numIndex>
+										<numIndex index="1">heartBeat</numIndex>
+									</numIndex>
+									<numIndex index="78" type="array">
+										<numIndex index="0">bounce</numIndex>
+										<numIndex index="1">bounce</numIndex>
+									</numIndex>
+								</items>
+								<size>1</size>
+								<minitems>1</minitems>
+								<maxitems>1</maxitems>
+							</config>
+							<!-- <onChange>reload</onChange> -->
+
+						</TCEforms>
+					</animation_left>
+
+					<animationspeed_left type="array">
+						<TCEforms type="array">
+							<label>Animations-Geschwindigkeit (optional)</label>
+							<config>
+								<type>selectSingle</type>
+								<items type="array">
+									<numIndex index="1" type="array">
+										<numIndex index="0">default - 1s</numIndex>
+										<numIndex index="1">default</numIndex>
+									</numIndex>
+									<numIndex index="2" type="array">
+										<numIndex index="0">slow - 2s</numIndex>
+										<numIndex index="1">slow</numIndex>
+									</numIndex>
+									<numIndex index="3" type="array">
+										<numIndex index="0">slower - 3s</numIndex>
+										<numIndex index="1">slower</numIndex>
+									</numIndex>
+									<numIndex index="4" type="array">
+										<numIndex index="0">fast - 800ms</numIndex>
+										<numIndex index="1">fast</numIndex>
+									</numIndex>
+									<numIndex index="5" type="array">
+										<numIndex index="0">faster - 500ms</numIndex>
+										<numIndex index="1">faster</numIndex>
+									</numIndex>
+								</items>
+								<size>1</size>
+								<minitems>1</minitems>
+								<maxitems>1</maxitems>
+							</config>
+						</TCEforms>
+					</animationspeed_left>
+
+					<animationdelay_left type="array">
+						<TCEforms type="array">
+							<label>Animations-Verzögerung (optional)</label>
+							<config>
+								<type>selectSingle</type>
+								<items type="array">
+									<numIndex index="1" type="array">
+										<numIndex index="0">none</numIndex>
+										<numIndex index="1">none</numIndex>
+									</numIndex>
+									<numIndex index="2" type="array">
+										<numIndex index="0">delay-2s</numIndex>
+										<numIndex index="1">delay-2s</numIndex>
+									</numIndex>
+									<numIndex index="3" type="array">
+										<numIndex index="0">delay-3s</numIndex>
+										<numIndex index="1">delay-3s</numIndex>
+									</numIndex>
+									<numIndex index="4" type="array">
+										<numIndex index="0">delay-4s</numIndex>
+										<numIndex index="1">delay-4s</numIndex>
+									</numIndex>
+									<numIndex index="5" type="array">
+										<numIndex index="0">delay-5s</numIndex>
+										<numIndex index="1">delay-5s</numIndex>
+									</numIndex>
+								</items>
+								<size>1</size>
+								<minitems>1</minitems>
+								<maxitems>1</maxitems>
+							</config>
+						</TCEforms>
+					</animationdelay_left>
+
+                    <verlaufsfarbe_start_left type="array">
+                        <TCEforms type="array">
+                            <label>Start - Verlaufsfarbe</label>
+                            <config>
+                            	<type>input</type>
+                            	<renderType>colorpicker</renderType>
+                            	<size>10</size>
+                            </config>
+                        </TCEforms>
+                    </verlaufsfarbe_start_left>
+
+                    <verlaufsfarbe_ende_left type="array">
+                        <TCEforms type="array">
+                            <label>Ende - Verlaufsfarbe</label>
+                            <config>
+                            	<type>input</type>
+                            	<renderType>colorpicker</renderType>
+                            	<size>10</size>
+                            </config>
+                        </TCEforms>
+                    </verlaufsfarbe_ende_left>
+
+                    <verlaufsfarbe_winkel_left type="array">
+                        <TCEforms type="array">
+                            <label>Verlauf - Winkel°</label>
+                            <config>
+                                <type>input</type>
+                                <size>5</size>
+                                <eval>trim</eval>
+                            </config>
+                        </TCEforms>
+                    </verlaufsfarbe_winkel_left>
+
+                    <verlaufsfarbe_schriftfarbe_left type="array">
+                        <TCEforms type="array">
+                            <label>Verlauf - Schriftfarbe</label>
+                            <config>
+                            	<type>input</type>
+                            	<renderType>colorpicker</renderType>
+                            	<size>10</size>
+                            </config>
+                        </TCEforms>
+                    </verlaufsfarbe_schriftfarbe_left>
+				</el>
+			</ROOT>
+		</left>
+		<center>
+			<ROOT>
+				<TCEforms>
+					<sheetTitle>Center Col</sheetTitle>
+				</TCEforms>
+				<type>array</type>
+				<el>
+					<cssklassen_center type="array">
+						<TCEforms type="array">
+							<label>Zusätzliche CSS Klassen (optional)</label>
+							<config>
+								<type>input</type>
+								<size>30</size>
+								<eval>trim</eval>
+							</config>
+						</TCEforms>
+					</cssklassen_center>
+
+					<inlineCSS_center type="array">
+						<TCEforms type="array">
+							<label>inlineCSS (optional)</label>
+							<config>
+								<type>input</type>
+								<size>120</size>
+								<eval>trim</eval>
+							</config>
+						</TCEforms>
+					</inlineCSS_center>
+
+					<animation_center type="array">
+						<TCEforms type="array">
+							<label>AnimateCSS Animation (optional)</label>
+							<config>
+								<type>selectSingle</type>
+								<items type="array">
+									<numIndex index="1" type="array">
+										<numIndex index="0">disabled</numIndex>
+										<numIndex index="1">disabled</numIndex>
+									</numIndex>
+									<numIndex index="2" type="array">
+										<numIndex index="0">flash</numIndex>
+										<numIndex index="1">flash</numIndex>
+									</numIndex>
+									<numIndex index="3" type="array">
+										<numIndex index="0">pulse</numIndex>
+										<numIndex index="1">pulse</numIndex>
+									</numIndex>
+									<numIndex index="4" type="array">
+										<numIndex index="0">rubberBand</numIndex>
+										<numIndex index="1">rubberBand</numIndex>
+									</numIndex>
+									<numIndex index="5" type="array">
+										<numIndex index="0">shake</numIndex>
+										<numIndex index="1">shake</numIndex>
+									</numIndex>
+									<numIndex index="6" type="array">
+										<numIndex index="0">headShake</numIndex>
+										<numIndex index="1">headShake</numIndex>
+									</numIndex>
+									<numIndex index="7" type="array">
+										<numIndex index="0">swing</numIndex>
+										<numIndex index="1">swing</numIndex>
+									</numIndex>
+									<numIndex index="8" type="array">
+										<numIndex index="0">tada</numIndex>
+										<numIndex index="1">tada</numIndex>
+									</numIndex>
+									<numIndex index="9" type="array">
+										<numIndex index="0">wobble</numIndex>
+										<numIndex index="1">wobble</numIndex>
+									</numIndex>
+									<numIndex index="10" type="array">
+										<numIndex index="0">jello</numIndex>
+										<numIndex index="1">jello</numIndex>
+									</numIndex>
+									<numIndex index="11" type="array">
+										<numIndex index="0">bounceIn</numIndex>
+										<numIndex index="1">bounceIn</numIndex>
+									</numIndex>
+									<numIndex index="12" type="array">
+										<numIndex index="0">bounceInDown</numIndex>
+										<numIndex index="1">bounceInDown</numIndex>
+									</numIndex>
+									<numIndex index="13" type="array">
+										<numIndex index="0">bounceInLeft</numIndex>
+										<numIndex index="1">bounceInLeft</numIndex>
+									</numIndex>
+									<numIndex index="14" type="array">
+										<numIndex index="0">bounceInRight</numIndex>
+										<numIndex index="1">bounceInRight</numIndex>
+									</numIndex>
+									<numIndex index="15" type="array">
+										<numIndex index="0">bounceInUp</numIndex>
+										<numIndex index="1">bounceInUp</numIndex>
+									</numIndex>
+									<numIndex index="16" type="array">
+										<numIndex index="0">bounceOut</numIndex>
+										<numIndex index="1">bounceOut</numIndex>
+									</numIndex>
+									<numIndex index="17" type="array">
+										<numIndex index="0">bounceOutDown</numIndex>
+										<numIndex index="1">bounceOutDown</numIndex>
+									</numIndex>
+									<numIndex index="18" type="array">
+										<numIndex index="0">bounceOutLeft</numIndex>
+										<numIndex index="1">bounceOutLeft</numIndex>
+									</numIndex>
+									<numIndex index="19" type="array">
+										<numIndex index="0">bounceOutRight</numIndex>
+										<numIndex index="1">bounceOutRight</numIndex>
+									</numIndex>
+									<numIndex index="20" type="array">
+										<numIndex index="0">bounceOutUp</numIndex>
+										<numIndex index="1">bounceOutUp</numIndex>
+									</numIndex>
+									<numIndex index="21" type="array">
+										<numIndex index="0">fadeIn</numIndex>
+										<numIndex index="1">fadeIn</numIndex>
+									</numIndex>
+									<numIndex index="22" type="array">
+										<numIndex index="0">fadeInDown</numIndex>
+										<numIndex index="1">fadeInDown</numIndex>
+									</numIndex>
+									<numIndex index="23" type="array">
+										<numIndex index="0">fadeInDownBig</numIndex>
+										<numIndex index="1">fadeInDownBig</numIndex>
+									</numIndex>
+									<numIndex index="24" type="array">
+										<numIndex index="0">fadeInLeft</numIndex>
+										<numIndex index="1">fadeInLeft</numIndex>
+									</numIndex>
+									<numIndex index="25" type="array">
+										<numIndex index="0">fadeInLeftBig</numIndex>
+										<numIndex index="1">fadeInLeftBig</numIndex>
+									</numIndex>
+									<numIndex index="26" type="array">
+										<numIndex index="0">fadeInRight</numIndex>
+										<numIndex index="1">fadeInRight</numIndex>
+									</numIndex>
+									<numIndex index="27" type="array">
+										<numIndex index="0">fadeInRightBig</numIndex>
+										<numIndex index="1">fadeInRightBig</numIndex>
+									</numIndex>
+									<numIndex index="28" type="array">
+										<numIndex index="0">fadeInUp</numIndex>
+										<numIndex index="1">fadeInUp</numIndex>
+									</numIndex>
+									<numIndex index="29" type="array">
+										<numIndex index="0">fadeInUpBig</numIndex>
+										<numIndex index="1">fadeInUpBig</numIndex>
+									</numIndex>
+									<numIndex index="30" type="array">
+										<numIndex index="0">fadeOut</numIndex>
+										<numIndex index="1">fadeOut</numIndex>
+									</numIndex>
+									<numIndex index="31" type="array">
+										<numIndex index="0">fadeOutDown</numIndex>
+										<numIndex index="1">fadeOutDown</numIndex>
+									</numIndex>
+									<numIndex index="32" type="array">
+										<numIndex index="0">fadeOutDownBig</numIndex>
+										<numIndex index="1">fadeOutDownBig</numIndex>
+									</numIndex>
+									<numIndex index="33" type="array">
+										<numIndex index="0">fadeOutLeft</numIndex>
+										<numIndex index="1">fadeOutLeft</numIndex>
+									</numIndex>
+									<numIndex index="34" type="array">
+										<numIndex index="0">fadeOutLeftBig</numIndex>
+										<numIndex index="1">fadeOutLeftBig</numIndex>
+									</numIndex>
+									<numIndex index="35" type="array">
+										<numIndex index="0">fadeOutRight</numIndex>
+										<numIndex index="1">fadeOutRight</numIndex>
+									</numIndex>
+									<numIndex index="36" type="array">
+										<numIndex index="0">fadeOutRightBig</numIndex>
+										<numIndex index="1">fadeOutRightBig</numIndex>
+									</numIndex>
+									<numIndex index="37" type="array">
+										<numIndex index="0">fadeOutUp</numIndex>
+										<numIndex index="1">fadeOutUp</numIndex>
+									</numIndex>
+									<numIndex index="38" type="array">
+										<numIndex index="0">fadeOutUpBig</numIndex>
+										<numIndex index="1">fadeOutUpBig</numIndex>
+									</numIndex>
+									<numIndex index="39" type="array">
+										<numIndex index="0">flipInX</numIndex>
+										<numIndex index="1">flipInX</numIndex>
+									</numIndex>
+									<numIndex index="40" type="array">
+										<numIndex index="0">flipInY</numIndex>
+										<numIndex index="1">flipInY</numIndex>
+									</numIndex>
+									<numIndex index="41" type="array">
+										<numIndex index="0">flipOutX</numIndex>
+										<numIndex index="1">flipOutX</numIndex>
+									</numIndex>
+									<numIndex index="42" type="array">
+										<numIndex index="0">flipOutY</numIndex>
+										<numIndex index="1">flipOutY</numIndex>
+									</numIndex>
+									<numIndex index="43" type="array">
+										<numIndex index="0">lightSpeedIn</numIndex>
+										<numIndex index="1">lightSpeedIn</numIndex>
+									</numIndex>
+									<numIndex index="44" type="array">
+										<numIndex index="0">lightSpeedOut</numIndex>
+										<numIndex index="1">lightSpeedOut</numIndex>
+									</numIndex>
+									<numIndex index="45" type="array">
+										<numIndex index="0">rotateIn</numIndex>
+										<numIndex index="1">rotateIn</numIndex>
+									</numIndex>
+									<numIndex index="46" type="array">
+										<numIndex index="0">rotateInDownLeft</numIndex>
+										<numIndex index="1">rotateInDownLeft</numIndex>
+									</numIndex>
+									<numIndex index="47" type="array">
+										<numIndex index="0">rotateInDownRight</numIndex>
+										<numIndex index="1">rotateInDownRight</numIndex>
+									</numIndex>
+									<numIndex index="48" type="array">
+										<numIndex index="0">rotateInUpLeft</numIndex>
+										<numIndex index="1">rotateInUpLeft</numIndex>
+									</numIndex>
+									<numIndex index="49" type="array">
+										<numIndex index="0">rotateInUpRight</numIndex>
+										<numIndex index="1">rotateInUpRight</numIndex>
+									</numIndex>
+									<numIndex index="50" type="array">
+										<numIndex index="0">rotateOut</numIndex>
+										<numIndex index="1">rotateOut</numIndex>
+									</numIndex>
+									<numIndex index="51" type="array">
+										<numIndex index="0">rotateOutDownLeft</numIndex>
+										<numIndex index="1">rotateOutDownLeft</numIndex>
+									</numIndex>
+									<numIndex index="52" type="array">
+										<numIndex index="0">rotateOutDownRight</numIndex>
+										<numIndex index="1">rotateOutDownRight</numIndex>
+									</numIndex>
+									<numIndex index="53" type="array">
+										<numIndex index="0">rotateOutUpLeft</numIndex>
+										<numIndex index="1">rotateOutUpLeft</numIndex>
+									</numIndex>
+									<numIndex index="54" type="array">
+										<numIndex index="0">rotateOutUpRight</numIndex>
+										<numIndex index="1">rotateOutUpRight</numIndex>
+									</numIndex>
+									<numIndex index="55" type="array">
+										<numIndex index="0">hinge</numIndex>
+										<numIndex index="1">hinge</numIndex>
+									</numIndex>
+									<numIndex index="56" type="array">
+										<numIndex index="0">jackInTheBox</numIndex>
+										<numIndex index="1">jackInTheBox</numIndex>
+									</numIndex>
+									<numIndex index="57" type="array">
+										<numIndex index="0">rollIn</numIndex>
+										<numIndex index="1">rollIn</numIndex>
+									</numIndex>
+									<numIndex index="58" type="array">
+										<numIndex index="0">rollOut</numIndex>
+										<numIndex index="1">rollOut</numIndex>
+									</numIndex>
+									<numIndex index="59" type="array">
+										<numIndex index="0">zoomIn</numIndex>
+										<numIndex index="1">zoomIn</numIndex>
+									</numIndex>
+									<numIndex index="60" type="array">
+										<numIndex index="0">zoomInDown</numIndex>
+										<numIndex index="1">zoomInDown</numIndex>
+									</numIndex>
+									<numIndex index="61" type="array">
+										<numIndex index="0">zoomInLeft</numIndex>
+										<numIndex index="1">zoomInLeft</numIndex>
+									</numIndex>
+									<numIndex index="62" type="array">
+										<numIndex index="0">zoomInRight</numIndex>
+										<numIndex index="1">zoomInRight</numIndex>
+									</numIndex>
+									<numIndex index="63" type="array">
+										<numIndex index="0">zoomInUp</numIndex>
+										<numIndex index="1">zoomInUp</numIndex>
+									</numIndex>
+									<numIndex index="64" type="array">
+										<numIndex index="0">zoomOut</numIndex>
+										<numIndex index="1">zoomOut</numIndex>
+									</numIndex>
+									<numIndex index="65" type="array">
+										<numIndex index="0">zoomOutDown</numIndex>
+										<numIndex index="1">zoomOutDown</numIndex>
+									</numIndex>
+									<numIndex index="66" type="array">
+										<numIndex index="0">zoomOutLeft</numIndex>
+										<numIndex index="1">zoomOutLeft</numIndex>
+									</numIndex>
+									<numIndex index="67" type="array">
+										<numIndex index="0">zoomOutRight</numIndex>
+										<numIndex index="1">zoomOutRight</numIndex>
+									</numIndex>
+									<numIndex index="68" type="array">
+										<numIndex index="0">zoomOutUp</numIndex>
+										<numIndex index="1">zoomOutUp</numIndex>
+									</numIndex>
+									<numIndex index="69" type="array">
+										<numIndex index="0">slideInDown</numIndex>
+										<numIndex index="1">slideInDown</numIndex>
+									</numIndex>
+									<numIndex index="70" type="array">
+										<numIndex index="0">slideInLeft</numIndex>
+										<numIndex index="1">slideInLeft</numIndex>
+									</numIndex>
+									<numIndex index="71" type="array">
+										<numIndex index="0">slideInRight</numIndex>
+										<numIndex index="1">slideInRight</numIndex>
+									</numIndex>
+									<numIndex index="72" type="array">
+										<numIndex index="0">slideInUp</numIndex>
+										<numIndex index="1">slideInUp</numIndex>
+									</numIndex>
+									<numIndex index="73" type="array">
+										<numIndex index="0">slideOutDown</numIndex>
+										<numIndex index="1">slideOutDown</numIndex>
+									</numIndex>
+									<numIndex index="74" type="array">
+										<numIndex index="0">slideOutLeft</numIndex>
+										<numIndex index="1">slideOutLeft</numIndex>
+									</numIndex>
+									<numIndex index="75" type="array">
+										<numIndex index="0">slideOutRight</numIndex>
+										<numIndex index="1">slideOutRight</numIndex>
+									</numIndex>
+									<numIndex index="76" type="array">
+										<numIndex index="0">slideOutUp</numIndex>
+										<numIndex index="1">slideOutUp</numIndex>
+									</numIndex>
+									<numIndex index="77" type="array">
+										<numIndex index="0">heartBeat</numIndex>
+										<numIndex index="1">heartBeat</numIndex>
+									</numIndex>
+									<numIndex index="78" type="array">
+										<numIndex index="0">bounce</numIndex>
+										<numIndex index="1">bounce</numIndex>
+									</numIndex>
+								</items>
+								<size>1</size>
+								<minitems>1</minitems>
+								<maxitems>1</maxitems>
+							</config>
+							<!-- <onChange>reload</onChange> -->
+
+						</TCEforms>
+					</animation_center>
+
+					<animationspeed_center type="array">
+						<TCEforms type="array">
+							<label>Animations-Geschwindigkeit (optional)</label>
+							<config>
+								<type>selectSingle</type>
+								<items type="array">
+									<numIndex index="1" type="array">
+										<numIndex index="0">default - 1s</numIndex>
+										<numIndex index="1">default</numIndex>
+									</numIndex>
+									<numIndex index="2" type="array">
+										<numIndex index="0">slow - 2s</numIndex>
+										<numIndex index="1">slow</numIndex>
+									</numIndex>
+									<numIndex index="3" type="array">
+										<numIndex index="0">slower - 3s</numIndex>
+										<numIndex index="1">slower</numIndex>
+									</numIndex>
+									<numIndex index="4" type="array">
+										<numIndex index="0">fast - 800ms</numIndex>
+										<numIndex index="1">fast</numIndex>
+									</numIndex>
+									<numIndex index="5" type="array">
+										<numIndex index="0">faster - 500ms</numIndex>
+										<numIndex index="1">faster</numIndex>
+									</numIndex>
+								</items>
+								<size>1</size>
+								<minitems>1</minitems>
+								<maxitems>1</maxitems>
+							</config>
+						</TCEforms>
+					</animationspeed_center>
+
+					<animationdelay_center type="array">
+						<TCEforms type="array">
+							<label>Animations-Verzögerung (optional)</label>
+							<config>
+								<type>selectSingle</type>
+								<items type="array">
+									<numIndex index="1" type="array">
+										<numIndex index="0">none</numIndex>
+										<numIndex index="1">none</numIndex>
+									</numIndex>
+									<numIndex index="2" type="array">
+										<numIndex index="0">delay-2s</numIndex>
+										<numIndex index="1">delay-2s</numIndex>
+									</numIndex>
+									<numIndex index="3" type="array">
+										<numIndex index="0">delay-3s</numIndex>
+										<numIndex index="1">delay-3s</numIndex>
+									</numIndex>
+									<numIndex index="4" type="array">
+										<numIndex index="0">delay-4s</numIndex>
+										<numIndex index="1">delay-4s</numIndex>
+									</numIndex>
+									<numIndex index="5" type="array">
+										<numIndex index="0">delay-5s</numIndex>
+										<numIndex index="1">delay-5s</numIndex>
+									</numIndex>
+								</items>
+								<size>1</size>
+								<minitems>1</minitems>
+								<maxitems>1</maxitems>
+							</config>
+						</TCEforms>
+					</animationdelay_center>
+
+                    <verlaufsfarbe_start_center type="array">
+                        <TCEforms type="array">
+                            <label>Start - Verlaufsfarbe</label>
+                            <config>
+                            	<type>input</type>
+                            	<renderType>colorpicker</renderType>
+                            	<size>10</size>
+                            </config>
+                        </TCEforms>
+                    </verlaufsfarbe_start_center>
+
+                    <verlaufsfarbe_ende_center type="array">
+                        <TCEforms type="array">
+                            <label>Ende - Verlaufsfarbe</label>
+                            <config>
+                            	<type>input</type>
+                            	<renderType>colorpicker</renderType>
+                            	<size>10</size>
+                            </config>
+                        </TCEforms>
+                    </verlaufsfarbe_ende_center>
+
+                    <verlaufsfarbe_winkel_center type="array">
+                        <TCEforms type="array">
+                            <label>Verlauf - Winkel°</label>
+                            <config>
+                                <type>input</type>
+                                <size>5</size>
+                                <eval>trim</eval>
+                            </config>
+                        </TCEforms>
+                    </verlaufsfarbe_winkel_center>
+
+                    <verlaufsfarbe_schriftfarbe_center type="array">
+                        <TCEforms type="array">
+                            <label>Verlauf - Schriftfarbe</label>
+                            <config>
+                            	<type>input</type>
+                            	<renderType>colorpicker</renderType>
+                            	<size>10</size>
+                            </config>
+                        </TCEforms>
+                    </verlaufsfarbe_schriftfarbe_center>
+
+				</el>
+			</ROOT>
+		</center>
+		<right>
+			<ROOT>
+				<TCEforms>
+					<sheetTitle>Rechte Col</sheetTitle>
+				</TCEforms>
+				<type>array</type>
+				<el>
+					<cssklassen_right type="array">
+						<TCEforms type="array">
+							<label>Zusätzliche CSS Klassen (optional)</label>
+							<config>
+								<type>input</type>
+								<size>30</size>
+								<eval>trim</eval>
+							</config>
+						</TCEforms>
+					</cssklassen_right>
+
+					<inlineCSS_right type="array">
+						<TCEforms type="array">
+							<label>inlineCSS (optional)</label>
+							<config>
+								<type>input</type>
+								<size>120</size>
+								<eval>trim</eval>
+							</config>
+						</TCEforms>
+					</inlineCSS_right>
+
+					<animation_right type="array">
+						<TCEforms type="array">
+							<label>AnimateCSS Animation (optional)</label>
+							<config>
+								<type>selectSingle</type>
+								<items type="array">
+									<numIndex index="1" type="array">
+										<numIndex index="0">disabled</numIndex>
+										<numIndex index="1">disabled</numIndex>
+									</numIndex>
+									<numIndex index="2" type="array">
+										<numIndex index="0">flash</numIndex>
+										<numIndex index="1">flash</numIndex>
+									</numIndex>
+									<numIndex index="3" type="array">
+										<numIndex index="0">pulse</numIndex>
+										<numIndex index="1">pulse</numIndex>
+									</numIndex>
+									<numIndex index="4" type="array">
+										<numIndex index="0">rubberBand</numIndex>
+										<numIndex index="1">rubberBand</numIndex>
+									</numIndex>
+									<numIndex index="5" type="array">
+										<numIndex index="0">shake</numIndex>
+										<numIndex index="1">shake</numIndex>
+									</numIndex>
+									<numIndex index="6" type="array">
+										<numIndex index="0">headShake</numIndex>
+										<numIndex index="1">headShake</numIndex>
+									</numIndex>
+									<numIndex index="7" type="array">
+										<numIndex index="0">swing</numIndex>
+										<numIndex index="1">swing</numIndex>
+									</numIndex>
+									<numIndex index="8" type="array">
+										<numIndex index="0">tada</numIndex>
+										<numIndex index="1">tada</numIndex>
+									</numIndex>
+									<numIndex index="9" type="array">
+										<numIndex index="0">wobble</numIndex>
+										<numIndex index="1">wobble</numIndex>
+									</numIndex>
+									<numIndex index="10" type="array">
+										<numIndex index="0">jello</numIndex>
+										<numIndex index="1">jello</numIndex>
+									</numIndex>
+									<numIndex index="11" type="array">
+										<numIndex index="0">bounceIn</numIndex>
+										<numIndex index="1">bounceIn</numIndex>
+									</numIndex>
+									<numIndex index="12" type="array">
+										<numIndex index="0">bounceInDown</numIndex>
+										<numIndex index="1">bounceInDown</numIndex>
+									</numIndex>
+									<numIndex index="13" type="array">
+										<numIndex index="0">bounceInLeft</numIndex>
+										<numIndex index="1">bounceInLeft</numIndex>
+									</numIndex>
+									<numIndex index="14" type="array">
+										<numIndex index="0">bounceInRight</numIndex>
+										<numIndex index="1">bounceInRight</numIndex>
+									</numIndex>
+									<numIndex index="15" type="array">
+										<numIndex index="0">bounceInUp</numIndex>
+										<numIndex index="1">bounceInUp</numIndex>
+									</numIndex>
+									<numIndex index="16" type="array">
+										<numIndex index="0">bounceOut</numIndex>
+										<numIndex index="1">bounceOut</numIndex>
+									</numIndex>
+									<numIndex index="17" type="array">
+										<numIndex index="0">bounceOutDown</numIndex>
+										<numIndex index="1">bounceOutDown</numIndex>
+									</numIndex>
+									<numIndex index="18" type="array">
+										<numIndex index="0">bounceOutLeft</numIndex>
+										<numIndex index="1">bounceOutLeft</numIndex>
+									</numIndex>
+									<numIndex index="19" type="array">
+										<numIndex index="0">bounceOutRight</numIndex>
+										<numIndex index="1">bounceOutRight</numIndex>
+									</numIndex>
+									<numIndex index="20" type="array">
+										<numIndex index="0">bounceOutUp</numIndex>
+										<numIndex index="1">bounceOutUp</numIndex>
+									</numIndex>
+									<numIndex index="21" type="array">
+										<numIndex index="0">fadeIn</numIndex>
+										<numIndex index="1">fadeIn</numIndex>
+									</numIndex>
+									<numIndex index="22" type="array">
+										<numIndex index="0">fadeInDown</numIndex>
+										<numIndex index="1">fadeInDown</numIndex>
+									</numIndex>
+									<numIndex index="23" type="array">
+										<numIndex index="0">fadeInDownBig</numIndex>
+										<numIndex index="1">fadeInDownBig</numIndex>
+									</numIndex>
+									<numIndex index="24" type="array">
+										<numIndex index="0">fadeInLeft</numIndex>
+										<numIndex index="1">fadeInLeft</numIndex>
+									</numIndex>
+									<numIndex index="25" type="array">
+										<numIndex index="0">fadeInLeftBig</numIndex>
+										<numIndex index="1">fadeInLeftBig</numIndex>
+									</numIndex>
+									<numIndex index="26" type="array">
+										<numIndex index="0">fadeInRight</numIndex>
+										<numIndex index="1">fadeInRight</numIndex>
+									</numIndex>
+									<numIndex index="27" type="array">
+										<numIndex index="0">fadeInRightBig</numIndex>
+										<numIndex index="1">fadeInRightBig</numIndex>
+									</numIndex>
+									<numIndex index="28" type="array">
+										<numIndex index="0">fadeInUp</numIndex>
+										<numIndex index="1">fadeInUp</numIndex>
+									</numIndex>
+									<numIndex index="29" type="array">
+										<numIndex index="0">fadeInUpBig</numIndex>
+										<numIndex index="1">fadeInUpBig</numIndex>
+									</numIndex>
+									<numIndex index="30" type="array">
+										<numIndex index="0">fadeOut</numIndex>
+										<numIndex index="1">fadeOut</numIndex>
+									</numIndex>
+									<numIndex index="31" type="array">
+										<numIndex index="0">fadeOutDown</numIndex>
+										<numIndex index="1">fadeOutDown</numIndex>
+									</numIndex>
+									<numIndex index="32" type="array">
+										<numIndex index="0">fadeOutDownBig</numIndex>
+										<numIndex index="1">fadeOutDownBig</numIndex>
+									</numIndex>
+									<numIndex index="33" type="array">
+										<numIndex index="0">fadeOutLeft</numIndex>
+										<numIndex index="1">fadeOutLeft</numIndex>
+									</numIndex>
+									<numIndex index="34" type="array">
+										<numIndex index="0">fadeOutLeftBig</numIndex>
+										<numIndex index="1">fadeOutLeftBig</numIndex>
+									</numIndex>
+									<numIndex index="35" type="array">
+										<numIndex index="0">fadeOutRight</numIndex>
+										<numIndex index="1">fadeOutRight</numIndex>
+									</numIndex>
+									<numIndex index="36" type="array">
+										<numIndex index="0">fadeOutRightBig</numIndex>
+										<numIndex index="1">fadeOutRightBig</numIndex>
+									</numIndex>
+									<numIndex index="37" type="array">
+										<numIndex index="0">fadeOutUp</numIndex>
+										<numIndex index="1">fadeOutUp</numIndex>
+									</numIndex>
+									<numIndex index="38" type="array">
+										<numIndex index="0">fadeOutUpBig</numIndex>
+										<numIndex index="1">fadeOutUpBig</numIndex>
+									</numIndex>
+									<numIndex index="39" type="array">
+										<numIndex index="0">flipInX</numIndex>
+										<numIndex index="1">flipInX</numIndex>
+									</numIndex>
+									<numIndex index="40" type="array">
+										<numIndex index="0">flipInY</numIndex>
+										<numIndex index="1">flipInY</numIndex>
+									</numIndex>
+									<numIndex index="41" type="array">
+										<numIndex index="0">flipOutX</numIndex>
+										<numIndex index="1">flipOutX</numIndex>
+									</numIndex>
+									<numIndex index="42" type="array">
+										<numIndex index="0">flipOutY</numIndex>
+										<numIndex index="1">flipOutY</numIndex>
+									</numIndex>
+									<numIndex index="43" type="array">
+										<numIndex index="0">lightSpeedIn</numIndex>
+										<numIndex index="1">lightSpeedIn</numIndex>
+									</numIndex>
+									<numIndex index="44" type="array">
+										<numIndex index="0">lightSpeedOut</numIndex>
+										<numIndex index="1">lightSpeedOut</numIndex>
+									</numIndex>
+									<numIndex index="45" type="array">
+										<numIndex index="0">rotateIn</numIndex>
+										<numIndex index="1">rotateIn</numIndex>
+									</numIndex>
+									<numIndex index="46" type="array">
+										<numIndex index="0">rotateInDownLeft</numIndex>
+										<numIndex index="1">rotateInDownLeft</numIndex>
+									</numIndex>
+									<numIndex index="47" type="array">
+										<numIndex index="0">rotateInDownRight</numIndex>
+										<numIndex index="1">rotateInDownRight</numIndex>
+									</numIndex>
+									<numIndex index="48" type="array">
+										<numIndex index="0">rotateInUpLeft</numIndex>
+										<numIndex index="1">rotateInUpLeft</numIndex>
+									</numIndex>
+									<numIndex index="49" type="array">
+										<numIndex index="0">rotateInUpRight</numIndex>
+										<numIndex index="1">rotateInUpRight</numIndex>
+									</numIndex>
+									<numIndex index="50" type="array">
+										<numIndex index="0">rotateOut</numIndex>
+										<numIndex index="1">rotateOut</numIndex>
+									</numIndex>
+									<numIndex index="51" type="array">
+										<numIndex index="0">rotateOutDownLeft</numIndex>
+										<numIndex index="1">rotateOutDownLeft</numIndex>
+									</numIndex>
+									<numIndex index="52" type="array">
+										<numIndex index="0">rotateOutDownRight</numIndex>
+										<numIndex index="1">rotateOutDownRight</numIndex>
+									</numIndex>
+									<numIndex index="53" type="array">
+										<numIndex index="0">rotateOutUpLeft</numIndex>
+										<numIndex index="1">rotateOutUpLeft</numIndex>
+									</numIndex>
+									<numIndex index="54" type="array">
+										<numIndex index="0">rotateOutUpRight</numIndex>
+										<numIndex index="1">rotateOutUpRight</numIndex>
+									</numIndex>
+									<numIndex index="55" type="array">
+										<numIndex index="0">hinge</numIndex>
+										<numIndex index="1">hinge</numIndex>
+									</numIndex>
+									<numIndex index="56" type="array">
+										<numIndex index="0">jackInTheBox</numIndex>
+										<numIndex index="1">jackInTheBox</numIndex>
+									</numIndex>
+									<numIndex index="57" type="array">
+										<numIndex index="0">rollIn</numIndex>
+										<numIndex index="1">rollIn</numIndex>
+									</numIndex>
+									<numIndex index="58" type="array">
+										<numIndex index="0">rollOut</numIndex>
+										<numIndex index="1">rollOut</numIndex>
+									</numIndex>
+									<numIndex index="59" type="array">
+										<numIndex index="0">zoomIn</numIndex>
+										<numIndex index="1">zoomIn</numIndex>
+									</numIndex>
+									<numIndex index="60" type="array">
+										<numIndex index="0">zoomInDown</numIndex>
+										<numIndex index="1">zoomInDown</numIndex>
+									</numIndex>
+									<numIndex index="61" type="array">
+										<numIndex index="0">zoomInLeft</numIndex>
+										<numIndex index="1">zoomInLeft</numIndex>
+									</numIndex>
+									<numIndex index="62" type="array">
+										<numIndex index="0">zoomInRight</numIndex>
+										<numIndex index="1">zoomInRight</numIndex>
+									</numIndex>
+									<numIndex index="63" type="array">
+										<numIndex index="0">zoomInUp</numIndex>
+										<numIndex index="1">zoomInUp</numIndex>
+									</numIndex>
+									<numIndex index="64" type="array">
+										<numIndex index="0">zoomOut</numIndex>
+										<numIndex index="1">zoomOut</numIndex>
+									</numIndex>
+									<numIndex index="65" type="array">
+										<numIndex index="0">zoomOutDown</numIndex>
+										<numIndex index="1">zoomOutDown</numIndex>
+									</numIndex>
+									<numIndex index="66" type="array">
+										<numIndex index="0">zoomOutLeft</numIndex>
+										<numIndex index="1">zoomOutLeft</numIndex>
+									</numIndex>
+									<numIndex index="67" type="array">
+										<numIndex index="0">zoomOutRight</numIndex>
+										<numIndex index="1">zoomOutRight</numIndex>
+									</numIndex>
+									<numIndex index="68" type="array">
+										<numIndex index="0">zoomOutUp</numIndex>
+										<numIndex index="1">zoomOutUp</numIndex>
+									</numIndex>
+									<numIndex index="69" type="array">
+										<numIndex index="0">slideInDown</numIndex>
+										<numIndex index="1">slideInDown</numIndex>
+									</numIndex>
+									<numIndex index="70" type="array">
+										<numIndex index="0">slideInLeft</numIndex>
+										<numIndex index="1">slideInLeft</numIndex>
+									</numIndex>
+									<numIndex index="71" type="array">
+										<numIndex index="0">slideInRight</numIndex>
+										<numIndex index="1">slideInRight</numIndex>
+									</numIndex>
+									<numIndex index="72" type="array">
+										<numIndex index="0">slideInUp</numIndex>
+										<numIndex index="1">slideInUp</numIndex>
+									</numIndex>
+									<numIndex index="73" type="array">
+										<numIndex index="0">slideOutDown</numIndex>
+										<numIndex index="1">slideOutDown</numIndex>
+									</numIndex>
+									<numIndex index="74" type="array">
+										<numIndex index="0">slideOutLeft</numIndex>
+										<numIndex index="1">slideOutLeft</numIndex>
+									</numIndex>
+									<numIndex index="75" type="array">
+										<numIndex index="0">slideOutRight</numIndex>
+										<numIndex index="1">slideOutRight</numIndex>
+									</numIndex>
+									<numIndex index="76" type="array">
+										<numIndex index="0">slideOutUp</numIndex>
+										<numIndex index="1">slideOutUp</numIndex>
+									</numIndex>
+									<numIndex index="77" type="array">
+										<numIndex index="0">heartBeat</numIndex>
+										<numIndex index="1">heartBeat</numIndex>
+									</numIndex>
+									<numIndex index="78" type="array">
+										<numIndex index="0">bounce</numIndex>
+										<numIndex index="1">bounce</numIndex>
+									</numIndex>
+								</items>
+								<size>1</size>
+								<minitems>1</minitems>
+								<maxitems>1</maxitems>
+							</config>
+							<!-- <onChange>reload</onChange> -->
+
+						</TCEforms>
+					</animation_right>
+
+					<animationspeed_right type="array">
+						<TCEforms type="array">
+							<label>Animations-Geschwindigkeit (optional)</label>
+							<config>
+								<type>selectSingle</type>
+								<items type="array">
+									<numIndex index="1" type="array">
+										<numIndex index="0">default - 1s</numIndex>
+										<numIndex index="1">default</numIndex>
+									</numIndex>
+									<numIndex index="2" type="array">
+										<numIndex index="0">slow - 2s</numIndex>
+										<numIndex index="1">slow</numIndex>
+									</numIndex>
+									<numIndex index="3" type="array">
+										<numIndex index="0">slower - 3s</numIndex>
+										<numIndex index="1">slower</numIndex>
+									</numIndex>
+									<numIndex index="4" type="array">
+										<numIndex index="0">fast - 800ms</numIndex>
+										<numIndex index="1">fast</numIndex>
+									</numIndex>
+									<numIndex index="5" type="array">
+										<numIndex index="0">faster - 500ms</numIndex>
+										<numIndex index="1">faster</numIndex>
+									</numIndex>
+								</items>
+								<size>1</size>
+								<minitems>1</minitems>
+								<maxitems>1</maxitems>
+							</config>
+						</TCEforms>
+					</animationspeed_right>
+
+					<animationdelay_right type="array">
+						<TCEforms type="array">
+							<label>Animations-Verzögerung (optional)</label>
+							<config>
+								<type>selectSingle</type>
+								<items type="array">
+									<numIndex index="1" type="array">
+										<numIndex index="0">none</numIndex>
+										<numIndex index="1">none</numIndex>
+									</numIndex>
+									<numIndex index="2" type="array">
+										<numIndex index="0">delay-2s</numIndex>
+										<numIndex index="1">delay-2s</numIndex>
+									</numIndex>
+									<numIndex index="3" type="array">
+										<numIndex index="0">delay-3s</numIndex>
+										<numIndex index="1">delay-3s</numIndex>
+									</numIndex>
+									<numIndex index="4" type="array">
+										<numIndex index="0">delay-4s</numIndex>
+										<numIndex index="1">delay-4s</numIndex>
+									</numIndex>
+									<numIndex index="5" type="array">
+										<numIndex index="0">delay-5s</numIndex>
+										<numIndex index="1">delay-5s</numIndex>
+									</numIndex>
+								</items>
+								<size>1</size>
+								<minitems>1</minitems>
+								<maxitems>1</maxitems>
+							</config>
+						</TCEforms>
+					</animationdelay_right>
+
+                    <verlaufsfarbe_start_right type="array">
+                        <TCEforms type="array">
+                            <label>Start - Verlaufsfarbe</label>
+                            <config>
+                            	<type>input</type>
+                            	<renderType>colorpicker</renderType>
+                            	<size>10</size>
+                            </config>
+                        </TCEforms>
+                    </verlaufsfarbe_start_right>
+
+                    <verlaufsfarbe_ende_right type="array">
+                        <TCEforms type="array">
+                            <label>Ende - Verlaufsfarbe</label>
+                            <config>
+                            	<type>input</type>
+                            	<renderType>colorpicker</renderType>
+                            	<size>10</size>
+                            </config>
+                        </TCEforms>
+                    </verlaufsfarbe_ende_right>
+
+                    <verlaufsfarbe_winkel_right type="array">
+                        <TCEforms type="array">
+                            <label>Verlauf - Winkel°</label>
+                            <config>
+                                <type>input</type>
+                                <size>5</size>
+                                <eval>trim</eval>
+                            </config>
+                        </TCEforms>
+                    </verlaufsfarbe_winkel_right>
+
+                    <verlaufsfarbe_schriftfarbe_right type="array">
+                        <TCEforms type="array">
+                            <label>Verlauf - Schriftfarbe</label>
+                            <config>
+                            	<type>input</type>
+                            	<renderType>colorpicker</renderType>
+                            	<size>10</size>
+                            </config>
+                        </TCEforms>
+                    </verlaufsfarbe_schriftfarbe_right>
+
+				</el>
+			</ROOT>
+		</right>
+
+
+	</sheets>
+</T3DataStructure>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<T3DataStructure>
+    <meta>
+        <langDisable>1</langDisable>
+    </meta>
+    <sheets>
+        <allgemein>
+            <ROOT type="array">
+                <TCEforms>
+                    <sheetTitle>Allgemein</sheetTitle>
+                </TCEforms>
+                <type>array</type>
+                <el type="array">
+                    <headline type="array">
+                        <TCEforms type="array">
+                            <label>Headline</label>
+                            <config>
+                                <type>input</type>
+                                <size>30</size>
+                                <eval>trim</eval>
+                            </config>
+                        </TCEforms>
+                    </headline>
+
+                    <datum type="array">
+                        <TCEforms type="array">
+                            <label>Datum</label>
+                            <config>
+                                <type>input</type>
+                                <size>30</size>
+                                <eval>trim</eval>
+                                <default>Hannover, 22.12.2021</default>
+                            </config>
+                        </TCEforms>
+                    </datum>
+                    <download type="array">
+                        <TCEforms type="array">
+                            <label>Download</label>
+                            <config>
+                                <type>input</type>
+                                <size>30</size>
+                                <eval>trim</eval>
+                            </config>
+                        </TCEforms>
+                    </download>
+
+                </el>
+            </ROOT>
+        </allgemein>
+    </sheets>
+</T3DataStructure>

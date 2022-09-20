@@ -1,0 +1,48 @@
+<div class="dce dce-heroelement">
+	<div class="container">
+		<div class="row min-vh-100 align-items-center gy-5 overflow-hidden">
+			<div class="col-lg-8 zindex-10">
+				<div class="home-intro">
+					<div class="animated start fadeIn slower ">
+						<h5 class="font-size-16"><f:format.html>{fied.subhead}</f:format.html></h5>
+						<h2 class="font-size-28"><f:format.raw>{field.precolor}</f:format.raw><br><span class="text-theme font-size-74 fw-bolder"><f:format.raw>{field.colorheadline}</f:format.raw></span>
+						</h2>
+						<p>
+							<f:format.raw>{field.introtext}</f:format.raw>
+						</p> <br><br>
+						</div>
+					<div class="animated start fadeIn slower delay-15s ">
+						<f:for each="{field.links}" as="links">
+							<div class="btn-bar">
+								<a class="ink-effect bn5" href="{links.slug}">{links.title}
+									<i class="bi bi-arrow-up-right"></i>
+								</a>
+							</div>
+							<br><br>
+						</f:for>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-4 ps-0 position-relative animated fadeIn delay-1s slower text-center">
+				<div class="home-image responsive-image">
+					<f:for each="{field.bild}" as="image">
+						<div class="slide">
+							<f:image image="{image.originalFile}" width="280c"/>
+						</div>
+					</f:for>
+				</div>
+				<div class="bg-blob-element blob_2 position-absolute"></div>
+			</div>
+			<div class="col-lg-12 pb-15">
+				<h4 class="card-title mb-5 ">
+					<div class="link-wrapper">
+						<span class="font-primary font-size-42 fw-bolderlink hover"  >
+							Mein Techstack:
+						</span>
+					</div>
+				</h4>
+				<f:cObject typoscriptObjectPath="lib.badges" />
+			</div>
+		</div>
+	</div>
+</div>

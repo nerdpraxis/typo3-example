@@ -1,0 +1,19 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<f:if condition="{data.show}">
+	<f:be.infobox title="{f:translate(key: 'module.message.pageNotice.title')}" state="2">
+		<f:render section="content" arguments="{_all}" />
+	</f:be.infobox>
+</f:if>
+
+<f:section name="content">
+	<f:translate key="module.message.pageNotice" />
+	<f:for each="{data.pages}" as="page" iteration="iterator">
+		<f:link.page additionalParams="{id: page.uid}" addQueryString="1" argumentsToBeExcludedFromQueryString="{0: 'id'}">
+			{page.title}
+		</f:link.page>
+		<f:if condition="{iterator.cycle} < {iterator.total}">,</f:if>
+	</f:for>
+</f:section>
+
+</html>

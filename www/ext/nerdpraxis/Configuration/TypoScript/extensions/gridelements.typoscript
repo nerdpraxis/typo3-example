@@ -1,0 +1,30 @@
+lib.gridelements.defaultGridSetup =< lib.contentElement
+tt_content.gridelements_pi1 =< lib.contentElement
+
+tt_content.gridelements_pi1 >
+tt_content.gridelements_pi1 =< lib.contentElement
+tt_content.gridelements_pi1 {
+
+// ORGINIAL PROCESSING
+  dataProcessing {
+      10 = GridElementsTeam\Gridelements\DataProcessing\GridChildrenProcessor
+      10 {
+        default {
+          as = children
+          # Default options of the grid children processor
+          # Change them according to the needs of your layout
+          # Read more about it in the TypoScript section of the manual
+            options {
+              resolveFlexFormData = 0
+              resolveChildFlexFormData = 0
+          }
+        }
+      }
+    }
+ //CUSTOM PROCESSING
+  dataProcessing {
+    10 = GridElementsTeam\Gridelements\DataProcessing\GridChildrenProcessor
+    10 {
+    }
+  }
+}

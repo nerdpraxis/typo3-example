@@ -1,8 +1,6 @@
 ## TYPO3 v6.2
 # Ignore several upload and file directories.
-/fileadmin/user_upload/
-/fileadmin/_temp_/
-/fileadmin/_processed_/
+/fileadmin
 /uploads/
 # Ignore cache
 /typo3conf/temp_CACHED*
@@ -21,3 +19,19 @@
 /index.php
 # Ignore temp directory.
 /typo3temp/
+/nerdpraxis.sql
+/www_bak/
+/dump/myDB.sql
+/dump/nerdpraxis_typo3_10.sql
+/www/vendor/
+/www/var/
+/www/_.htpasswd
+/www/public/typo3conf/AdditionalConfiguration.php
+/www/public/typo3conf/LocalConfiguration.php
+/www/ext/nerdpraxis/.Build/
+/www/ext/nerdpraxis/Configuration/ExtensionBuilder/
+/www/ext/gridelements/
+/www/ext/webp/
+/www/ext/nerdpraxis/Resources/Public/node_modules/
+/www/public/typo3conf/AdditionalConfiguration.php
+/www/public/typo3conf/LocalConfiguration.php

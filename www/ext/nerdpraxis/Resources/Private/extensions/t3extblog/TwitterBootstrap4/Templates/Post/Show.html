@@ -1,0 +1,104 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers" xmlns:t3b="http://typo3.org/ns/FelixNagel/T3extblog/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<f:layout name="Default"/>
+
+<f:section name="main">
+	<f:render partial="Post/Meta" arguments="{post: post, settings: settings}"/>
+
+	<article class="blog-post-wrapper">
+
+		<div class="container view_show">
+			<div class="row align-items-center gy-5 mt-22 mb-10">
+				<div class="col-lg-8">
+					<div class="home-intro">
+						<h5 class="font-size-16">
+							<f:render partial="Post/TagCloud" arguments="{post: post}"/>
+						</h5>
+						<h2 class="font-size-28">
+							<f:cObject typoscriptObjectPath="lib.tx_t3extblog.date" data="{f:format.date(format:'U', date:'{post.publishDate}')}"/>
+							<br>
+							<span class="text-theme font-size-74 fw-bolder">{post.title}</span></h2>
+						<p>
+							{post.preview -> f:format.crop(maxCharacters: '1000') -> f:format.html()} </p>
+						<br><br>
+
+					</div>
+				</div>
+				<div class="col-lg-4 ps-6 position-relative">
+					<div class="home-image responsive-image">
+						<f:if condition="{post.previewImage}">
+							<f:render partial="Post/PreviewImage" arguments="{post: post, settings: settings}"/>
+						</f:if>
+					</div>
+					<div class="bg-blob-element blob_2 position-absolute"></div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-8">
+					<f:if condition="{post.content}">
+						<f:render partial="Post/Content" arguments="{post: post}"/>
+					</f:if>
+				</div>
+			</div>
+			<div class="row mb-10">
+				<div class="col-8">
+					<div class="link-wrapper">
+						<f:link.action controller="Post" action="show" arguments="{post.linkParameter}" section="comment-section" class="link-primary link hover">
+							<span class="icon icon-comments" aria-hidden="true"></span>
+							<f:count subject="{post.comments}"/>
+							<f:translate key="post.comments"/>
+						</f:link.action>
+					</div> &nbsp;
+
+					<div class="link-wrapper">
+						<f:link.action controller="Post" action="permalink" arguments="{permalinkPost: post.uid}" class="permalink link-primary link hover">
+							<span class="icon icon-link" aria-hidden="true"></span>
+							<f:translate key="post.permalink"/>
+						</f:link.action>
+					</div>
+
+					<div class="link-wrapper">
+						<f:if condition="{post.author.uid}">
+							<f:link.action controller="Post" action="author" arguments="{author: post.author}" class="link-primary link hover">
+								<img src="{t3b:frontend.backendUserAvatar(uid: '{post.author.uid}', size: '{settings.blogsystem.posts.author.avatar.size}')}" class="rounded-circle mr-2" alt="Avatar of {post.author.name}"/>
+								<span class="author">{post.author.name}</span>
+							</f:link.action>
+						</f:if>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row my-30">
+			<div class="col-8 offset-2">
+				<f:if condition="{newComment}">
+					<div id="comment-section" class="mt-4">
+						<div id="comment-form" class="mb-4">
+							<div class="">
+								<f:render partial="Comment/New" arguments="{post: post, newComment: newComment, settings: settings}"/>
+							</div>
+						</div>
+						<h3>
+							<f:count subject="{post.comments}"/>
+							<f:translate key="post.comments"/>
+						</h3>
+						<f:if condition="{post.comments}">
+							<div id="comment-list">
+								<t3b:widget.paginate objects="{post.commentsForPaginate}" as="paginatedComments" configuration="{settings.blogsystem.comments.paginate}">
+									<f:for each="{paginatedComments}" as="comment">
+										<f:render partial="Comment/Show" arguments="{post: post, comment: comment}"/>
+									</f:for>
+								</t3b:widget.paginate>
+							</div>
+						</f:if>
+					</div>
+				</f:if>
+
+			</div>
+		</div>
+
+	</article>
+
+</f:section>
+
+</html>

@@ -1,0 +1,24 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers"
+			xmlns:t3b="http://typo3.org/ns/FelixNagel/T3extblog/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<f:layout name="Default" />
+
+<f:section name="main">
+
+	<f:if condition="{posts}">
+		<t3b:widget.paginate objects="{posts}" as="paginatedPosts" configuration="{settings.latestPosts.paginate}">
+			<ul>
+			<f:for each="{paginatedPosts}" as="post">
+				<li>
+					<f:link.action pluginName="Blogsystem" controller="Post" action="show" pageUid="{settings.blogsystem.pid}" arguments="{post.linkParameter}">
+						{post.title}
+					</f:link.action>
+				</li>
+			</f:for>
+			</ul>
+		</t3b:widget.paginate>
+	</f:if>
+
+</f:section>
+
+</html>

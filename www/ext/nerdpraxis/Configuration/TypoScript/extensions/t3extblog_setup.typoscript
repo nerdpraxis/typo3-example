@@ -1,0 +1,76 @@
+plugin.tx_t3extblog {
+	view {
+		# "Email/" is appended to the final template path when rendering emails
+		templateRootPaths.0 = EXT:t3extblog/Resources/Private/Templates/
+		templateRootPaths.10 = {$plugin.tx_t3extblog.view.templateRootPath}
+		templateRootPaths.0 = EXT:nerdpraxis/Resources/Private/extensions/t3extblog/Templates/
+
+		partialRootPaths.0 = EXT:t3extblog/Resources/Private/Partials/
+		partialRootPaths.10 = {$plugin.tx_t3extblog.view.partialRootPath}
+		partialRootPaths.0 = EXT:nerdpraxis/Resources/Private/extensions/t3extblog/Partials/
+
+		layoutRootPaths.0 = EXT:t3extblog/Resources/Private/Layouts/
+		layoutRootPaths.10 = {$plugin.tx_t3extblog.view.layoutRootPath}
+		layoutRootPaths.0 = EXT:nerdpraxis/Resources/Private/extensions/t3extblog/Layouts/
+
+		#widget.FelixNagel\T3extblog\ViewHelpers\Widget\PaginateViewHelper.templateRootPaths.0 = EXT:t3extblog/Resources/Private/Templates/
+		#widget.FelixNagel\T3extblog\ViewHelpers\Widget\PaginateViewHelper.templateRootPaths.10 = {$plugin.tx_t3extblog.view.templateRootPath}
+
+		widget.FelixNagel\T3extblog\ViewHelpers\Widget\PaginateViewHelper.templateRootPaths.0 = EXT:nerdpraxis/Resources/Private/extensions/t3extblog/Templates/
+		widget.FelixNagel\T3extblog\ViewHelpers\Widget\PaginateViewHelper.templateRootPaths.10 = EXT:nerdpraxis/Resources/Private/extensions/t3extblog/Templates/
+
+
+		#widget.FelixNagel\T3extblog\ViewHelpers\Widget\PaginateViewHelper.partialRootPaths.0 = EXT:t3extblog/Resources/Private/Partials/
+		#widget.FelixNagel\T3extblog\ViewHelpers\Widget\PaginateViewHelper.partialRootPaths.10 = {$plugin.tx_t3extblog.view.partialRootPath}
+
+		widget.FelixNagel\T3extblog\ViewHelpers\Widget\PaginateViewHelper.partialRootPaths.0 = EXT:nerdpraxis/Resources/Private/extensions/t3extblog/Partials/
+		widget.FelixNagel\T3extblog\ViewHelpers\Widget\PaginateViewHelper.partialRootPaths.10 = EXT:nerdpraxis/Resources/Private/extensions/t3extblog/Partials/
+	}
+
+	persistence {
+		storagePid = {$plugin.tx_t3extblog.persistence.storagePid}
+		enableAutomaticCacheClearing = 1
+	}
+
+	settings {
+		overrideFlexformSettingsIfEmpty := addToList(latestPosts.categoryUid, latestPosts.paginate.itemsPerPage)
+		overrideFlexformSettingsIfEmpty := addToList(latestComments.paginate.itemsPerPage)
+
+		# Used for all emails
+		blogName = {$plugin.tx_t3extblog.settings.blogName}
+
+		# Debug settings: Do not enable in production context
+		debug {
+			disableEmailTransmission = 0
+			# Render log message in FE
+			renderInFe = 0
+		}
+	}
+}
+
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:t3extblog/Configuration/TypoScript/Includes/Settings/" extensions="typoscript">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:t3extblog/Configuration/TypoScript/Includes/Libraries.typoscript">
+
+# Configure BE module
+# Make sure to update the backend TS every time you change the TS!
+module.tx_t3extblog < plugin.tx_t3extblog
+
+
+
+plugin.tx_t3extblog {
+	view {
+		#templateRootPaths.5 = EXT:t3extblog/Resources/Private/TwitterBootstrap4/Templates/
+		templateRootPaths.5 = EXT:nerdpraxis/Resources/Private/extensions/t3extblog/TwitterBootstrap4/Templates/
+
+		#partialRootPaths.5 = EXT:t3extblog/Resources/Private/TwitterBootstrap4/Partials/
+		partialRootPaths.5 = EXT:nerdpraxis/Resources/Private/extensions/t3extblog/TwitterBootstrap4/Partials/
+
+		#layoutRootPaths.5 = EXT:t3extblog/Resources/Private/TwitterBootstrap4/Layouts/
+		layoutRootPaths.5 = EXT:nerdpraxis/Resources/Private/extensions/t3extblog/TwitterBootstrap4/Layouts/
+
+		#widget.FelixNagel\T3extblog\ViewHelpers\Widget\PaginateViewHelper.templateRootPaths.5 = EXT:nerdpraxis/Resources/Private/extensions/t3extblog/TwitterBootstrap4/Templates/
+		widget.FelixNagel\T3extblog\ViewHelpers\Widget\PaginateViewHelper.partialRootPaths.5 = EXT:nerdpraxis/Resources/Private/extensions/t3extblog/TwitterBootstrap4/Templates/
+	}
+}
+
+module.tx_t3extblog < plugin.tx_t3extblog

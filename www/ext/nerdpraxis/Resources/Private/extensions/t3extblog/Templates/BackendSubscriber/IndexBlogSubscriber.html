@@ -1,0 +1,50 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers"
+			xmlns:t3b="http://typo3.org/ns/FelixNagel/T3extblog/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<f:layout name="Backend" />
+
+<f:section name="headline">
+	<f:translate key="module.subscriber.blog.title" />
+</f:section>
+
+<f:section name="main">
+	<div class="panel panel-space panel-default">
+		<f:if condition="{blogSubscribers}">
+			<f:then>
+				<div class="table-fit">
+				<t3b:widget.paginate objects="{blogSubscribers}" as="paginatedBlogSubscriber" configuration="{settings.backend.subscriber.blog.paginate}">
+					<table border="0" cellpadding="0" cellspacing="0" class="typo3-dblist table table-striped table-hover">
+						<thead>
+							<tr class="t3-row-header">
+								<td>&nbsp;</td>
+								<td><f:translate key="module.subscriber.post.table.email" /></td>
+								<td><f:translate key="module.subscriber.post.table.date" /></td>
+								<td style="width: 50px;">&nbsp;</td>
+							</tr>
+						</thead>
+
+						<f:for each="{paginatedBlogSubscriber}" as="subscriber">
+							<f:render partial="Backend/Subscriber/BlogSubscriberRow" arguments="{subscriber: subscriber, dateTimeFormat: dateTimeFormat}" />
+						</f:for>
+
+						<tr>
+							<td colspan="6">
+								<f:translate
+									key="module.subscriber.table.count"
+									arguments="{0: '{paginatedBlogSubscriber -> f:count()}', 1: '{blogSubscribers -> f:count()}'}" />
+							</td>
+						</tr>
+					</table>
+				</t3b:widget.paginate>
+				</div>
+			</f:then>
+			<f:else>
+				<div class="panel-body">
+					<em><f:translate key="module.subscriber.noRecords" /></em>
+				</div>
+			</f:else>
+		</f:if>
+	</div>
+</f:section>
+
+</html>

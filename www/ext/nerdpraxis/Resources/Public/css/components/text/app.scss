@@ -1,0 +1,14 @@
+@import "font-includes";
+@import "font-awesome";
+@import "text-colors";
+@import "font-size";
+@import "link";
+.whitespace-nowrap{
+ white-space:nowrap;
+}
+
+.text-theme {
+    background: linear-gradient(to right,  $secondary-color,  $primary-color, $primary-color);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

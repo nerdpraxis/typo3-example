@@ -1,0 +1,11 @@
+ 
+<v:page.header>
+	<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "Organization",
+			"url": "<f:comment></f:comment>{field.gurl}",
+			"logo": "<f:comment></f:comment><f:for each="{dce:fal(field:'glogo', contentObject:contentObject)}" as="fileReference" iteration="iterator">{f:uri.image(src:'{fileReference.uid}',treatIdAsReference:'1',absolute:'1')}</f:for>"
+		}
+	</script>
+</v:page.header>

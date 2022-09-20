@@ -1,0 +1,232 @@
+config.contentObjectExceptionHandler = 0
+config {
+  compressJs = 0
+  compressCss = 0
+  concatenateJs = 0
+  concatenateCss = 0
+}
+config.doctype = html5
+#config.htmlTag.attributes.class =  HTML TAG CLASSES
+#DEFAULT TEMPLATE
+page = PAGE
+page.10 = FLUIDTEMPLATE
+page.10 {
+  typeNum = 0
+  format = html
+  file = EXT:nerdpraxis/Resources/Private/Templates/mainTemplate.html
+  partialRootPath = EXT:nerdpraxis/Resources/Private/Partials/
+
+  variables {
+    content_main < styles.content.get
+    content_main.select.where = colPos = 0
+    layout = TEXT
+    layout.data = levelfield:-2,backend_layout_next_level,slide
+    layout.override.field = backend_layout
+    pageUid = TEXT
+    pageUid.field = uid
+  }
+
+  dataProcessing {
+    10 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+    10 {
+      levels = 1
+      includeSpacer = 1
+      as = mainnavigation
+      entryLevel = 1
+      excludeUidList =
+    }
+  }
+}
+
+tt_content.gridelements_pi1.dataProcessing.10.default.options.resolveChildFlexFormData=0
+
+
+lib.contentElement {
+   templateRootPaths {
+     // 10 = EXT:nerdpraxis/Resources/Private/fluid_styled_content/Templates/
+   }
+   partialRootPaths {
+      1 = EXT:nerdpraxis/Resources/Private/fluid_styled_content/Partials/
+   }
+   layoutRootPaths {
+     // 10 =  EXT:nerdpraxis/Resources/Private/fluid_styled_content/Layouts/
+   }
+}
+
+# HTML HEADER INCLUDES
+page {
+  config.cors {
+    allowOrigin (
+       https://www.youtube.com,
+       https://www.youtube-nocookie.com,
+       *
+    )
+  }
+  includeCSS {
+    main = EXT:nerdpraxis/Resources/Public/dist/style.css
+    ckcode-default = EXT:nerdpraxis/Resources/Public/CKEditor/Plugins/codesnippet/lib/highlight/styles/default.css
+    ckexCode = EXT:nerdpraxis/Resources/Public/CKEditor/Plugins/codesnippet/lib/highlight/styles/monokai.css
+    colorbox = EXT:nerdpraxis/Resources/Public/css/colorbox.css
+    animatecss = EXT:nerdpraxis/Resources/Public/css/animate.css
+  }
+  includeJSLibs {
+    jquery = EXT:nerdpraxis/Resources/Public/JavaScript/vendor/jquery-3.4.1.min.js
+    boostrapjs = EXT:nerdpraxis/Resources/Public/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js
+    colorbox-min = EXT:nerdpraxis/Resources/Public/JavaScript/vendor/jquery.colorbox-min.js
+  }
+  includeJSFooter {
+    main = EXT:nerdpraxis/Resources/Public/dist/app.min.js
+    ckeCode = EXT:nerdpraxis/Resources/Public/CKEditor/Plugins/codesnippet/lib/highlight/highlight.pack.js
+    wow = EXT:nerdpraxis/Resources/Public/JavaScript/vendor/wow.min.js
+    artplayer = typo3conf/ext/nerdpraxis/Resources/Public/JavaScript/vendor/artplayer/artplayer.js
+    artplayer-thumbnail = typo3conf/ext/nerdpraxis/Resources/Public/JavaScript/vendor/artplayer/artplayer-tool-thumbnail.js
+    artplayer-danmuku = typo3conf/ext/nerdpraxis/Resources/Public/JavaScript/vendor/artplayer/artplayer-plugin-danmuku.js
+  }
+}
+
+#REPLACEMENT
+page.10.stdWrap.replacement {
+  10 {
+    search = ##
+    replace = <br>
+  }
+}
+
+# DEFAULT SEARCH PATHS
+lib.contentElement {
+  templateRootPaths {
+    10 = EXT:nerdpraxis/Resources/Private/Templates/
+    20 = EXT:nerdpraxis/Resources/Private/extensions/grid_elements/
+  }
+
+  partialRootPaths {
+    10 = EXT:nerdpraxis/Resources/Private/Partials/
+  }
+
+  layoutRootPaths {
+    10 = EXT:nerdpraxis/Resources/Private/Layouts/
+  }
+}
+# BODY TAG erweitern um pageid, rootebene ect.
+page.bodyTag >
+page.bodyTagCObject = TEXT
+page.bodyTagCObject.field = uid
+page.bodyTagCObject.wrap = <body id="uid-|">
+page {
+  bodyTagCObject >
+  bodyTagCObject = COA
+  bodyTagCObject {
+
+    # id:
+    10 = TEXT
+    10.data = levelfield:1, uid
+    10.dataWrap = id="pid{TSFE:id}" class="bg-dark be-{TSFE:beUserLogin} rpid|
+
+    # level/depth
+    20 = TEXT
+    20.data = level:1
+    20.noTrimWrap = | level| |
+
+    # mit unterseiten
+    30 = TEXT
+    30.value = has-subs
+    30.if.isTrue.numRows {
+      table = pages
+      where = pid=this
+    }
+
+    # keine unterseiten
+    40 = TEXT
+    40.value = no-subs
+    40.if.negate = 1
+    40.if.isTrue.numRows {
+      table = pages
+      where = pid=this
+    }
+    #das " von der class=" wieder schließen
+    50 = TEXT
+    50.value = "
+    # und rein damit
+    stdWrap.noTrimWrap = |<body |>|
+  }
+}
+
+# Max IMAGES SIZES
+tt_content.image.dataProcessing.20.maxGalleryWidth = 1080
+tt_content.textmedia.dataProcessing.20.maxGalleryWidth = 1080
+tt_content.textpic.dataProcessing.20.maxGalleryWidth = 1080
+
+tt_content.image.20.maxW = 1920
+styles.content.imgtext.maxW = 1920
+
+# duh !
+page.shortcutIcon = typo3conf/ext/nerdpraxis/Resources/Public/Icons/favicon.ico
+
+
+# POWERMAIL
+plugin {
+    tx_powermail {
+        settings {
+            misc {
+                htmlForHtmlFields = 1
+                htmlForLabels = 1
+            }
+        }
+    }
+}
+plugin.tx_powermail.view.partialRootPaths.0 = EXT:nerdpraxis/Resources/Private/extensions/powermail/Partials/
+
+# ts math bsp
+lib.math = TEXT
+lib.math {
+  current = 1
+  prioriCalc = 1
+}
+
+# INCLUDES
+<INCLUDE_TYPOSCRIPT: source="FILE: EXT:nerdpraxis/Configuration/TypoScript/extensions/gridelements.typoscript">
+<INCLUDE_TYPOSCRIPT: source="FILE: EXT:nerdpraxis/Configuration/TypoScript/libs/lib_includes.typoscript">
+<INCLUDE_TYPOSCRIPT: source="FILE: EXT:nerdpraxis/Configuration/TypoScript/extensions/t3extblog_setup.typoscript">
+
+# Blog uid settings
+#TODO: Sascha
+# auslagern in eigenes TS file
+plugin.tx_t3extblog.settings.blogsystem.pid = 37
+module.tx_t3extblog.settings.blogsystem.pid = 37
+plugin.tx_t3extblog.settings.subscriptionManager.pid = 7
+module.tx_t3extblog.settings.subscriptionManager.pid = 7
+module.tx_t3extblog.settings.subscriptionManager.comment.admin.mailTo.email = sascha.wildenhain@gmail.com
+plugin.tx_t3extblog.settings.subscriptionManager.comment.admin.mailTo.email = sascha.wildenhain@gmail.com
+plugin.tx_t3extblog.persistence.storagePid = 36
+
+
+# Plugin für RTE
+config.extraPlugins = 'codeTag';
+lib.parseFunc_RTE.allowTags:=addToList(iframe)
+lib.parseFunc.htmlSanitize = 1
+lib.parseFunc_RTE.htmlSanitize = 0
+
+#Lightbox TS
+tt_content.image.20.1.imageLinkWrap.linkParams.ATagParams.dataWrap = data-lightbox="{field:uid}"
+plugin.tt_news.displaySingle.image.imageLinkWrap {
+  JSwindow = 0
+  directImageLink = 1
+  linkParams.ATagParams.ATagParams {
+    dataWrap =  rel="lightbox{field:uid}" = data-lightbox="{field:uid}"
+  }
+  height =800
+  width =800
+}
+
+# Custom Field für Pages um icon zu definieren
+lib.pageconfig {
+  pageicon = TEXT
+  pageicon {
+        value = default
+        override {
+           required = 1
+           data = levelfield : -1 , pageicon
+        }
+    }
+}
+

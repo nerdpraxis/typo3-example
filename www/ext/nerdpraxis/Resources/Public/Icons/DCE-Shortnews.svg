@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" id="Ebene_1" data-name="Ebene 1" width="32" height="32" viewBox="0 0 32 32">
+  <defs>
+    <style>.cls-1{fill:#29abe2;}.cls-2{fill:#fff;}.cls-2,.cls-3{stroke:#000;stroke-miterlimit:10;}.cls-3{fill:none;}</style>
+  </defs>
+  <rect class="cls-1" x="0.55" y="0.77" width="31" height="31"></rect>
+  <path d="M31,1V31H1V1H31m1-1H0V32H32Z"></path>
+  <rect class="cls-2" x="3.33" y="12.32" width="6.74" height="7.36"></rect>
+  <line class="cls-3" x1="4.62" y1="17" x2="8.78" y2="17"></line>
+  <line class="cls-3" x1="4.62" y1="15" x2="6.89" y2="15"></line>
+  <rect class="cls-2" x="12.63" y="12.32" width="6.74" height="7.36"></rect>
+  <line class="cls-3" x1="13.92" y1="17" x2="18.08" y2="17"></line>
+  <line class="cls-3" x1="13.92" y1="15" x2="16.19" y2="15"></line>
+  <rect class="cls-2" x="21.93" y="12.32" width="6.74" height="7.36"></rect>
+  <line class="cls-3" x1="23.22" y1="17" x2="27.38" y2="17"></line>
+  <line class="cls-3" x1="23.22" y1="15" x2="25.49" y2="15"></line>
+</svg>

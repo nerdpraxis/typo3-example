@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" id="Ebene_1" data-name="Ebene 1" width="32" height="32" viewBox="0 0 32 32">
+  <defs>
+    <style>.cls-1{fill:#29abe2;}.cls-2{fill:#fff;}</style>
+  </defs>
+  <rect class="cls-1" x="0.6" y="0.77" width="31" height="31"></rect>
+  <path d="M31,1V31H1V1H31m1-1H0V32H32Z"></path>
+  <rect class="cls-2" x="3.07" y="11.46" width="8.01" height="4.06"></rect>
+  <path d="M10.59,12V15h-7V12h7m1-1h-9V16h9V11Z"></path>
+  <rect class="cls-2" x="12.65" y="8.62" width="6.9" height="6.9"></rect>
+  <path d="M19.05,9.12V15h-5.9V9.12h5.9m1-1h-7.9V16h7.9V8.12Z"></path>
+  <rect class="cls-2" x="11.53" y="17.07" width="8.01" height="4.06"></rect>
+  <path d="M19.05,17.57v3.06H12V17.57h7m1-1H11v5.06h9V16.57Z"></path>
+  <rect class="cls-2" x="21.12" y="8.62" width="8.01" height="4.06"></rect>
+  <path d="M28.63,9.12v3.06h-7V9.12h7m1-1h-9v5.06h9V8.12Z"></path>
+  <rect class="cls-2" x="21.12" y="14.27" width="5" height="9.66"></rect>
+  <path d="M25.62,14.77v8.66h-4V14.77h4m1-1h-6V24.43h6V13.77Z"></path>
+</svg>

@@ -1,0 +1,5 @@
+@use "sass:color";
+
+.border-primary-bottom {
+ border-bottom: 1px dashed darken(#b4d4ff, 7%);
+}

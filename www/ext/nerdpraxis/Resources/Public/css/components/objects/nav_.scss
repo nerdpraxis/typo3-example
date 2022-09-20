@@ -1,0 +1,35 @@
+.o-nav {
+ &_subtitle {
+	display: block;
+	line-height: 1.2rem;
+	color: $grey;
+ }
+ &_nav-link{
+	color:#FFF;
+	display: inline-block;
+ }
+ &_submenu_element {
+	border-left: 3px solid transparent;
+	margin-left: 5px;
+	transition: all 0.5s;
+	&:hover {
+	 border-left: 3px solid $secondary-color;
+	 transition: all 0.5s;
+	}
+	&:nth-of-type(1n+2):hover{
+	 border-left: 3px solid #1ca2ea;
+	}
+	&:nth-of-type(2n+2):hover{
+	 border-left: 3px solid #491cea;
+	}
+	&:nth-of-type(3n+2):hover{
+	 border-left: 3px solid #e31cea;
+	}
+	&:nth-of-type(4n+2):hover{
+	 border-left: 3px solid #ea1c53;
+	}
+	&:nth-of-type(5n+2):hover{
+	 border-left: 3px solid #ea641c;
+	}
+ }
+}

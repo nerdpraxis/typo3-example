@@ -1,0 +1,33 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers" xmlns:t3b="http://typo3.org/ns/FelixNagel/T3extblog/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<div class="col-12 col-md-4 mb-5">
+	<div class="text-lg-start feature-box font-white text-start px-0 pt-0 h-100">
+		<f:if condition="{post.previewImage}">
+			<div class="card-img-top">
+				<f:render partial="Post/PreviewImage" arguments="{post: post, settings: settings}"/>
+			</div>
+		</f:if>
+		<div class="card-body text-start px-6">
+			<h4 class="card-title mb-5 ">
+				<div class="link-wrapper">
+					<f:link.action class="font-primary font-size-42 fw-bolderlink hover" pluginName="Blogsystem" controller="Post" action="show" pageUid="{settings.blogsystem.pid}" arguments="{post.linkParameter}">
+						{post.title}
+					</f:link.action>
+				</div>
+			</h4>
+			<h6 class="card-subtitle mb-3 font-secondary font-size-16">
+				<f:cObject typoscriptObjectPath="lib.tx_t3extblog.date" data="{f:format.date(format:'U', date:'{post.publishDate}')}"/>
+			</h6>
+			<div class="card-text mb-8">
+				{post.preview -> f:format.crop(maxCharacters: '150') -> f:format.html()}
+			</div>
+			<!--
+			<f:link.action class="link-effect bn5" pluginName="Blogsystem" controller="Post" action="show" pageUid="{settings.blogsystem.pid}" arguments="{post.linkParameter}">
+				{post.title}
+			</f:link.action>
+			-->
+		</div>
+	</div>
+</div>
+
+</html>

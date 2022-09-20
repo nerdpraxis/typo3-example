@@ -1,0 +1,153 @@
+<div id="main-wrapper" class="">
+	<f:render partial="MainNavigation"/>
+	<div id="content-fullwrapper" class="container-fluid">
+
+
+		<div id="content-wrapper" class="container">
+
+			<!-- Breadcrumb -->
+			<f:if condition="{data.uid} !='1'">
+				<nav class="d-flex mt-3 mb-3">
+					<div class="verticals ten offset-by-one">
+						<ol class="breadcrumb breadcrumb-fill2 style3">
+							<li><a href="/"><i class="fa fa-home border-radius feature-box "></i></a></li>
+							<f:cObject typoscriptObjectPath="lib.rootline" />
+						</ol>
+					</div>
+				</nav>
+			</f:if>
+			<!-- Breadcrumb -->
+
+			<!-- HEADER Area Desktop-->
+			<div class="na">
+				<div class="header-col">
+					<v:content.render column="1" slide="1"></v:content.render>
+				</div>
+			</div>
+			<!-- HEADER Area Desktop END -->
+
+			<!--TYPO3SEARCH_start-->
+			<section class="maincontent">
+
+				<main>
+
+
+					<v:content.render column="0"></v:content.render>
+
+				</main>
+
+
+			</section>
+
+			<!--TYPO3SEARCH_end-->
+
+			<!-- footer START-->
+			<footer class="container text-center text-lg-start feature-box font-white border-radius mt-10">
+				<!-- Section: Social media -->
+				<section class="d-flex justify-content-center justify-content-lg-between p-4 border-primary-bottom">
+					<!-- Left -->
+					<div class="me-5 d-none d-lg-block">
+						<span> </span>
+					</div>
+					<!-- Left -->
+
+					<!-- Right -->
+					<div>
+						<a href="https://www.linkedin.com/in/sascha-newzero-393032141/" class="me-4 text-reset">
+							<i class="fa fa-linkedin"></i>
+						</a>
+						<a href="https://github.com/newzero" class="me-4 text-reset">
+							<i class="fa fa-github"></i>
+						</a>
+					</div>
+					<!-- Right -->
+				</section>
+				<!-- Section: Social media -->
+
+				<!-- Section: Links  -->
+				<section class="">
+					<div class="container text-center text-md-start mt-5">
+						<!-- Grid row -->
+						<div class="row mt-3">
+							<!-- Grid column -->
+							<div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+								<!-- Content -->
+								<h5 class="text-uppercase fw-bold mb-4">WTF ? </h5>
+								<p>
+									Hier findet ihr (hoffentlich) hilfreiche <b>Typo3</b> Tips zu allem was
+									zum aufsetzen einer Komplexen (oder auch einfachen) Typo3 Website dazugehört. </p>
+							</div>
+							<!-- Grid column -->
+
+							<!-- Grid column -->
+							<div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+								<!-- Links -->
+								<h6 class="text-uppercase fw-bold mb-4">
+									Hilfreich </h6>
+								<p>
+									<a href="#!" class="text-reset">FLUID</a>
+								</p>
+								<p>
+									<a href="#!" class="text-reset">VHS</a>
+								</p>
+								<p>
+									<a href="#!" class="text-reset">Extbase</a>
+								</p>
+								<p>
+									<a href="#!" class="text-reset">TypoScript</a>
+								</p>
+							</div>
+							<!-- Grid column -->
+
+							<!-- Grid column -->
+							<div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+								<!-- Links -->
+								<h6 class="text-uppercase fw-bold mb-4">
+									Anleitungen </h6>
+								<p>
+									<a href="#!" class="text-reset">Pipelines</a>
+								</p>
+								<p>
+									<a href="#!" class="text-reset">Typo3/Extension Updates</a>
+								</p>
+							</div>
+							<!-- Grid column -->
+
+							<!-- Grid column -->
+							<div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+								<!-- Links -->
+								<h6 class="text-uppercase fw-bold mb-4">
+									Contact </h6>
+								<p><i class="fa fa-address-card-o  me-3"></i>Sascha Wildenhain</p>
+								<p class="float-start">
+									<i class="fa fa-envelope me-3"></i>
+									<div class="link-wrapper">
+										<a href="mailto:info@nerdpraxis.de" class="link-primary link hover">info@nerdpraxis.de</a>
+									</div>
+								</p>
+							</div>
+							<!-- Grid column -->
+						</div>
+						<!-- Grid row -->
+					</div>
+				</section>
+				<!-- Section: Links  -->
+
+				<!-- Copyright -->
+				<div class="text-center p-4" >
+					© 2022 Copyright:
+					<a class="text-reset fw-bold" href="https://www.nerdpraxis.de/">Nerdpraxis.de</a>
+				</div>
+				<!-- Copyright -->
+			</footer>
+			<!-- footer END-->
+		</div>
+	</div>
+</div>
+
+<div class="right-effects"></div>
+<div class="left-effects"></div>
+
+<p id="back-top">
+	<a href="#top" title="Jump 2 Top"><span class="btn"><i class="fa fa-caret-up font-white"></i></span></a>
+</p>

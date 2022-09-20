@@ -1,0 +1,82 @@
+<nav class="navbar navbar-expand-lg navbar-light zindex-20" data-naviwrap="1">
+	<div class="container-fluid">
+		<div class="container">
+			<div class="row p-0">
+				<div class="col-10 col-md-3 ps-0">
+					<div class="pt-2 mb-2 ps-0 detachwrap-logo">
+						<a href="/" class="d-block">
+						<img data-headerlogo="1" class="logo" src="/logo-web-landscape-white_nowebdesign.svg" alt="Nerdpraxis.de" width="190">
+						</a>
+					</div>
+				</div>
+				<div class="col-2 col-md-9 pt-8 pl-5 detachwrap-navi">
+					<label for="toggle" class="hamburger navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+					  <div class="top-bun"></div>
+					  <div class="meat"></div>
+					  <div class="bottom-bun"></div>
+					</label>
+					<div class="collapse navbar-collapse">
+						<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+							<li class="nav-item  pe-3">
+								<div class="link-wrapper pb-0">
+									<a href="/" class="nav-link link-primary link hover" aria-current="page">
+										<i class="fa fa-home font-white"></i>
+									</a>
+								</div>
+							</li>
+							<!-- Menu Object von pid = 2 generieren-->
+							<v:page.menu pageUid="3" expandAll="1" useShortcutData="0" levels="0" classActive="active" classCurrent="current" classHasSubpages="" classFirst="first" classLast="last">
+								<!-- Menu Object als itemLevel0 durchiterieren -->
+								<f:for each="{menu}" as="itemLevel0" iteration="iter">
+									<f:if condition="{itemLevel0.hasSubPages}">
+										<!-- wenn dieses itemLevel0 eine unterseite hat-->
+										<f:then>
+											<li class="nav-item dropdown pe-3">
+												<!-- neues menu object vom aktuell iteriertem element erstellen -->
+												<v:page.menu.directory pages="{itemLevel0.uid}" classHasSubpages="hasSub" classFirst="first" classLast="last">
+													<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+														<f:if condition="{itemLevel0.pageicon}"><f:then><i class="fa font-white {itemLevel0.pageicon} navi_pageicon pe-1" aria-hidden="true"></i></f:then></f:if>
+														<span class="font-white">{f:if(condition: "{itemLevel0.nav_title}", then: "{itemLevel0.nav_title}",else:"{itemLevel0.title}" )}</span>
+														<span class="font-secondary">{itemLevel0.subtitle}</span>
+													</a>
+													<ul class="dropdown-menu feature-box feature-box-dark my-3 px-0 font-color-white zindex-20" aria-labelledby="navbarDropdown">
+														<f:for each="{menu}" as="itemLevel1" iteration="itera">
+																<li class="o-nav_submenu_element">
+																	<a href='{itemLevel1.link}' class="ps-5 pe-8 py-2 o-nav_nav-link"  aria-current="page" >
+																		<div class="submenulink">
+																			<f:if condition="{itemLevel1.pageicon}"><f:then> <i class="fa font-white {itemLevel1.pageicon}  pe-2 font-size-24 navi_pageicon navi_pageicon_submenu" aria-hidden="true"></i></f:then></f:if>
+																			<span class="font-size-24 whitespace-nowrap">{f:if(condition: "{itemLevel1.nav_title}", then: "{itemLevel1.nav_title}",else:"{itemLevel1.title}" )}</span>
+																			<span class="o-nav_subtitle font-size-18 lh-base">{itemLevel1.subtitle}</span>
+																		</div>
+																	</a>
+																</li>
+														</f:for>
+													</ul>
+												</v:page.menu.directory>
+											</li>
+										</f:then>
+										<!-- wenn dieses itemLevel0 KEINE unterseite hat-->
+										<f:else>
+											<li class="nav-item  pe-3">
+												<div class="link-wrapper pb-0">
+												<a href='{itemLevel0.link}' class="nav-link link-primary link hover"  aria-current="page" >
+													<f:if condition="{itemLevel0.pageicon}"><f:then><i class="fa font-white {itemLevel0.pageicon} navi_pageicon pe-2" aria-hidden="true"></i></f:then></f:if>
+													<span class="font-white"> {f:if(condition: "{itemLevel0.nav_title}", then: "{itemLevel0.nav_title}",else:"{itemLevel0.title}" )}</span>
+													<span class="o-nav_subtitle font-secondary">{itemLevel0.subtitle}</span>
+												</a>
+												</div>
+											</li>
+										</f:else>
+									</f:if>
+								</f:for>
+							</v:page.menu>
+
+
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</nav>
+

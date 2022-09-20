@@ -1,0 +1,31 @@
+a:link, a:visited {
+ text-decoration: dashed;
+}
+
+a:hover, a:active {
+}
+
+a.link-white:link, a.link-white:visited, {
+ color: #fff;
+}
+
+a.link-white:hover, a.link-white:active, {
+ color: #fff;
+}
+
+a.link-primary:link, a.link-primary:visited, {
+ color: $primary-color;
+}
+
+a.link-primary:hover, a.link-primary:active, {
+ color: $secondary-color;
+}
+
+a.link-secondary:link, a.link-secondary:visited, {
+ color: $secondary-color;
+}
+
+a.link-secondary:hover, a.link-secondary:active, {
+ color: $primary-color;
+}
+

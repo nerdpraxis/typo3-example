@@ -1,0 +1,160 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers"
+			xmlns:t3b="http://typo3.org/ns/FelixNagel/T3extblog/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<f:layout name="Backend" />
+
+<f:section name="headline">
+	<f:translate key="module.dashboard.title" />
+</f:section>
+
+<f:section name="main">
+	<div id="dashboard">
+		<f:render partial="Backend/PendingComments" arguments="{pendingComments: pendingComments, addLink: 1}" />
+
+		<div class="grid" style="width: 28%; margin-right: 2%;">
+			<div class="panel panel-default" id="dashboard-actions">
+				<div class="panel-heading">
+					<f:translate key="module.dashboard.actions" />
+				</div>
+
+				<div class="panel-body">
+					<f:link.action controller="BackendPost" action="index" class="btn btn-default btn-block">
+						<t3b:backend.spriteManagerIcon iconName="extensions-t3extblog-post" />
+						{f:translate(key: 'module.post.title')}
+					</f:link.action>
+					<f:link.action controller="BackendComment" action="index" class="btn btn-default btn-block">
+						<t3b:backend.spriteManagerIcon iconName="extensions-t3extblog-comment" />
+						{f:translate(key: 'module.comment.title.all')}
+					</f:link.action>
+					<f:link.action controller="BackendComment" action="listPending" class="btn btn-default btn-block">
+						<t3b:backend.spriteManagerIcon iconName="extensions-t3extblog-comment" />
+						{f:translate(key: 'module.comment.title.pending')}
+					</f:link.action>
+					<f:link.action controller="BackendSubscriber" action="indexPostSubscriber" class="btn btn-default btn-block">
+						<t3b:backend.spriteManagerIcon iconName="extensions-t3extblog-subscriber" />
+						{f:translate(key: 'module.subscriber.post.title')}
+					</f:link.action>
+					<f:link.action controller="BackendSubscriber" action="indexBlogSubscriber" class="btn btn-default btn-block">
+						<t3b:backend.spriteManagerIcon iconName="extensions-t3extblog-subscriber" />
+						{f:translate(key: 'module.subscriber.blog.title')}
+					</f:link.action>
+				</div>
+			</div>
+
+			<f:if condition="{postDrafts}">
+				<div class="panel panel-default" id="dashboard-drafts">
+					<div class="panel-heading">
+						<f:translate key="module.dashboard.drafts" />
+					</div>
+
+					<f:render partial="Backend/Dashboard/Posts"
+						arguments="{posts: postDrafts, dateTimeFormat: dateTimeFormat}" />
+				</div>
+			</f:if>
+
+			<div class="panel panel-default" id="dashboard-statistic">
+				<div class="panel-heading">
+					<f:translate key="module.dashboard.statistic" />
+				</div>
+
+				<ul class="list-group">
+				    <li class="list-group-item">
+						<f:translate key="module.dashboard.statistic.postAndComments"
+							arguments="{0: '{postCount}', 1: '{validCommentsCount}', 2: '{validPostSubscribersCount}'}"/>
+					</li>
+
+				    <li class="list-group-item">
+						<f:translate key="module.dashboard.statistic.subscriptions" arguments="{0: '{validBlogSubscribersCount}'}"/>
+					</li>
+			  	</ul>
+			</div>
+
+		</div>
+
+		<div class="grid" style="width: 70%;">
+			<div class="panel panel-default" id="dashboard-comments">
+				<div class="panel-heading">
+					<f:link.action controller="BackendComment" action="index">
+						<f:translate key="module.dashboard.comments" />
+					</f:link.action>
+				</div>
+
+				<f:if condition="{comments}">
+					<f:then>
+						<f:render partial="Backend/Dashboard/Comments" arguments="{comments: comments,	dateTimeFormat:	dateTimeFormat}" />
+					</f:then>
+					<f:else>
+						<div class="panel-body">
+							<em><f:translate key="module.comment.noRecords" /></em>
+						</div>
+					</f:else>
+				</f:if>
+			</div>
+
+			<div class="panel panel-default" id="dashboard-subscriptions">
+				<div class="panel-heading">
+					<f:translate key="module.dashboard.subscriptions" />
+				</div>
+
+				<div class="table-fit">
+					<table border="0" cellpadding="0" cellspacing="0" class="typo3-dblist table table-striped table-hover">
+						<thead>
+						<tr class="t3-row-header">
+							<td>&nbsp;</td>
+							<td><f:translate key="module.subscriber.post.table.email" /></td>
+							<td><f:translate key="module.subscriber.post.table.date" /></td>
+							<td>&nbsp;</td>
+						</tr>
+						</thead>
+
+						<tbody>
+						<tr class="c-headLine">
+							<td colspan="4" class="col-title">
+								<f:link.action controller="BackendSubscriber" action="indexPostSubscriber">
+									<b><f:translate key="module.subscriber.post.title" /></b>
+								</f:link.action>
+							</td>
+						</tr>
+						<f:if condition="{postSubscribers}">
+							<f:then>
+								<t3b:widget.paginate objects="{postSubscribers}" as="paginatedPostSubscribers" configuration="{settings.backend.dashboard.subscriber.post.paginate}">
+									<f:render partial="Backend/Dashboard/Subscriber"
+														arguments="{subscribers: paginatedPostSubscribers, table: 'tx_t3blog_com_nl', dateTimeFormat: dateTimeFormat}" />
+								</t3b:widget.paginate>
+							</f:then>
+							<f:else>
+								<tr class="db_list_normal">
+									<td colspan="4"><em><f:translate key="module.subscriber.noRecords" /></em></td>
+								</tr>
+							</f:else>
+						</f:if>
+
+						<tr class="c-headLine">
+							<td colspan="4" class="col-title">
+								<f:link.action controller="BackendSubscriber" action="indexBlogSubscriber">
+									<b><f:translate key="module.subscriber.blog.title" /></b>
+								</f:link.action>
+							</td>
+						</tr>
+						<f:if condition="{blogSubscribers}">
+							<f:then>
+								<t3b:widget.paginate objects="{blogSubscribers}" as="paginatedPostSubscribers" configuration="{settings.backend.dashboard.subscriber.blog.paginate}">
+									<f:render partial="Backend/Dashboard/Subscriber"
+														arguments="{subscribers: paginatedPostSubscribers, table: 'tx_t3blog_blog_nl', dateTimeFormat: dateTimeFormat}" />
+								</t3b:widget.paginate>
+							</f:then>
+							<f:else>
+								<tr class="db_list_normal">
+									<td colspan="4"><em><f:translate key="module.subscriber.noRecords" /></em></td>
+								</tr>
+							</f:else>
+						</f:if>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</f:section>
+
+</html>

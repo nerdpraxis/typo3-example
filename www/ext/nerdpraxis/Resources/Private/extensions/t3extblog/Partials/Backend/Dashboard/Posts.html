@@ -1,0 +1,38 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers"
+			xmlns:be="http://typo3.org/ns/TYPO3/CMS/Backend/ViewHelpers"
+			xmlns:t3b="http://typo3.org/ns/FelixNagel/T3extblog/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<div class="table-fit">
+
+<t3b:widget.paginate objects="{posts}" as="paginatedPosts" configuration="{settings.backend.dashboard.postDrafts.paginate}">
+	<table border="0" cellpadding="0" cellspacing="0" class="typo3-dblist table table-striped table-hover">
+		<thead>
+			<tr class="t3-row-header">
+				<td>&nbsp;</td>
+				<td><f:translate key="module.post.table.title" /></td>
+				<td><f:translate key="module.post.table.author" /></td>
+			</tr>
+		</thead>
+
+		<f:for each="{paginatedPosts}" as="post">
+			<tr class="db_list_normal">
+				<td class="col-icon">
+					<a href="#" class="t3js-contextmenutrigger" data-uid="{post.uid}" data-table="tx_t3blog_post" title="{post.uid}">
+						<t3b:backend.spriteIconForRecord table="tx_t3blog_post" object="{post}" />
+					</a>
+				</td>
+
+				<td class="title">
+					<be:link.editRecord uid="{post.uid}" table="tx_t3blog_post">
+						{post.title -> f:format.crop(maxCharacters: 20, respectWordBoundaries: false)}
+					</be:link.editRecord>
+				</td>
+				<td>{post.author.username}</td>
+			</tr>
+		</f:for>
+	</table>
+</t3b:widget.paginate>
+
+</div>
+
+</html>

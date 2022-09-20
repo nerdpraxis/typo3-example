@@ -1,0 +1,19 @@
+##################
+#### TsConfig ####
+##################
+TCEFORM.tx_gridelements_backend_layout{
+  frame{
+    addItems{
+      4= Grau
+      5= Dunkel Grau
+      6= Schwarz
+      7= Grün
+      8= Cyan
+      9= Türkis
+      10 = Lila
+      11 = Orange
+      12 = Bordeauxrot
+      13 = Gelb
+    }
+  }
+}

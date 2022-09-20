@@ -1,0 +1,160 @@
+
+page.meta.viewport = width=device-width, initial-scale=1.0
+lib.imageresourceBig = IMG_RESOURCE
+lib.imageresourceBig {
+  file {
+    #import = uploads/media/
+    import.data = levelmedia:-1
+    treatIdAsReference = 1
+    import.listNum = 0
+    width = 600
+  }
+}
+
+##Bild in kleinerer Auflösung ausgeben
+lib.imageresourceSmall < lib.imageresourceBig
+lib.imageresourceSmall {
+  file {
+    width = 220
+  }
+}
+
+##Bild in kleinerer Auflösung ausgeben
+lib.imageresource < lib.imageresourceBig
+lib.imageresource {
+  file {
+    width = 1980
+  }
+}
+
+lib.pageResourceImage >
+lib.pageResourceImage = FILES
+lib.pageResourceImage {
+   references {
+      table = pages
+      fieldName = media
+      uid.data = field:pageUid
+   }
+   renderObj = IMAGE
+   renderObj {
+      file {
+         width = 300
+//         height = 200m
+         maxW = 400
+         maxH = 200
+         import.data = file:current:publicUrl
+      }
+      altText.field = title
+      titleText.field = title
+   }
+}
+
+
+# PAGE PID
+lib.pageid = TEXT
+lib.pageid.data = page:uid
+
+#PAGE KEYWORDS
+lib.keywords = TEXT
+lib.keywords.data = DB:pages:keywords
+
+#PAGE DESCRIPTION
+lib.description = TEXT
+lib.description.data = DB:pages:description
+#
+lib.abstract = TEXT
+lib.abstract.data = DB:pages:abstract
+#
+lib.author = TEXT
+lib.author.data = DB:pages:1:author
+
+
+lib.currentURL = TEXT
+lib.currentURL.value = https://nerdpraxis.loc/index.php?{getIndpEnv:QUERY_STRING}
+lib.currentURL.insertData = 1
+
+# Check for duplicate parameters and remove them
+page.config.uniqueLinkVars = 1
+#
+# PAGE UID für FLUID
+lib.pageid = TEXT
+lib.pageid.data = page:uid
+
+temp.seoTitle = COA
+temp.seoTitle {
+  10 = TEXT
+  10.field = title
+  10.wrap = | //Radio21/
+
+  20 = TEXT
+  20.field = subtitle
+  20.if.isTrue.field = subtitle
+  20.wrap = &nbsp;-&nbsp;|
+}
+
+lib.field_title = TEXT
+lib.field_title.value = {page:title} {page:subtitle}
+lib.field_title.insertData = 1
+
+lib.seoTitle < lib.field_title
+
+config.noPageTitle = 2
+
+tmp1.headerdata = TEXT
+tmp1.headerdata.field = seo_title //title // nav_title // header
+tmp2.headerdata = TEXT
+tmp2.headerdata.field = subtitle
+tmp2.headerdata.required = 1
+tmp2.headerdata.wrap = &nbsp;-&nbsp;|
+tmp.headerdata >
+tmp.headerdata = COA
+tmp.headerdata.10 < tmp1.headerdata
+tmp.headerdata.20 < tmp2.headerdata
+tmp.headerdata.wrap = <title> |</title>
+page.headerData = COA
+page.headerData {
+  910 < plugin.tx_simulatebe_pi1
+  920 < tmp.headerdata
+}
+# Badged (startseite)
+lib.badges >
+lib.badges = CONTENT
+lib.badges {
+   table = tt_content
+       select {
+           pidInList = 5
+           uidInList = 22
+       }
+}
+# Breadcrumb
+lib.rootline = HMENU
+lib.rootline {
+    special = rootline
+
+    # zeige komplette rootline an
+    special.range = 1|-1
+
+    # Variation: Link nur auf die Uebergeordnete Seite
+    #special.range = -2|-2
+
+    # Text vor dem Rootline Menue
+    wrap =  |
+
+    1 = TMENU
+    1.target = _top
+    1.NO {
+        stdWrap.htmlSpecialChars = 1
+
+        # Layout 1: Seite 1 | Seite 2 | Seite 3
+         linkWrap = <li><i class="fa fa-caret-right" aria-hidden="true"></i> <div class="link-wrapper">|</div></li>
+         ATagParams.override = class="link-primary link hover"
+
+        # Layout 3: Seite 1 >> Seite 2 >> Seite 3
+        #linkWrap = |&nbsp;&raquo;&nbsp;|*||*| |
+
+       #doNotLinkIt = |*| 0 |*| 1
+    }
+    1.CURRENT{
+      linkWrap = <li><div class="link-wrapper">|</div></li>
+    }
+}

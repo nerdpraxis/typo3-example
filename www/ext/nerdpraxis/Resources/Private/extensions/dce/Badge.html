@@ -1,0 +1,5 @@
+<div class="dce dce_badge">
+	<f:for each="{field.badge}" as="badge" iteration="ita">
+	   <img alt="{badge.textlinks}" class="custom_badge animated zoomIn delay-{ita.cycle}s " src="https://img.shields.io/badge/{badge.textrechts}-B?style=for-the-badge&logo={badge.logo}&label={badge.textlinks}&color={badge.hintergrundfarbeRechts -> v:format.trim(characters="#")}&labelColor={badge.textfarbeRechts -> v:format.trim(characters="#")}">
+	</f:for>
+</div>
